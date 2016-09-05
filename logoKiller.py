@@ -24,24 +24,38 @@ if __name__ == '__main__':
 
 	screen = pygame.display.set_mode((w,h), FULLSCREEN)
 	screen.fill((0,0,0))
-	facebook = [pygame.image.load("img/facebook.png").convert_alpha(),"facebook"]
+	facebook = [pygame.image.load("img/facebook.jpg").convert_alpha(),"facebook"]
+	facebook_f = [pygame.transform.flip(pygame.image.load("img/facebook.jpg").convert_alpha(),False,True),"facebook_f"]
+	facebook_c = [pygame.image.load("img/mod/facebook.jpg").convert_alpha(),"facebook_c"]
 	yahoo = [pygame.image.load("img/yahoo.jpg").convert_alpha(),"yahoo"]
 	ge = [pygame.image.load("img/ge.jpg").convert_alpha(),"ge"]
-	addidas = [pygame.image.load("img/addidas.gif").convert_alpha(),"addidas"]
+	fila = [pygame.image.load("img/fila.jpg").convert_alpha(),"fila"]
+	firestone = [pygame.image.load("img/firestone.jpg").convert_alpha(),"firestone"]
+	addidas = [pygame.image.load("img/addidas.jpg").convert_alpha(),"addidas"]
+	addidas2 = [pygame.image.load("img/addidas2.jpg").convert_alpha(),"addidas2"]
 	nike = [pygame.image.load("img/nike.jpg").convert_alpha(),"nike"]
-	carrefour = [pygame.image.load("img/carrefour.png").convert_alpha(),"carrefour"]
-	twitter = [pygame.image.load("img/twitter.png").convert_alpha(),"twitter"]
-	claro = [pygame.image.load("img/claro.png").convert_alpha(),"claro"]
-	cocacola = [pygame.image.load("img/cocacola.png").convert_alpha(),"cocacola"]
+	carrefour = [pygame.image.load("img/carrefour.jpg").convert_alpha(),"carrefour"]
+	twitter = [pygame.image.load("img/twitter.jpg").convert_alpha(),"twitter"]
+	claro = [pygame.image.load("img/claro.jpg").convert_alpha(),"claro"]
+	claro_c = [pygame.image.load("img/mod/claro.jpg").convert_alpha(),"claro_c"]
+	claro_f = [pygame.transform.flip(pygame.image.load("img/claro.jpg").convert_alpha(),True,False),"claro_f"]
+	cocacola = [pygame.image.load("img/cocacola.jpg").convert_alpha(),"cocacola"]
+	cocacola2 = [pygame.image.load("img/cocacola2.jpg").convert_alpha(),"cocacola2"]
+	ford = [pygame.image.load("img/ford.jpg").convert_alpha(),"ford"]
 	disco = [pygame.image.load("img/disco.jpg").convert_alpha(),"disco"]
-	walmart = [pygame.image.load("img/walmart.png").convert_alpha(),"walmart"]
-	like = [pygame.image.load("img/like.png").convert_alpha(),"like"]
-	ferrum = [pygame.image.load("img/ferrum.png").convert_alpha(),"ferrum"]
+	walmart = [pygame.image.load("img/walmart.jpg").convert_alpha(),"walmart"]
+	like = [pygame.image.load("img/like.jpg").convert_alpha(),"like"]
+	ferrum = [pygame.image.load("img/ferrum.jpg").convert_alpha(),"ferrum"]
 	pepsi = [pygame.image.load("img/pepsi.jpg").convert_alpha(),"pepsi"]
-	python = [pygame.image.load("img/python.png").convert_alpha(),"python"]
+	python = [pygame.image.load("img/python.jpg").convert_alpha(),"python"]
+	apple = [pygame.image.load("img/apple.jpg").convert_alpha(),"apple"]
 	movistar = [pygame.image.load("img/movistar.jpg").convert_alpha(),"movistar"]
+	shell = [pygame.image.load("img/shell.jpg").convert_alpha(),"shell"]
+	motorola = [pygame.image.load("img/motorola.jpg").convert_alpha(),"motorola"]
+	microsoft = [pygame.image.load("img/microsoft.jpg").convert_alpha(),"microsoft"]
+	android = [pygame.image.load("img/android.jpg").convert_alpha(),"android"]
 	mcdonalds = [pygame.image.load("img/mcdonalds.jpg").convert_alpha(),"mcdonalds"]
-	mcdonalds-f = [pygame.transform.flip(pygame.image.load("img/mcdonalds.jpg").convert_alpha(),False,True),"mcdonalds"]
+	mcdonalds_f = [pygame.transform.flip(pygame.image.load("img/mcdonalds.jpg").convert_alpha(),False,True),"mcdonalds"]
 
 	tries = []
 	show = []
@@ -57,11 +71,30 @@ if __name__ == '__main__':
 	while 1:
 		if estado==-1:
 			if timer <= 0:
-				tries = [[0,facebook[0],[like,ferrum,ge,addidas]],
-						 [1,disco[0],[carrefour,cocacola,pepsi,claro]],
-						 [2,claro[0],[movistar,pepsi,disco,carrefour]],
-						 [3,movistar[0],[claro,mcdonalds_flip,python]],
-						 [4,twitter[0],[facebook,motorola,nike,addidas]]
+				tries = [[0,facebook[0],	[like,		ferrum,		ge,			addidas2]],
+						 [1,facebook[0],	[twitter,	ferrum,		ge,			addidas2]],
+						 [2,facebook[0],	[like,		motorola,	ford,		fila]],
+						 [3,facebook[0],	[like,		fila,		walmart,	firestone]],
+						 [4,facebook[0],	[like,		fila,		ford,		firestone]],
+						 [5,facebook_f[0],	[like,		ferrum,		firestone,	addidas2]],
+						 [6,facebook_f[0],	[twitter,	ferrum,		fila,		addidas2]],
+						 [7,facebook_f[0],	[like,		fila,		ge,			firestone]],
+						 [8,facebook_c[0],	[like,		fila,		ford,		firestone]],
+						 [9,facebook_c[0],	[twitter,	ferrum,		shell,		addidas2]],
+						[10,facebook_c[0],	[like,		firestone,	fila,		mcdonalds]],
+						[11,claro[0],		[movistar,	disco,		cocacola,	pepsi]],
+						[12,claro[0],		[movistar,	apple,		cocacola,	mcdonalds]],
+						[13,claro[0],		[movistar,	shell,		disco,		mcdonalds]],
+						[14,claro_f[0],		[movistar,	shell,		apple,		mcdonalds]],
+						[15,claro_f[0],		[movistar,	disco,		cocacola,	pepsi]],
+						[19,claro_c[0],		[movistar,	disco,		cocacola,	pepsi]],
+						[20,claro_c[0],		[movistar,	ge,			apple,		pepsi]],
+						[19,claro_c[0],		[movistar,	disco,		twitter,	pepsi]],
+						[20,claro_c[0],		[movistar,	facebook,	apple,		mcdonalds]]
+#						 [1,disco[0],[carrefour,cocacola,pepsi,claro]],
+#						 [2,claro[0],[movistar,pepsi,disco,carrefour]],
+#						 [3,movistar[0],[claro,mcdonalds_f,python]],
+#						 [4,twitter[0],[facebook,motorola,nike,addidas]],
 						]
 				random.shuffle(tries)
 				estado = 0
@@ -113,16 +146,7 @@ if __name__ == '__main__':
 								done = True
 								break
 					if (done):
-						if len(tries) == 0:
-							screen.fill((0,0,0))
-							pygame.display.update()
-							timer = tiempo_pre_target
-							tries = [[0,facebook[0],[like,ferrum,ge,addidas]],
-									 [1,disco[0],[cocacola,contramano,claro,carrefour]],
-									 [2,claro[0],[pepsi,disco,movistar,carrefour]],
-									 [3,movistar[0],[claro,mcdonalds,python]]
-									]
-							random.shuffle(tries)
+						random.shuffle(tries)
 						show = []
 						random.shuffle(positions)
 						trie = tries[0]
@@ -131,11 +155,15 @@ if __name__ == '__main__':
 						sx = trie[1].get_rect().w*h/trie[1].get_rect().h
 						target = pygame.transform.scale(trie[1], (sx, sy))
 						others = []
-						sx = w/5
 						for i in trie[2]:
-							sy = i[0].get_rect().h*w/5/i[0].get_rect().w
-							others.append([pygame.transform.scale(i[0], (sx, sy)),i[1]])
-						tries.remove(trie)
+							if i[0].get_rect().w > i[0].get_rect().h:
+								sx = w/5
+								sy = i[0].get_rect().h*w/5/i[0].get_rect().w
+								others.append([pygame.transform.scale(i[0], (sx, sy)),i[1]])
+							else:
+								sy = h/3
+								sx = i[0].get_rect().w*h/3/i[0].get_rect().h
+								others.append([pygame.transform.scale(i[0], (sx, sy)),i[1]])
 						timer = 1
 						estado = 1
 			elif event.type == pygame.KEYDOWN:

@@ -28,3 +28,5 @@ if __name__ == '__main__':
 			new_im.save("./img/new/" + names[0] + "-c4." + names[1])
 			new_im = Image.fromarray(np.dstack([item for item in (g,r,b,a)]))
 			new_im.save("./img/new/" + names[0] + "-c5." + names[1])
+			new_im = Image.fromarray(np.dstack([item for item in (b,b,r,a)]))
+			new_im.save("./img/new/" + names[0] + "-c6." + names[1])

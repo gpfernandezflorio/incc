@@ -42,6 +42,7 @@ if __name__ == '__main__':
 	cocacola = [pygame.image.load("img/cocacola.jpg").convert_alpha(),"cocacola"]
 	cocacola2 = [pygame.image.load("img/cocacola2.jpg").convert_alpha(),"cocacola2"]
 	ford = [pygame.image.load("img/ford.jpg").convert_alpha(),"ford"]
+	whatsapp = [pygame.image.load("img/whatsapp.jpg").convert_alpha(),"whatsapp"]
 	disco = [pygame.image.load("img/disco.jpg").convert_alpha(),"disco"]
 	walmart = [pygame.image.load("img/walmart.jpg").convert_alpha(),"walmart"]
 	like = [pygame.image.load("img/like.jpg").convert_alpha(),"like"]
@@ -70,27 +71,43 @@ if __name__ == '__main__':
 
 	while 1:
 		if estado==-1:
-			if timer <= 0:
-				tries = [[0,facebook[0],	[like,		ferrum,		ge,			addidas2]],
-						 [1,facebook[0],	[twitter,	ferrum,		ge,			addidas2]],
-						 [2,facebook[0],	[like,		motorola,	ford,		fila]],
-						 [3,facebook[0],	[like,		fila,		walmart,	firestone]],
-						 [4,facebook[0],	[like,		fila,		ford,		firestone]],
-						 [5,facebook_f[0],	[like,		ferrum,		firestone,	addidas2]],
-						 [6,facebook_f[0],	[twitter,	ferrum,		fila,		addidas2]],
-						 [7,facebook_f[0],	[like,		fila,		ge,			firestone]],
-						 [8,facebook_c[0],	[like,		fila,		ford,		firestone]],
-						 [9,facebook_c[0],	[twitter,	ferrum,		shell,		addidas2]],
-						[10,facebook_c[0],	[like,		firestone,	fila,		mcdonalds]],
-						[11,claro[0],		[movistar,	disco,		cocacola,	pepsi]],
-						[12,claro[0],		[movistar,	apple,		cocacola,	mcdonalds]],
-						[13,claro[0],		[movistar,	shell,		disco,		mcdonalds]],
-						[14,claro_f[0],		[movistar,	shell,		apple,		mcdonalds]],
-						[15,claro_f[0],		[movistar,	disco,		cocacola,	pepsi]],
-						[19,claro_c[0],		[movistar,	disco,		cocacola,	pepsi]],
-						[20,claro_c[0],		[movistar,	ge,			apple,		pepsi]],
-						[19,claro_c[0],		[movistar,	disco,		twitter,	pepsi]],
-						[20,claro_c[0],		[movistar,	facebook,	apple,		mcdonalds]]
+			if timer <= 0:					#CONCEPTO	#LETRA		#COLOR		#RUIDO
+				tries = [[0,facebook[0],	[whatsapp,	firestone,	ge,			shell]],
+						 [1,facebook[0],	[whatsapp,	fila,		ge,			shell]],
+						 [2,facebook[0],	[whatsapp,	ford,		ge,			shell]],
+						 [3,facebook[0],	[whatsapp,	firestone,	motorola,	shell]],
+						 [4,facebook[0],	[whatsapp,	fila,		motorola,	shell]],
+						 [5,facebook[0],	[whatsapp,	ford,		motorola,	shell]],
+						 [6,facebook[0],	[whatsapp,	firestone,	addidas2,	shell]],
+						 [7,facebook[0],	[whatsapp,	fila,		addidas2,	shell]],
+						 [8,facebook[0],	[whatsapp,	ford,		addidas2,	shell]],
+						 [9,facebook_f[0],	[whatsapp,	firestone,	ge,			shell]],
+						[10,facebook_f[0],	[whatsapp,	fila,		ge,			shell]],
+						[11,facebook_f[0],	[whatsapp,	ford,		ge,			shell]],
+						[12,facebook_f[0],	[whatsapp,	firestone,	motorola,	shell]],
+						[13,facebook_f[0],	[whatsapp,	fila,		motorola,	shell]],
+						[14,facebook_f[0],	[whatsapp,	ford,		motorola,	shell]],
+						[15,facebook_f[0],	[whatsapp,	firestone,	addidas2,	shell]],
+						[16,facebook_f[0],	[whatsapp,	fila,		addidas2,	shell]],
+						[17,facebook_f[0],	[whatsapp,	ford,		addidas2,	shell]],
+						[18,facebook_c[0],	[whatsapp,	firestone,	shell,		ge]],
+						[19,facebook_c[0],	[whatsapp,	fila,		shell,		ge]],
+						[20,facebook_c[0],	[whatsapp,	ford,		shell,		ge]],
+						[21,facebook_c[0],	[whatsapp,	firestone,	shell,		motorola]],
+						[22,facebook_c[0],	[whatsapp,	fila,		shell,		motorola]],
+						[23,facebook_c[0],	[whatsapp,	ford,		shell,		motorola]],
+						[24,facebook_c[0],	[whatsapp,	firestone,	shell,		addidas2]],
+						[25,facebook_c[0],	[whatsapp,	fila,		shell,		addidas2]],
+						[26,facebook_c[0],	[whatsapp,	ford,		shell,		addidas2]],
+#						[11,claro[0],		[movistar,	disco,		cocacola,	pepsi]],
+#						[12,claro[0],		[movistar,	apple,		cocacola,	mcdonalds]],
+#						[13,claro[0],		[movistar,	shell,		disco,		mcdonalds]],
+#						[14,claro_f[0],		[movistar,	shell,		apple,		mcdonalds]],
+#						[15,claro_f[0],		[movistar,	disco,		cocacola,	pepsi]],
+#						[16,claro_c[0],		[movistar,	disco,		cocacola,	pepsi]],
+#						[17,claro_c[0],		[movistar,	ge,			apple,		pepsi]],
+#						[18,claro_c[0],		[movistar,	disco,		twitter,	pepsi]],
+#						[19,claro_c[0],		[movistar,	facebook,	apple,		mcdonalds]]
 #						 [1,disco[0],[carrefour,cocacola,pepsi,claro]],
 #						 [2,claro[0],[movistar,pepsi,disco,carrefour]],
 #						 [3,movistar[0],[claro,mcdonalds_f,python]],

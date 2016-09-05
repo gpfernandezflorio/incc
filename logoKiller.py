@@ -3,6 +3,8 @@
 
 import sys, math, random, pygame, datetime, matplotlib.pyplot
 from pygame.locals import *
+from PIL import Image
+import numpy as np
 
 tiempo_pre_target = 10
 tiempo_target = 50
@@ -22,26 +24,24 @@ if __name__ == '__main__':
 
 	screen = pygame.display.set_mode((w,h), FULLSCREEN)
 	screen.fill((0,0,0))
-	background = pygame.image.load("background.jpg").convert()
-	background = pygame.transform.scale(background, (w, h))
-	facebook = [pygame.image.load("facebook.png").convert_alpha(),"facebook"]
-	yahoo = [pygame.image.load("yahoo.jpg").convert_alpha(),"yahoo"]
-	ge = [pygame.image.load("ge.jpg").convert_alpha(),"ge"]
-	addidas = [pygame.image.load("addidas.gif").convert_alpha(),"addidas"]
-	nike = [pygame.image.load("nike.jpg").convert_alpha(),"nike"]
-	carrefour = [pygame.image.load("carrefour.png").convert_alpha(),"carrefour"]
-	twitter = [pygame.image.load("twitter.png").convert_alpha(),"twitter"]
-	claro = [pygame.image.load("claro.png").convert_alpha(),"claro"]
-	cocacola = [pygame.image.load("cocacola.png").convert_alpha(),"cocacola"]
-	contramano = [pygame.image.load("contramano.jpg").convert_alpha(),"contramano"]
-	disco = [pygame.image.load("disco.jpg").convert_alpha(),"disco"]
-	walmart = [pygame.image.load("walmart.png").convert_alpha(),"walmart"]
-	like = [pygame.image.load("like.png").convert_alpha(),"like"]
-	ferrum = [pygame.image.load("ferrum.png").convert_alpha(),"ferrum"]
-	pepsi = [pygame.image.load("pepsi.jpg").convert_alpha(),"pepsi"]
-	python = [pygame.image.load("python.png").convert_alpha(),"python"]
-	movistar = [pygame.image.load("movistar.jpg").convert_alpha(),"movistar"]
-	mcdonalds = [pygame.image.load("mcdonalds.jpg").convert_alpha(),"mcdonalds"]
+	facebook = [pygame.image.load("img/facebook.png").convert_alpha(),"facebook"]
+	yahoo = [pygame.image.load("img/yahoo.jpg").convert_alpha(),"yahoo"]
+	ge = [pygame.image.load("img/ge.jpg").convert_alpha(),"ge"]
+	addidas = [pygame.image.load("img/addidas.gif").convert_alpha(),"addidas"]
+	nike = [pygame.image.load("img/nike.jpg").convert_alpha(),"nike"]
+	carrefour = [pygame.image.load("img/carrefour.png").convert_alpha(),"carrefour"]
+	twitter = [pygame.image.load("img/twitter.png").convert_alpha(),"twitter"]
+	claro = [pygame.image.load("img/claro.png").convert_alpha(),"claro"]
+	cocacola = [pygame.image.load("img/cocacola.png").convert_alpha(),"cocacola"]
+	disco = [pygame.image.load("img/disco.jpg").convert_alpha(),"disco"]
+	walmart = [pygame.image.load("img/walmart.png").convert_alpha(),"walmart"]
+	like = [pygame.image.load("img/like.png").convert_alpha(),"like"]
+	ferrum = [pygame.image.load("img/ferrum.png").convert_alpha(),"ferrum"]
+	pepsi = [pygame.image.load("img/pepsi.jpg").convert_alpha(),"pepsi"]
+	python = [pygame.image.load("img/python.png").convert_alpha(),"python"]
+	movistar = [pygame.image.load("img/movistar.jpg").convert_alpha(),"movistar"]
+	mcdonalds = [pygame.image.load("img/mcdonalds.jpg").convert_alpha(),"mcdonalds"]
+	mcdonalds-f = [pygame.transform.flip(pygame.image.load("img/mcdonalds.jpg").convert_alpha(),False,True),"mcdonalds"]
 
 	tries = []
 	show = []
@@ -58,9 +58,10 @@ if __name__ == '__main__':
 		if estado==-1:
 			if timer <= 0:
 				tries = [[0,facebook[0],[like,ferrum,ge,addidas]],
-						 [1,disco[0],[cocacola,contramano,claro,carrefour]],
-						 [2,claro[0],[pepsi,disco,movistar,carrefour]],
-						 [3,movistar[0],[claro,mcdonalds,python]]
+						 [1,disco[0],[carrefour,cocacola,pepsi,claro]],
+						 [2,claro[0],[movistar,pepsi,disco,carrefour]],
+						 [3,movistar[0],[claro,mcdonalds_flip,python]],
+						 [4,twitter[0],[facebook,motorola,nike,addidas]]
 						]
 				random.shuffle(tries)
 				estado = 0

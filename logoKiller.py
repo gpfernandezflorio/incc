@@ -10,6 +10,8 @@ tiempo_pre_target = 10
 tiempo_target = 50
 tiempo_pos_target = 10
 
+global_timer = 10 * 60 * 100
+
 if __name__ == '__main__':
 
 	pygame.init()
@@ -20,7 +22,7 @@ if __name__ == '__main__':
 
 	f = open("data.txt", 'a')
 	d = datetime.datetime.now()
-	f.write(str(d.day) + "/" + str(d.month) + "/" + str(d.year) + "\n")
+	f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
 
 	screen = pygame.display.set_mode((w,h), FULLSCREEN)
 	screen.fill((0,0,0))
@@ -58,7 +60,7 @@ if __name__ == '__main__':
 	mcdonalds = [pygame.image.load("img/mcdonalds.jpg").convert_alpha(),"mcdonalds"]
 	mcdonalds_f = [pygame.transform.flip(pygame.image.load("img/mcdonalds.jpg").convert_alpha(),False,True),"mcdonalds"]
 
-	tries = []
+	trials = []
 	show = []
 	#positions = [[x, y] for x in range(5) for y in range(3)]
 	positions = [[0,1],[0,2],[0,3],[1,1],[1,3],[2,1],[2,2],[2,3]]
@@ -66,55 +68,18 @@ if __name__ == '__main__':
 	now = -1
 	others = []
 
-	estado = -1
+	estado = 0
 	timer = 0
+	g_timer = global_timer
+	font = pygame.font.SysFont("digital", w/10, True)
+
+	time_left = ""
+
+	trials = [									#CONCEPTO																			#LETRA																			#COLOR																	#RUIDO
+					[movistar,				[claro],																			[mcdonalds],																[python],																[pepsi]]
+					]
 
 	while 1:
-		if estado==-1:
-			if timer <= 0:					#CONCEPTO	#LETRA		#COLOR		#RUIDO
-				tries = [[0,facebook[0],	[whatsapp,	firestone,	ge,			shell]],
-						 [1,facebook[0],	[whatsapp,	fila,		ge,			shell]],
-						 [2,facebook[0],	[whatsapp,	ford,		ge,			shell]],
-						 [3,facebook[0],	[whatsapp,	firestone,	motorola,	shell]],
-						 [4,facebook[0],	[whatsapp,	fila,		motorola,	shell]],
-						 [5,facebook[0],	[whatsapp,	ford,		motorola,	shell]],
-						 [6,facebook[0],	[whatsapp,	firestone,	addidas2,	shell]],
-						 [7,facebook[0],	[whatsapp,	fila,		addidas2,	shell]],
-						 [8,facebook[0],	[whatsapp,	ford,		addidas2,	shell]],
-						 [9,facebook_f[0],	[whatsapp,	firestone,	ge,			shell]],
-						[10,facebook_f[0],	[whatsapp,	fila,		ge,			shell]],
-						[11,facebook_f[0],	[whatsapp,	ford,		ge,			shell]],
-						[12,facebook_f[0],	[whatsapp,	firestone,	motorola,	shell]],
-						[13,facebook_f[0],	[whatsapp,	fila,		motorola,	shell]],
-						[14,facebook_f[0],	[whatsapp,	ford,		motorola,	shell]],
-						[15,facebook_f[0],	[whatsapp,	firestone,	addidas2,	shell]],
-						[16,facebook_f[0],	[whatsapp,	fila,		addidas2,	shell]],
-						[17,facebook_f[0],	[whatsapp,	ford,		addidas2,	shell]],
-						[18,facebook_c[0],	[whatsapp,	firestone,	shell,		ge]],
-						[19,facebook_c[0],	[whatsapp,	fila,		shell,		ge]],
-						[20,facebook_c[0],	[whatsapp,	ford,		shell,		ge]],
-						[21,facebook_c[0],	[whatsapp,	firestone,	shell,		motorola]],
-						[22,facebook_c[0],	[whatsapp,	fila,		shell,		motorola]],
-						[23,facebook_c[0],	[whatsapp,	ford,		shell,		motorola]],
-						[24,facebook_c[0],	[whatsapp,	firestone,	shell,		addidas2]],
-						[25,facebook_c[0],	[whatsapp,	fila,		shell,		addidas2]],
-						[26,facebook_c[0],	[whatsapp,	ford,		shell,		addidas2]],
-#						[11,claro[0],		[movistar,	disco,		cocacola,	pepsi]],
-#						[12,claro[0],		[movistar,	apple,		cocacola,	mcdonalds]],
-#						[13,claro[0],		[movistar,	shell,		disco,		mcdonalds]],
-#						[14,claro_f[0],		[movistar,	shell,		apple,		mcdonalds]],
-#						[15,claro_f[0],		[movistar,	disco,		cocacola,	pepsi]],
-#						[16,claro_c[0],		[movistar,	disco,		cocacola,	pepsi]],
-#						[17,claro_c[0],		[movistar,	ge,			apple,		pepsi]],
-#						[18,claro_c[0],		[movistar,	disco,		twitter,	pepsi]],
-#						[19,claro_c[0],		[movistar,	facebook,	apple,		mcdonalds]]
-#						 [1,disco[0],[carrefour,cocacola,pepsi,claro]],
-#						 [2,claro[0],[movistar,pepsi,disco,carrefour]],
-#						 [3,movistar[0],[claro,mcdonalds_f,python]],
-#						 [4,twitter[0],[facebook,motorola,nike,addidas]],
-						]
-				random.shuffle(tries)
-				estado = 0
 		if estado==1:
 			if timer <= 0:
 				screen.fill((255,255,255))
@@ -134,16 +99,40 @@ if __name__ == '__main__':
 				x = 0
 				for i in others:
 					pos = positions[0]
-					show.append([[pos[1],pos[0]],i[1]])
+					show.append([[pos[1],pos[0]],i[1],i[2]])
 					screen.blit(i[0], (pos[1]*w/5,pos[0]*h/3))
 					x = x + w/5
 					positions.remove(pos)
 					positions.append(pos)
-				pygame.display.update()
 				random.shuffle(positions)
 				estado = 4
+		elif estado==4:
+			screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
+			hour = 0
+			mint = 0
+			sec = g_timer/100
+			if sec >= 60:
+				mint = sec / 60
+				sec = sec % 60
+			if mint >= 60:
+				hour = mint / 60
+				mint = mint % 60
+			if hour < 10:
+				hour = "0"+str(hour)
+			if sec < 10:
+				sec = "0"+str(sec)
+			if mint < 10:
+				mint = "0"+str(mint)
+			new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
+			if new_time != time_left:
+				label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
+				screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
+				pygame.display.update()
+				time_left = new_time
+			#TODO: ver que pasa si llega a cero.
 
 		timer = timer-1
+		g_timer = g_timer-1
 		pygame.time.wait(10)
 
 		for event in pygame.event.get():
@@ -151,7 +140,10 @@ if __name__ == '__main__':
 			elif event.type == pygame.MOUSEBUTTONUP:
 				if event.button == 1:
 					done = False
+					x = -1
+					y = -1
 					if estado==0:
+						g_timer = global_timer
 						done = True
 					elif estado==4:
 						pos = pygame.mouse.get_pos()
@@ -159,28 +151,36 @@ if __name__ == '__main__':
 						y = pos[1]*3/h
 						for i in show:
 							if (i[0][0]==x and i[0][1]==y):
-								f.write(str(now) + " - " + i[1] + "\n")
+								f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]) + "|")
+								for j in show:
+									if i != j:
+										f.write(" " + j[1])
+								f.write("|"+time_left+"\n")
 								done = True
+								positions.remove([y,x])
 								break
 					if (done):
-						random.shuffle(tries)
+						random.shuffle(trials)
 						show = []
 						random.shuffle(positions)
-						trie = tries[0]
-						now = trie[0]
+						if (x>=0 and y>=0):
+							positions.append([y,x])
+						trial = trials[0]
+						now = trial[0]
 						sy = h
-						sx = trie[1].get_rect().w*h/trie[1].get_rect().h
-						target = pygame.transform.scale(trie[1], (sx, sy))
+						sx = now[0].get_rect().w*h/now[0].get_rect().h
+						target = pygame.transform.scale(now[0], (sx, sy))
 						others = []
-						for i in trie[2]:
-							if i[0].get_rect().w > i[0].get_rect().h:
+						for i in range(4):
+							t = random.choice(trial[i+1])
+							if t[0].get_rect().w > t[0].get_rect().h:
 								sx = w/5
-								sy = i[0].get_rect().h*w/5/i[0].get_rect().w
-								others.append([pygame.transform.scale(i[0], (sx, sy)),i[1]])
+								sy = t[0].get_rect().h*w/5/t[0].get_rect().w
+								others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
 							else:
 								sy = h/3
-								sx = i[0].get_rect().w*h/3/i[0].get_rect().h
-								others.append([pygame.transform.scale(i[0], (sx, sy)),i[1]])
+								sx = t[0].get_rect().w*h/3/t[0].get_rect().h
+								others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
 						timer = 1
 						estado = 1
 			elif event.type == pygame.KEYDOWN:

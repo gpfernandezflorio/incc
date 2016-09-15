@@ -59,6 +59,28 @@ if __name__ == '__main__':
 	android = [pygame.image.load("img/android.jpg").convert_alpha(),"android"]
 	mcdonalds = [pygame.image.load("img/mcdonalds.jpg").convert_alpha(),"mcdonalds"]
 	mcdonalds_f = [pygame.transform.flip(pygame.image.load("img/mcdonalds.jpg").convert_alpha(),False,True),"mcdonalds"]
+	mcdonalds1 = [pygame.image.load("img/mcDonals.png").convert_alpha(),"mcdonalds1"]
+	mario = [pygame.image.load("img/mario.png").convert_alpha(),"mario"]
+	pam = [pygame.image.load("img/paginasAmarillas.png").convert_alpha(),"paginas amarillas"]
+	cat = [pygame.image.load("img/cat.png").convert_alpha(),"cat"]
+	bic = [pygame.image.load("img/bic.png").convert_alpha(),"bic"]
+	fila1 = [pygame.image.load("img/fila1.png").convert_alpha(),"fila1"]
+	pizzahut1 = [pygame.image.load("img/pizzahut1.jpg").convert_alpha(),"pizzahut1"]
+	burgerking = [pygame.image.load("img/burgerKing.jpg").convert_alpha(),"burger king"]
+	manaos = [pygame.image.load("img/manaos.png").convert_alpha(),"manaos"]
+	crush = [pygame.image.load("img/crush.jpg").convert_alpha(),"crush"]
+	fanta = [pygame.image.load("img/fanta.png").convert_alpha(),"fanta"]
+	volkswagen = [pygame.image.load("img/volkswagen.png").convert_alpha(),"vw"]
+	v = [pygame.image.load("img/v.gif").convert_alpha(),"v"]
+	wordpress = [pygame.image.load("img/wordpress.png").convert_alpha(),"word press"]
+	chevrolet = [pygame.image.load("img/chevrolet.png").convert_alpha(),"chevrolet"]
+	mitsubishi = [pygame.image.load("img/mitsubishi.png").convert_alpha(),"mitsubishi"]
+	google = [pygame.image.load("img/googlePlus.png").convert_alpha(),"google"]
+	pinterest = [pygame.image.load("img/pinterest.png").convert_alpha(),"pinterest"]
+	puma = [pygame.image.load("img/puma logo.gif").convert_alpha(),"puma"]
+	ital = [pygame.image.load("img/italMexicana.png").convert_alpha(),"ital"]
+	wm = [pygame.image.load("img/warnerMusic.png").convert_alpha(),"warner music"]
+	superman = [pygame.image.load("img/superman.jpg").convert_alpha(),"superman"]
 
 	trials = []
 	show = []
@@ -76,7 +98,12 @@ if __name__ == '__main__':
 	time_left = ""
 
 	trials = [									#CONCEPTO																			#LETRA																			#COLOR																	#RUIDO
-					[movistar,				[claro],																			[mcdonalds],																[python],																[pepsi]]
+					[movistar,				[claro],																			[mcdonalds],																[python],																[pepsi]],
+					[mcdonalds1,			[pizzahut1,burgerking],												[movistar,motorola,mario],									[pam,cat,bic],													[addidas2,nike,fila,twitter]],
+					[cocacola,				[manaos,crush,fanta],													[motorola,whatsapp],												[mario,firestone],											[addidas2,walmart,bic]],
+					[volkswagen,			[chevrolet,mitsubishi],												[v,yahoo,cocacola,disco,wordpress],					[motorola,addidas2],										[superman,android,apple]],
+					[facebook,				[whatsapp,google,pinterest],									[fila1,firestone],													[motorola,addidas2],										[bic,crush,pam]],
+					[addidas,					[fila,nike,puma],															[ital,wm],																	[wordpress,v],													[crush,firestone,disco]]
 					]
 
 	while 1:
@@ -132,7 +159,7 @@ if __name__ == '__main__':
 			#TODO: ver que pasa si llega a cero.
 
 		timer = timer-1
-		g_timer = g_timer-1
+		g_timer = g_timer-10
 		pygame.time.wait(10)
 
 		for event in pygame.event.get():
@@ -151,21 +178,22 @@ if __name__ == '__main__':
 						y = pos[1]*3/h
 						for i in show:
 							if (i[0][0]==x and i[0][1]==y):
-								f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]) + "|")
+								f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]))
 								for j in show:
 									if i != j:
-										f.write(" " + j[1])
+										f.write("|" + j[1])
 								f.write("|"+time_left+"\n")
 								done = True
 								positions.remove([y,x])
 								break
 					if (done):
-						random.shuffle(trials)
 						show = []
 						random.shuffle(positions)
 						if (x>=0 and y>=0):
 							positions.append([y,x])
 						trial = trials[0]
+						trials.remove(trial)
+						trials.append(trial)
 						now = trial[0]
 						sy = h
 						sx = now[0].get_rect().w*h/now[0].get_rect().h
@@ -187,3 +215,8 @@ if __name__ == '__main__':
 				if event.key == pygame.K_F8:
 					f.close()
 					sys.exit()
+				elif event.key == pygame.K_F5:
+					f.write("NEW USER\n")
+					screen.fill((0,0,0))
+					pygame.display.update()
+					estado = 0

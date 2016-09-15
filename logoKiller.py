@@ -23,6 +23,7 @@ if __name__ == '__main__':
 	f = open("data.txt", 'a')
 	d = datetime.datetime.now()
 	f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
+	f.write("NEW USER\n")
 
 	screen = pygame.display.set_mode((w,h), FULLSCREEN)
 	screen.fill((0,0,0))

@@ -10,7 +10,7 @@ tiempo_pre_target = 10
 tiempo_target = 50
 tiempo_pos_target = 10
 
-global_timer = 10 * 60 * 100
+global_timer = 10 * 60 * 10
 
 if __name__ == '__main__':
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 	w = infoObject.current_w
 	h = infoObject.current_h
 
-	f = open("data.txt", 'a')
+	f = open("trials.txt", 'a')
 	d = datetime.datetime.now()
 	f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
 	f.write("NEW USER\n")
@@ -111,15 +111,15 @@ if __name__ == '__main__':
 	dot = [pygame.image.load("img/dot.jpg").convert_alpha(),"dot"]
 	suzuki = [pygame.image.load("img/suzuki.jpg").convert_alpha(),"suzuki"]
 
-
-
-	trials = [facebook, yahoo, ge, fila, firestone, addidas, addidas2, nike, carrefour, twitter, claro, cocacola, cocacola2, ford, whatsapp, disco, walmart, like, ferrum, pepsi, python, apple, movistar, shell, motorola, microsoft, android, mcdonalds, mcdonalds1, mario, pam, cat, bic, fila1, pizzahut1, burgerking, manaos, crush, fanta, volkswagen, v, wordpress, chevrolet, mitsubishi, google, pinterest, puma, ital, wm, superman, farmacity, america, apple, audi, havana, honda, olimpiadas, sube, toilet, unicenter, bic2, chrome, nueve, tvpublica, cruz, cruzroja, drahorro, fantoche, guaymallen, gamecube, jorgito, michelin, xbox, spiderman, batman, linterna, dot, suzuki]
+	imagenes = [facebook, yahoo, ge, fila, firestone, addidas, addidas2, nike, carrefour, twitter, claro, cocacola, cocacola2, ford, whatsapp, disco, walmart, like, ferrum, pepsi, python, apple, movistar, shell, motorola, microsoft, android, mcdonalds, mcdonalds1, mario, pam, cat, bic, fila1, pizzahut1, burgerking, manaos, crush, fanta, volkswagen, v, wordpress, chevrolet, mitsubishi, google, pinterest, puma, ital, wm, superman, farmacity, america, apple, audi, havana, honda, olimpiadas, sube, toilet, unicenter, bic2, chrome, nueve, tvpublica, cruz, cruzroja, drahorro, fantoche, guaymallen, gamecube, jorgito, michelin, xbox, spiderman, batman, linterna, dot, suzuki]
 	show = []
 	#positions = [[x, y] for x in range(5) for y in range(3)]
 	positions = [[0,1],[0,2],[0,3],[1,1],[1,3],[2,1],[2,2],[2,3]]
 	target = 0
 	now = -1
 	others = []
+	to_random = False
+	in_random = False
 
 	estado = 0
 	timer = 0
@@ -135,7 +135,7 @@ if __name__ == '__main__':
 					[cocacola,				[manaos,crush,fanta],							[motorola,whatsapp,volkswagen,wordpress],		[honda,mitsubishi,firestone],[addidas2,walmart,bic,sube,facebook,toilet]],
 					[volkswagen,			[chevrolet,mitsubishi,honda,ford],[v,cocacola,disco,wordpress,whatsapp],			[addidas2,twitter,ferrum,carrefour],[superman,android,unicenter,havana,fanta]],
 					[facebook,				[whatsapp,google,pinterest],			[fila1,firestone],													[motorola,addidas2,volkswagen],[bic,crush,pam,superman,honda,mitsubishi]],
-					[addidas,					[fila,nike,puma],									[ital,wm],																	[toilet,wordpress,v,puma],			[apple2,android,superman,crush,firestone,disco]],
+					[addidas,					[fila,nike,puma],									[ital,wm],																	[toilet,wordpress,v],				[apple2,android,superman,crush,firestone,disco]],
 					[america,					[nueve,tvpublica],								[gamecube],																	[olimpiadas,microsoft,apple2,chrome],[toilet,puma,wordpress]],
 					[android,					[apple2,microsoft],								[toilet,michelin,bic2],											[farmacity,xbox],								[disco,superman,volkswagen,ge,pam,bic]],
 					[audi,						[honda,chevrolet,mitsubishi],			[olimpiadas],																[puma,fila1,addidas],						[carrefour,movistar,microsoft,farmacity]],
@@ -177,33 +177,37 @@ if __name__ == '__main__':
 					positions.append(pos)
 				random.shuffle(positions)
 				estado = 4
-		elif estado==4:
-			screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
-			hour = 0
-			mint = 0
-			sec = g_timer/100
-			if sec >= 60:
-				mint = sec / 60
-				sec = sec % 60
-			if mint >= 60:
-				hour = mint / 60
-				mint = mint % 60
-			if hour < 10:
-				hour = "0"+str(hour)
-			if sec < 10:
-				sec = "0"+str(sec)
-			if mint < 10:
-				mint = "0"+str(mint)
-			new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
-			if new_time != time_left:
-				label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
-				screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
 				pygame.display.update()
-				time_left = new_time
+		#elif estado==4:
+			#screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
+			#hour = 0
+			#mint = 0
+			#sec = g_timer/100
+			#if sec >= 60:
+			#	mint = sec / 60
+			#	sec = sec % 60
+			#if mint >= 60:
+			#	hour = mint / 60
+			#	mint = mint % 60
+			#if hour < 10:
+			#	hour = "0"+str(hour)
+			#if sec < 10:
+			#	sec = "0"+str(sec)
+			#if mint < 10:
+			#	mint = "0"+str(mint)
+			#new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
+			#if new_time != time_left:
+			#	label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
+			#	screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
+			#	pygame.display.update()
+			#	time_left = new_time
 			#TODO: ver que pasa si llega a cero.
 
 		timer = timer-1
 		g_timer = g_timer-10
+		if g_timer <= 0:
+			if not in_random and not to_random:
+				to_random = True
 		pygame.time.wait(10)
 
 		for event in pygame.event.get():
@@ -222,7 +226,10 @@ if __name__ == '__main__':
 						y = pos[1]*3/h
 						for i in show:
 							if (i[0][0]==x and i[0][1]==y):
-								f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]))
+								if in_random:
+									f.write(str(now[1]) + "|" + i[1])
+								else:
+									f.write(str(now[1]) + "|" + i[1])
 								for j in show:
 									if i != j:
 										f.write("|" + j[1])
@@ -230,29 +237,64 @@ if __name__ == '__main__':
 								done = True
 								positions.remove([y,x])
 								break
+						if to_random:
+							f.close()
+							f = open("random.txt", 'a')
+							d = datetime.datetime.now()
+							f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
+							f.write("NEW USER\n")						
+							in_random = True
+							to_random = False
+							g_timer = global_timer
+						elif in_random and g_timer <= 0:
+							f.close()
+							f = open("trials.txt", 'a')
+							d = datetime.datetime.now()
+							f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
+							f.write("NEW USER\n")						
+							in_random = False
+							to_random = False
+							g_timer = global_timer
 					if (done):
 						show = []
 						random.shuffle(positions)
 						if (x>=0 and y>=0):
 							positions.append([y,x])
-						trial = trials[0]
-						trials.remove(trial)
-						trials.append(trial)
-						now = trial[0]
-						sy = h
-						sx = now[0].get_rect().w*h/now[0].get_rect().h
-						target = pygame.transform.scale(now[0], (sx, sy))
-						others = []
-						for i in range(4):
-							t = random.choice(trial[i+1])
-							if t[0].get_rect().w > t[0].get_rect().h:
-								sx = w/5
-								sy = t[0].get_rect().h*w/5/t[0].get_rect().w
-								others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
-							else:
-								sy = h/3
-								sx = t[0].get_rect().w*h/3/t[0].get_rect().h
-								others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
+						if in_random:
+							now = random.choice(imagenes)
+							sy = h
+							sx = now[0].get_rect().w*h/now[0].get_rect().h
+							target = pygame.transform.scale(now[0], (sx, sy))
+							others = []
+							for i in range(4):
+								t = random.choice(imagenes)
+								if t[0].get_rect().w > t[0].get_rect().h:
+									sx = w/5
+									sy = t[0].get_rect().h*w/5/t[0].get_rect().w
+									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],-1])
+								else:
+									sy = h/3
+									sx = t[0].get_rect().w*h/3/t[0].get_rect().h
+									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],-1])
+						else:
+							trial = trials[0]
+							trials.remove(trial)
+							trials.append(trial)
+							now = trial[0]
+							sy = h
+							sx = now[0].get_rect().w*h/now[0].get_rect().h
+							target = pygame.transform.scale(now[0], (sx, sy))
+							others = []
+							for i in range(4):
+								t = random.choice(trial[i+1])
+								if t[0].get_rect().w > t[0].get_rect().h:
+									sx = w/5
+									sy = t[0].get_rect().h*w/5/t[0].get_rect().w
+									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
+								else:
+									sy = h/3
+									sx = t[0].get_rect().w*h/3/t[0].get_rect().h
+									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
 						timer = 1
 						estado = 1
 			elif event.type == pygame.KEYDOWN:
@@ -260,7 +302,17 @@ if __name__ == '__main__':
 					f.close()
 					sys.exit()
 				elif event.key == pygame.K_F5:
-					f.write("NEW USER\n")
+					if in_random:
+						f.close()
+						f = open("trials.txt", 'a')
+						d = datetime.datetime.now()
+						f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
+						f.write("NEW USER\n")						
+						in_random = False
+						to_random = False
+						g_timer = global_timer
+					else:
+						f.write("NEW USER\n")
 					screen.fill((0,0,0))
 					pygame.display.update()
 					estado = 0

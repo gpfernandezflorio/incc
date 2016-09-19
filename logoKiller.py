@@ -82,6 +82,34 @@ if __name__ == '__main__':
 	ital = [pygame.image.load("img/italMexicana.png").convert_alpha(),"ital"]
 	wm = [pygame.image.load("img/warnerMusic.png").convert_alpha(),"warner music"]
 	superman = [pygame.image.load("img/superman.jpg").convert_alpha(),"superman"]
+	farmacity = [pygame.image.load("img/farmacity.png").convert_alpha(),"farmacity"]
+	america = [pygame.image.load("img/america.png").convert_alpha(),"america"]
+	apple2 = [pygame.image.load("img/apple.png").convert_alpha(),"apple2"]
+	audi = [pygame.image.load("img/audi.png").convert_alpha(),"audi"]
+	havana = [pygame.image.load("img/havanna.jpg").convert_alpha(),"havana"]
+	honda = [pygame.image.load("img/honda.jpg").convert_alpha(),"honda"]
+	olimpiadas = [pygame.image.load("img/olimpiadas.png").convert_alpha(),"olimpiadas"]
+	sube = [pygame.image.load("img/sube.jpg").convert_alpha(),"sube"]
+	toilet = [pygame.image.load("img/toilet.png").convert_alpha(),"toilet"]
+	unicenter = [pygame.image.load("img/unicenter.jpg").convert_alpha(),"unicenter"]
+	bic2 = [pygame.image.load("img/bic2.png").convert_alpha(),"bic2"]
+	chrome = [pygame.image.load("img/chrome.png").convert_alpha(),"chrome"]
+	canal9 = [pygame.image.load("img/canal9.jpg").convert_alpha(),"canal9"]
+	canal7 = [pygame.image.load("img/canal7.png").convert_alpha(),"canal7"]
+	cruz = [pygame.image.load("img/cruz.png").convert_alpha(),"cruz"]
+	cruzroja = [pygame.image.load("img/cruzr.gif").convert_alpha(),"cruzroja"]
+	drahorro = [pygame.image.load("img/drAhorro.jpg").convert_alpha(),"drahorro"]
+	fantoche = [pygame.image.load("img/fantoche.jpg").convert_alpha(),"fantoche"]
+	guaymallen = [pygame.image.load("img/Guaymallen.jpg").convert_alpha(),"guaymallen"]
+	gamecube = [pygame.image.load("img/gameCube.jpg").convert_alpha(),"gamecube"]
+	jorgito = [pygame.image.load("img/Jorgito.gif").convert_alpha(),"jorgito"]
+	michelin = [pygame.image.load("img/michelin.png").convert_alpha(),"michelin"]
+	xbox = [pygame.image.load("img/xbox.png").convert_alpha(),"xbox"]
+	spiderman = [pygame.image.load("img/spiderman.jpg").convert_alpha(),"spiderman"]
+	batman = [pygame.image.load("img/batman.gif").convert_alpha(),"batman"]
+	linterna = [pygame.image.load("img/linterna.png").convert_alpha(),"linterna"]
+	dot = [pygame.image.load("img/dot.jpg").convert_alpha(),"dot"]
+	suzuki = [pygame.image.load("img/suzuki.jpg").convert_alpha(),"suzuki"]
 
 	trials = []
 	show = []
@@ -99,12 +127,24 @@ if __name__ == '__main__':
 	time_left = ""
 
 	trials = [									#CONCEPTO																			#LETRA																			#COLOR																	#RUIDO
-					[movistar,				[claro],																			[mcdonalds],																[python],																[pepsi]],
-					[mcdonalds1,			[pizzahut1,burgerking],												[movistar,motorola,mario],									[pam,cat,bic],													[addidas2,nike,fila,twitter]],
-					[cocacola,				[manaos,crush,fanta],													[motorola,whatsapp],												[mario,firestone],											[addidas2,walmart,bic]],
-					[volkswagen,			[chevrolet,mitsubishi],												[v,yahoo,cocacola,disco,wordpress],					[motorola,addidas2],										[superman,android,apple]],
-					[facebook,				[whatsapp,google,pinterest],									[fila1,firestone],													[motorola,addidas2],										[bic,crush,pam]],
-					[addidas,					[fila,nike,puma],															[ital,wm],																	[wordpress,v],													[crush,firestone,disco]]
+					[movistar,				[claro],													[mcdonalds,motorola,mario],									[farmacity,sube],						[pepsi,bic,burgerking,carrefour,ge,mitsubishi,pam]],
+					[claro,						[movistar],												[whatsapp,motorola,wordpress],							[firestone, honda,mitsubishi],[fila1,chevrolet,pam,addidas,farmacity,toilet]],
+					[mcdonalds1,			[pizzahut1,burgerking],						[movistar,motorola,mario],									[pam,cat,bic],							[addidas2,nike,fila,twitter,volkswagen,farmacity]],
+					[cocacola,				[manaos,crush,fanta],							[motorola,whatsapp,volkswagen,wordpress],		[honda,mitsubishi,firestone],[addidas2,walmart,bic,sube,facebook,toilet]],
+					[volkswagen,			[chevrolet,mitsubishi,honda,ford],[v,cocacola,disco,wordpress,whatsapp],			[addidas2,twitter,ferrum,carrefour],[superman,android,unicenter,havana,fanta]],
+					[facebook,				[whatsapp,google,pinterest],			[fila1,firestone],													[motorola,addidas2,volkswagen],[bic,crush,pam,superman,honda,mirtsubishi]],
+					[addidas,					[fila,nike,puma],									[ital,wm],																	[toilet,wordpress,v,puma],			[apple2,android,superman,crush,firestone,disco]],
+					[america,					[nueve,tvpublica],								[gamecube,cube],														[olimpiadas,windows,apple2,chrome],[toilet,puma,wordpress]],
+					[android,					[apple2,microsoft],								[toilet,michelin,bic2],											[farmacity,xbox],								[disco,superman,volkswagen,ge,pam,bic]],
+					[audi,						[honda,chevrolet,mitsubishi],			[olimpiadas],																[puma,fila1,addidas],						[carrefour,movistar,microsoft,farmacity]],
+					[disco,						[carrefour,walmart],							[motorola,volkswagen,wordpress],						[honda,mcdonalds],						[pam,toilet,android,nike,twitter]],
+					[chevrolet,				[ford,honda,volkswagen,mitsubishi],[cruz,farmacity,cruzroja],									[cat,pam,mcdonalds1],					[unicenter,twitter,pepsi,android,yahoo]],
+					[cocacola2,				[pepsi,manaos,crush],							[ford],																			[pinterest,mitsubishi],				[motorola,facebook,whatsappp,america]],
+					[farmacity,				[drahorro],												[havana,cruz,chevrolet],										[movistar,whatsapp],					[mcdonalds1,pepsi,audi,misubishi,burgerking]],
+					[honda,						[chevrolet,volkswagen,ford,audi],	[havana,ferrum,twitter,pam,fila1],					[mario,disco,pinterest,claro],[whatsapp,addidas2,bic,ge]],
+					[havana,					[jorgito,guaymallen,fantoche],		[honda,farmacity,cruz,sube],								[cat,shell,bic,pam,superman],	[twitter,nike,volkswagen,movistar,yahoo]],
+					[superman,				[spiderman,batman,linterna],			[],																					[shell,mcdonalds],						[like,toilet,walmart,wordpress]],
+					[unicenter,				[dot],														[sube],																			[movistar,android,whatsapp],	[ferrum,volkswagen,ital]]
 					]
 
 	while 1:

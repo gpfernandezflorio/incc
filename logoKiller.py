@@ -72,7 +72,7 @@ if __name__ == '__main__':
 	crush = [pygame.image.load("img/crush.jpg").convert_alpha(),"crush"]
 	fanta = [pygame.image.load("img/fanta.png").convert_alpha(),"fanta"]
 	volkswagen = [pygame.image.load("img/volkswagen.png").convert_alpha(),"vw"]
-	v = [pygame.image.load("img/v.gif").convert_alpha(),"v"]
+	v = [pygame.image.load("img/v.png").convert_alpha(),"v"]
 	wordpress = [pygame.image.load("img/wordpress.png").convert_alpha(),"word press"]
 	chevrolet = [pygame.image.load("img/chevrolet.png").convert_alpha(),"chevrolet"]
 	mitsubishi = [pygame.image.load("img/mitsubishi.png").convert_alpha(),"mitsubishi"]
@@ -94,8 +94,8 @@ if __name__ == '__main__':
 	unicenter = [pygame.image.load("img/unicenter.jpg").convert_alpha(),"unicenter"]
 	bic2 = [pygame.image.load("img/bic2.png").convert_alpha(),"bic2"]
 	chrome = [pygame.image.load("img/chrome.png").convert_alpha(),"chrome"]
-	canal9 = [pygame.image.load("img/canal9.jpg").convert_alpha(),"canal9"]
-	canal7 = [pygame.image.load("img/canal7.png").convert_alpha(),"canal7"]
+	nueve = [pygame.image.load("img/canal9.jpg").convert_alpha(),"canal9"]
+	tvpublica = [pygame.image.load("img/canal7.png").convert_alpha(),"canal7"]
 	cruz = [pygame.image.load("img/cruz.png").convert_alpha(),"cruz"]
 	cruzroja = [pygame.image.load("img/cruzr.gif").convert_alpha(),"cruzroja"]
 	drahorro = [pygame.image.load("img/drAhorro.jpg").convert_alpha(),"drahorro"]
@@ -132,20 +132,21 @@ if __name__ == '__main__':
 					[mcdonalds1,			[pizzahut1,burgerking],						[movistar,motorola,mario],									[pam,cat,bic],							[addidas2,nike,fila,twitter,volkswagen,farmacity]],
 					[cocacola,				[manaos,crush,fanta],							[motorola,whatsapp,volkswagen,wordpress],		[honda,mitsubishi,firestone],[addidas2,walmart,bic,sube,facebook,toilet]],
 					[volkswagen,			[chevrolet,mitsubishi,honda,ford],[v,cocacola,disco,wordpress,whatsapp],			[addidas2,twitter,ferrum,carrefour],[superman,android,unicenter,havana,fanta]],
-					[facebook,				[whatsapp,google,pinterest],			[fila1,firestone],													[motorola,addidas2,volkswagen],[bic,crush,pam,superman,honda,mirtsubishi]],
+					[facebook,				[whatsapp,google,pinterest],			[fila1,firestone],													[motorola,addidas2,volkswagen],[bic,crush,pam,superman,honda,mitsubishi]],
 					[addidas,					[fila,nike,puma],									[ital,wm],																	[toilet,wordpress,v,puma],			[apple2,android,superman,crush,firestone,disco]],
-					[america,					[nueve,tvpublica],								[gamecube,cube],														[olimpiadas,windows,apple2,chrome],[toilet,puma,wordpress]],
+					[america,					[nueve,tvpublica],								[gamecube],																	[olimpiadas,microsoft,apple2,chrome],[toilet,puma,wordpress]],
 					[android,					[apple2,microsoft],								[toilet,michelin,bic2],											[farmacity,xbox],								[disco,superman,volkswagen,ge,pam,bic]],
 					[audi,						[honda,chevrolet,mitsubishi],			[olimpiadas],																[puma,fila1,addidas],						[carrefour,movistar,microsoft,farmacity]],
 					[disco,						[carrefour,walmart],							[motorola,volkswagen,wordpress],						[honda,mcdonalds],						[pam,toilet,android,nike,twitter]],
 					[chevrolet,				[ford,honda,volkswagen,mitsubishi],[cruz,farmacity,cruzroja],									[cat,pam,mcdonalds1],					[unicenter,twitter,pepsi,android,yahoo]],
-					[cocacola2,				[pepsi,manaos,crush],							[ford],																			[pinterest,mitsubishi],				[motorola,facebook,whatsappp,america]],
-					[farmacity,				[drahorro],												[havana,cruz,chevrolet],										[movistar,whatsapp],					[mcdonalds1,pepsi,audi,misubishi,burgerking]],
+					[cocacola2,				[pepsi,manaos,crush],							[ford],																			[pinterest,mitsubishi],				[motorola,facebook,whatsapp,america]],
+					[farmacity,				[drahorro],												[havana,cruz,chevrolet],										[movistar,whatsapp],					[mcdonalds1,pepsi,audi,mitsubishi,burgerking]],
 					[honda,						[chevrolet,volkswagen,ford,audi],	[havana,ferrum,twitter,pam,fila1],					[mario,disco,pinterest,claro],[whatsapp,addidas2,bic,ge]],
 					[havana,					[jorgito,guaymallen,fantoche],		[honda,farmacity,cruz,sube],								[cat,shell,bic,pam,superman],	[twitter,nike,volkswagen,movistar,yahoo]],
-					[superman,				[spiderman,batman,linterna],			[],																					[shell,mcdonalds],						[like,toilet,walmart,wordpress]],
+					[superman,				[spiderman,batman,linterna],			[suzuki],																		[shell,mcdonalds],						[like,toilet,walmart,wordpress]],
 					[unicenter,				[dot],														[sube],																			[movistar,android,whatsapp],	[ferrum,volkswagen,ital]]
 					]
+	random.shuffle(trials)
 
 	while 1:
 		if estado==1:

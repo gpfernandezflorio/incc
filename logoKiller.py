@@ -111,7 +111,9 @@ if __name__ == '__main__':
 	dot = [pygame.image.load("img/dot.jpg").convert_alpha(),"dot"]
 	suzuki = [pygame.image.load("img/suzuki.jpg").convert_alpha(),"suzuki"]
 
-	trials = []
+
+
+	trials = [facebook, yahoo, ge, fila, firestone, addidas, addidas2, nike, carrefour, twitter, claro, cocacola, cocacola2, ford, whatsapp, disco, walmart, like, ferrum, pepsi, python, apple, movistar, shell, motorola, microsoft, android, mcdonalds, mcdonalds1, mario, pam, cat, bic, fila1, pizzahut1, burgerking, manaos, crush, fanta, volkswagen, v, wordpress, chevrolet, mitsubishi, google, pinterest, puma, ital, wm, superman, farmacity, america, apple, audi, havana, honda, olimpiadas, sube, toilet, unicenter, bic2, chrome, nueve, tvpublica, cruz, cruzroja, drahorro, fantoche, guaymallen, gamecube, jorgito, michelin, xbox, spiderman, batman, linterna, dot, suzuki]
 	show = []
 	#positions = [[x, y] for x in range(5) for y in range(3)]
 	positions = [[0,1],[0,2],[0,3],[1,1],[1,3],[2,1],[2,2],[2,3]]

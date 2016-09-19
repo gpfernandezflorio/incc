@@ -229,7 +229,7 @@ if __name__ == '__main__':
 								if in_random:
 									f.write(str(now[1]) + "|" + i[1])
 								else:
-									f.write(str(now[1]) + "|" + i[1])
+									f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]))
 								for j in show:
 									if i != j:
 										f.write("|" + j[1])
@@ -240,18 +240,12 @@ if __name__ == '__main__':
 						if to_random:
 							f.close()
 							f = open("random.txt", 'a')
-							d = datetime.datetime.now()
-							f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
-							f.write("NEW USER\n")						
 							in_random = True
 							to_random = False
 							g_timer = global_timer
 						elif in_random and g_timer <= 0:
 							f.close()
 							f = open("trials.txt", 'a')
-							d = datetime.datetime.now()
-							f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
-							f.write("NEW USER\n")						
 							in_random = False
 							to_random = False
 							g_timer = global_timer
@@ -305,8 +299,6 @@ if __name__ == '__main__':
 					if in_random:
 						f.close()
 						f = open("trials.txt", 'a')
-						d = datetime.datetime.now()
-						f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
 						f.write("NEW USER\n")						
 						in_random = False
 						to_random = False

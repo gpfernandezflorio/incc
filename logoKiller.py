@@ -10,7 +10,7 @@ tiempo_pre_target = 10
 tiempo_target = 50
 tiempo_pos_target = 10
 
-global_timer = 10 * 60 * 10
+global_timer = 10 * 60 * 1
 
 if __name__ == '__main__':
 
@@ -118,12 +118,11 @@ if __name__ == '__main__':
 	target = 0
 	now = -1
 	others = []
-	to_random = False
 	in_random = False
 
 	estado = 0
 	timer = 0
-	g_timer = global_timer
+	g_timer = 0
 	font = pygame.font.SysFont("digital", w/10, True)
 
 	time_left = ""
@@ -178,36 +177,32 @@ if __name__ == '__main__':
 				random.shuffle(positions)
 				estado = 4
 				pygame.display.update()
-		#elif estado==4:
-			#screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
-			#hour = 0
-			#mint = 0
-			#sec = g_timer/100
-			#if sec >= 60:
-			#	mint = sec / 60
-			#	sec = sec % 60
-			#if mint >= 60:
-			#	hour = mint / 60
-			#	mint = mint % 60
-			#if hour < 10:
-			#	hour = "0"+str(hour)
-			#if sec < 10:
-			#	sec = "0"+str(sec)
-			#if mint < 10:
-			#	mint = "0"+str(mint)
-			#new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
-			#if new_time != time_left:
-			#	label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
-			#	screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
-			#	pygame.display.update()
-			#	time_left = new_time
-			#TODO: ver que pasa si llega a cero.
+		elif estado==4:
+			screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
+			hour = 0
+			mint = 0
+			sec = g_timer/100
+			if sec >= 60:
+				mint = sec / 60
+				sec = sec % 60
+			if mint >= 60:
+				hour = mint / 60
+				mint = mint % 60
+			if hour < 10:
+				hour = "0"+str(hour)
+			if sec < 10:
+				sec = "0"+str(sec)
+			if mint < 10:
+				mint = "0"+str(mint)
+			new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
+			if new_time != time_left:
+				label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
+				screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
+				pygame.display.update()
+				time_left = new_time
 
 		timer = timer-1
-		g_timer = g_timer-10
-		if g_timer <= 0:
-			if not in_random and not to_random:
-				to_random = True
+		g_timer = g_timer + 1
 		pygame.time.wait(10)
 
 		for event in pygame.event.get():
@@ -218,7 +213,7 @@ if __name__ == '__main__':
 					x = -1
 					y = -1
 					if estado==0:
-						g_timer = global_timer
+						g_timer = 0
 						done = True
 					elif estado==4:
 						pos = pygame.mouse.get_pos()
@@ -227,7 +222,7 @@ if __name__ == '__main__':
 						for i in show:
 							if (i[0][0]==x and i[0][1]==y):
 								if in_random:
-									f.write(str(now[1]) + "|" + i[1])
+									f.write(">" + str(now[1]) + "|" + i[1])
 								else:
 									f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]))
 								for j in show:
@@ -236,20 +231,10 @@ if __name__ == '__main__':
 								f.write("|"+time_left+"\n")
 								done = True
 								positions.remove([y,x])
-								break
-						if to_random:
-							f.close()
-							f = open("random.txt", 'a')
-							in_random = True
-							to_random = False
-							g_timer = global_timer
-						elif in_random and g_timer <= 0:
-							f.close()
-							f = open("trials.txt", 'a')
-							in_random = False
-							to_random = False
-							g_timer = global_timer
 					if (done):
+						if g_timer > global_timer:
+							in_random = not in_random
+							g_timer = 0
 						show = []
 						random.shuffle(positions)
 						if (x>=0 and y>=0):
@@ -297,14 +282,11 @@ if __name__ == '__main__':
 					sys.exit()
 				elif event.key == pygame.K_F5:
 					if in_random:
-						f.close()
-						f = open("trials.txt", 'a')
 						f.write("NEW USER\n")						
 						in_random = False
-						to_random = False
-						g_timer = global_timer
 					else:
 						f.write("NEW USER\n")
+					g_timer = 0
 					screen.fill((0,0,0))
 					pygame.display.update()
 					estado = 0

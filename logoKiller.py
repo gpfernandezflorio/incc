@@ -78,7 +78,7 @@ if __name__ == '__main__':
 	mitsubishi = [pygame.image.load("img/mitsubishi.png").convert_alpha(),"mitsubishi"]
 	google = [pygame.image.load("img/googlePlus.png").convert_alpha(),"google"]
 	pinterest = [pygame.image.load("img/pinterest.png").convert_alpha(),"pinterest"]
-	puma = [pygame.image.load("img/puma logo.gif").convert_alpha(),"puma"]
+	puma = [pygame.image.load("img/puma.png").convert_alpha(),"puma"]
 	ital = [pygame.image.load("img/italMexicana.png").convert_alpha(),"ital"]
 	wm = [pygame.image.load("img/warnerMusic.png").convert_alpha(),"warner music"]
 	superman = [pygame.image.load("img/superman.jpg").convert_alpha(),"superman"]
@@ -177,32 +177,33 @@ if __name__ == '__main__':
 				random.shuffle(positions)
 				estado = 4
 				pygame.display.update()
+				g_timer = 0
 		elif estado==4:
 			screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
 			hour = 0
 			mint = 0
+			g_timer = g_timer + 1
 			sec = g_timer/100
-			if sec >= 60:
-				mint = sec / 60
-				sec = sec % 60
-			if mint >= 60:
-				hour = mint / 60
-				mint = mint % 60
-			if hour < 10:
-				hour = "0"+str(hour)
-			if sec < 10:
-				sec = "0"+str(sec)
-			if mint < 10:
-				mint = "0"+str(mint)
-			new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
-			if new_time != time_left:
-				label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
-				screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
-				pygame.display.update()
-				time_left = new_time
+#			if sec >= 60:
+#				mint = sec / 60
+#				sec = sec % 60
+#			if mint >= 60:
+#				hour = mint / 60
+#				mint = mint % 60
+#			if hour < 10:
+#				hour = "0"+str(hour)
+#			if sec < 10:
+#				sec = "0"+str(sec)
+#			if mint < 10:
+#				mint = "0"+str(mint)
+#			new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
+#			if new_time != time_left:
+#				label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
+#				screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
+#				pygame.display.update()
+#				time_left = new_time
 
 		timer = timer-1
-		g_timer = g_timer + 1
 		pygame.time.wait(10)
 
 		for event in pygame.event.get():
@@ -228,13 +229,12 @@ if __name__ == '__main__':
 								for j in show:
 									if i != j:
 										f.write("|" + j[1])
-								f.write("|"+time_left+"\n")
+								f.write("|"+str(g_timer/100.0)+"\n")
 								done = True
 								positions.remove([y,x])
 					if (done):
-						if g_timer > global_timer:
-							in_random = not in_random
-							g_timer = 0
+						g_timer = 0
+						in_random = not in_random
 						show = []
 						random.shuffle(positions)
 						if (x>=0 and y>=0):
@@ -245,8 +245,11 @@ if __name__ == '__main__':
 							sx = now[0].get_rect().w*h/now[0].get_rect().h
 							target = pygame.transform.scale(now[0], (sx, sy))
 							others = []
+							temp = []
 							for i in range(4):
 								t = random.choice(imagenes)
+								imagenes.remove(t)
+								temp.append(t)
 								if t[0].get_rect().w > t[0].get_rect().h:
 									sx = w/5
 									sy = t[0].get_rect().h*w/5/t[0].get_rect().w
@@ -255,6 +258,8 @@ if __name__ == '__main__':
 									sy = h/3
 									sx = t[0].get_rect().w*h/3/t[0].get_rect().h
 									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],-1])
+							for t in temp:
+								imagenes.append(t)
 						else:
 							trial = trials[0]
 							trials.remove(trial)

@@ -20,10 +20,7 @@ if __name__ == '__main__':
 	w = infoObject.current_w
 	h = infoObject.current_h
 
-	f = open("trials.txt", 'a')
 	d = datetime.datetime.now()
-	f.write("<" + str(d.day) + "/" + str(d.month) + "/" + str(d.year) + ">\n")
-	f.write("NEW USER\n")
 
 	screen = pygame.display.set_mode((w,h), FULLSCREEN)
 	screen.fill((0,0,0))
@@ -147,130 +144,19 @@ if __name__ == '__main__':
 	random.shuffle(trials)
 
 	while 1:
-		if estado==1:
-			if timer <= 0:
-				screen.fill((255,255,255))
-				screen.blit(target, Rect(w/2-target.get_rect().w/2,0,1,1))
-				pygame.display.update()
-				timer = tiempo_target
-				estado = 2
-		elif estado==2:
-			if timer <= 0:
-				screen.fill((0,0,0))
-				pygame.display.update()
-				timer = tiempo_pos_target
-				estado = 3
-		elif estado==3:
-			if timer <= 0:
-				screen.fill((255,255,255))
-				x = 0
-				for i in others:
-					pos = positions[0]
-					show.append([[pos[1],pos[0]],i[1],i[2]])
-					screen.blit(i[0], (pos[1]*w/5,pos[0]*h/3))
-					x = x + w/5
-					positions.remove(pos)
-					positions.append(pos)
-				random.shuffle(positions)
-				estado = 4
-				pygame.display.update()
-				g_timer = 0
-		elif estado==4:
-			screen.fill((255,255,255),(w*2/5,h*1/3,w/5,h/3))
-			hour = 0
-			mint = 0
-			g_timer = g_timer + 1
-			sec = g_timer/100
-		timer = timer-1
-		pygame.time.wait(10)
 
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT: sys.exit()
 			elif event.type == pygame.MOUSEBUTTONUP:
 				if event.button == 1:
-					done = False
-					x = -1
-					y = -1
-					if estado==0:
-						g_timer = 0
-						done = True
-					elif estado==4:
-						pos = pygame.mouse.get_pos()
-						x = pos[0]*5/w
-						y = pos[1]*3/h
-						for i in show:
-							if (i[0][0]==x and i[0][1]==y):
-								if in_random:
-									f.write(">" + str(now[1]) + "|" + i[1])
-								else:
-									f.write(str(now[1]) + "|" + i[1] + "|" + str(i[2]))
-								for j in show:
-									if i != j:
-										f.write("|" + j[1])
-								f.write("|"+str(g_timer/100.0)+"\n")
-								done = True
-								positions.remove([y,x])
-					if (done):
-						g_timer = 0
-						in_random = not in_random
-						show = []
-						random.shuffle(positions)
-						if (x>=0 and y>=0):
-							positions.append([y,x])
-						if in_random:
-							now = random.choice(imagenes)
-							imagenes.remove(now)
-							temp = [now]
-							sy = h
-							sx = now[0].get_rect().w*h/now[0].get_rect().h
-							target = pygame.transform.scale(now[0], (sx, sy))
-							others = []
-							for i in range(4):
-								t = random.choice(imagenes)
-								imagenes.remove(t)
-								temp.append(t)
-								if t[0].get_rect().w > t[0].get_rect().h:
-									sx = w/5
-									sy = t[0].get_rect().h*w/5/t[0].get_rect().w
-									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],-1])
-								else:
-									sy = h/3
-									sx = t[0].get_rect().w*h/3/t[0].get_rect().h
-									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],-1])
-							for t in temp:
-								imagenes.append(t)
-						else:
-							trial = trials[0]
-							trials.remove(trial)
-							trials.append(trial)
-							now = trial[0]
-							sy = h
-							sx = now[0].get_rect().w*h/now[0].get_rect().h
-							target = pygame.transform.scale(now[0], (sx, sy))
-							others = []
-							for i in range(4):
-								t = random.choice(trial[i+1])
-								if t[0].get_rect().w > t[0].get_rect().h:
-									sx = w/5
-									sy = t[0].get_rect().h*w/5/t[0].get_rect().w
-									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
-								else:
-									sy = h/3
-									sx = t[0].get_rect().w*h/3/t[0].get_rect().h
-									others.append([pygame.transform.scale(t[0], (sx, sy)),t[1],i])
-						timer = 1
-						estado = 1
+					now = imagenes[0]
+					sy = h
+					sx = now[0].get_rect().w*h/now[0].get_rect().h
+					imagenes.remove(now)
+					target = pygame.transform.scale(now[0], (sx, sy))
+					screen.fill((255,255,255))
+					screen.blit(target, Rect(w/2-target.get_rect().w/2,0,1,1))
+					pygame.display.update()
 			elif event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_F8:
-					f.close()
 					sys.exit()
-				elif event.key == pygame.K_F5:
-					if in_random:
-						f.write("NEW USER\n")						
-						in_random = False
-					else:
-						f.write("NEW USER\n")
-					g_timer = 0
-					screen.fill((0,0,0))
-					pygame.display.update()
-					estado = 0

@@ -12,6 +12,8 @@ tiempo_pos_target = 10
 
 global_timer = 10 * 60 * 1
 
+new_timer = 10 * 60 * 1
+
 if __name__ == '__main__':
 
 	pygame.init()
@@ -120,6 +122,7 @@ if __name__ == '__main__':
 	estado = 0
 	timer = 0
 	g_timer = 0
+	n_timer = new_timer
 	font = pygame.font.SysFont("digital", w/10, True)
 
 	time_left = ""
@@ -180,6 +183,27 @@ if __name__ == '__main__':
 			hour = 0
 			mint = 0
 			g_timer = g_timer + 1
+			n_timer = n_timer - 1
+			sec = n_timer/100
+			if n_timer >= 0:
+				if sec >= 60:
+					mint = sec / 60
+					sec = sec % 60
+				if mint >= 60:
+					hour = mint / 60
+					mint = mint % 60
+				if hour < 10:
+					hour = "0"+str(hour)
+				if sec < 10:
+					sec = "0"+str(sec)
+				if mint < 10:
+					mint = "0"+str(mint)
+				new_time = str(hour) + ":" + str(mint) + ":" + str(sec)
+				if new_time != time_left:
+					label = pygame.transform.scale(font.render(new_time, True, (0,0,0)),(w/6,h/3))
+					screen.blit(label, (w/2-label.get_rect().w/2,h/2-label.get_rect().h/2))
+					pygame.display.update()
+					time_left = new_time
 			sec = g_timer/100
 		timer = timer-1
 		pygame.time.wait(10)
@@ -271,6 +295,7 @@ if __name__ == '__main__':
 					else:
 						f.write("NEW USER\n")
 					g_timer = 0
+					n_timer = new_timer
 					screen.fill((0,0,0))
 					pygame.display.update()
 					estado = 0

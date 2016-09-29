@@ -679,3 +679,903 @@ addidas|fila|0|ital|v|crush|1.96
 >claro|cruzroja|dot|audi|addidas|3.26
 disco|carrefour|0|word press|mcdonalds|twitter|1.87
 NEW USER
+>pepsi|movistar|xbox|puma|suzuki|4.32
+havana|fantoche|0|cruz|cat|yahoo|1.91
+>chevrolet|v|nike|ferrum|claro|3.51
+unicenter|dot|0|sube|whatsapp|ital|2.21
+>dot|yahoo|xbox|unicenter|cocacola|3.54
+superman|linterna|0|suzuki|mcdonalds|walmart|1.13
+>cocacola|fanta|suzuki|canal9|whatsapp|0.96
+audi|olimpiadas|1|chevrolet|puma|carrefour|1.35
+>mcdonalds1|mcdonalds|mitsubishi|shell|facebook|0.93
+facebook|firestone|1|pinterest|motorola|crush|1.64
+>toilet|facebook|suzuki|america|chrome|3.12
+honda|chevrolet|0|twitter|claro|addidas2|1.37
+>pepsi|walmart|pinterest|fila|addidas|1.85
+chevrolet|vw|0|cruz|cat|android|1.32
+>toilet|fila|shell|microsoft|manaos|1.35
+disco|walmart|0|word press|honda|android|1.21
+>cruz|android|fila|cocacola2|movistar|1.79
+addidas|puma|0|ital|v|superman|1.09
+>carrefour|dot|suzuki|android|warner music|1.0
+america|canal7|0|gamecube|microsoft|word press|1.25
+>cruz|cocacola2|gamecube|mcdonalds|manaos|2.37
+cocacola2|manaos|0|ford|pinterest|motorola|1.84
+>python|manaos|dot|audi|fanta|2.13
+farmacity|drahorro|0|havana|whatsapp|audi|1.64
+>cruzroja|pizzahut1|spiderman|honda|apple|1.81
+vw|honda|0|v|carrefour|superman|1.66
+>movistar|olimpiadas|superman|addidas|canal7|2.1
+movistar|motorola|1|claro|farmacity|paginas amarillas|2.81
+>unicenter|dot|bic2|mario|facebook|0.82
+cocacola|crush|0|motorola|mitsubishi|toilet|1.61
+>nike|olimpiadas|word press|michelin|microsoft|1.95
+claro|movistar|0|whatsapp|honda|toilet|1.09
+>bic2|ge|mcdonalds|google|cruzroja|2.54
+mcdonalds1|burger king|0|motorola|paginas amarillas|fila|1.13
+>canal7|pepsi|movistar|word press|claro|2.83
+android|superman|3|microsoft|toilet|farmacity|3.14
+>twitter|whatsapp|superman|vw|crush|1.23
+havana|jorgito|0|sube|cat|nike|3.12
+>fantoche|pepsi|warner music|batman|cruz|1.79
+unicenter|dot|0|sube|movistar|ferrum|0.81
+>ge|michelin|canal9|microsoft|unicenter|2.22
+superman|spiderman|0|suzuki|shell|toilet|1.73
+>sube|dot|whatsapp|mario|pepsi|3.16
+audi|mitsubishi|0|olimpiadas|puma|farmacity|2.46
+>fila|addidas2|bic2|disco|cocacola|1.55
+facebook|firestone|1|pinterest|motorola|bic|1.84
+>guaymallen|pepsi|chevrolet|android|pinterest|1.55
+honda|audi|0|ferrum|mario|whatsapp|0.98
+>addidas2|motorola|android|disco|walmart|1.62
+chevrolet|vw|0|cruzroja|mcdonalds1|twitter|0.96
+>linterna|unicenter|ge|bic2|cat|2.22
+disco|carrefour|0|word press|honda|toilet|1.43
+>dot|disco|farmacity|cruz|fanta|1.38
+addidas|nike|0|warner music|v|superman|1.3
+>audi|addidas2|motorola|guaymallen|cruzroja|2.43
+america|canal7|0|gamecube|microsoft|toilet|0.75
+>toilet|puma|spiderman|mcdonalds1|linterna|1.72
+cocacola2|crush|0|ford|mitsubishi|facebook|1.19
+>cocacola2|microsoft|yahoo|v|puma|1.56
+farmacity|drahorro|0|havana|movistar|pepsi|1.09
+>crush|nike|word press|like|bic|2.2
+vw|word press|1|mitsubishi|twitter|unicenter|1.46
+>pinterest|pizzahut1|fila|jorgito|apple|1.17
+movistar|claro|0|motorola|sube|burger king|1.19
+>olimpiadas|audi|shell|vw|spiderman|0.79
+cocacola|crush|0|vw|firestone|toilet|0.66
+>jorgito|paginas amarillas|warner music|apple|bic2|1.64
+claro|movistar|0|word press|mitsubishi|paginas amarillas|0.93
+>bic|like|mitsubishi|cocacola2|vw|1.5
+mcdonalds1|movistar|1|burger king|bic|addidas2|0.84
+>cocacola2|facebook|drahorro|linterna|gamecube|1.77
+android|xbox|2|apple2|bic2|paginas amarillas|1.58
+>manaos|batman|linterna|olimpiadas|apple|1.67
+havana|fantoche|0|farmacity|bic|twitter|1.08
+>fantoche|movistar|olimpiadas|honda|fila1|1.91
+unicenter|dot|0|sube|android|ital|1.33
+>superman|spiderman|bic|motorola|mitsubishi|3.18
+superman|linterna|0|suzuki|mcdonalds|walmart|0.87
+>nike|apple|bic|cruz|manaos|2.09
+audi|olimpiadas|1|honda|puma|farmacity|0.82
+>cat|burger king|cocacola|shell|pizzahut1|2.42
+facebook|fila1|1|whatsapp|vw|mitsubishi|0.76
+>gamecube|america|superman|drahorro|unicenter|2.05
+honda|audi|0|havana|claro|bic|0.85
+>bic|pizzahut1|mcdonalds1|america|pepsi|2.43
+chevrolet|mitsubishi|0|cruz|mcdonalds1|yahoo|1.46
+>batman|fila1|claro|python|unicenter|2.32
+disco|carrefour|0|word press|mcdonalds|paginas amarillas|1.16
+>mcdonalds1|fantoche|sube|fila|ge|1.44
+addidas|puma|0|ital|toilet|android|1.09
+>mario|linterna|sube|farmacity|audi|2.31
+america|canal7|0|gamecube|chrome|puma|0.7
+>apple|cocacola2|mario|bic2|motorola|1.53
+cocacola2|ford|1|manaos|mitsubishi|america|1.38
+>mcdonalds|mario|guaymallen|puma|cruz|1.39
+farmacity|drahorro|0|chevrolet|whatsapp|burger king|0.74
+>carrefour|drahorro|mitsubishi|guaymallen|warner music|1.23
+vw|chevrolet|0|whatsapp|twitter|unicenter|1.23
+>farmacity|jorgito|havana|guaymallen|america|2.33
+movistar|claro|0|motorola|sube|pepsi|0.79
+>python|xbox|suzuki|gamecube|claro|2.93
+cocacola|manaos|0|word press|firestone|toilet|1.16
+>cocacola2|carrefour|burger king|mario|guaymallen|1.13
+claro|movistar|0|word press|firestone|addidas|1.09
+>havana|bic|movistar|america|microsoft|1.66
+mcdonalds1|burger king|0|motorola|cat|nike|1.22
+>google|word press|cocacola|linterna|ferrum|1.99
+android|michelin|1|apple2|farmacity|paginas amarillas|2.07
+<29/9/2016>
+NEW USER
+>canal9|mitsubishi|apple|ferrum|nike|6.65
+unicenter|dot|0|sube|android|vw|3.55
+>carrefour|apple|chevrolet|mitsubishi|spiderman|12.0
+farmacity|drahorro|0|havana|whatsapp|mcdonalds1|4.89
+>chrome|apple|suzuki|toilet|drahorro|5.17
+mcdonalds1|burger king|0|motorola|paginas amarillas|twitter|2.69
+>pinterest|ge|bic|firestone|shell|14.45
+audi|chevrolet|0|olimpiadas|puma|carrefour|1.72
+>gamecube|yahoo|superman|xbox|batman|9.02
+facebook|whatsapp|0|fila1|addidas2|paginas amarillas|2.48
+>burger king|unicenter|manaos|addidas2|cruz|5.55
+superman|spiderman|0|suzuki|shell|like|10.95
+>fila1|addidas2|bic|like|toilet|7.95
+android|xbox|2|microsoft|toilet|paginas amarillas|1.74
+>bic2|carrefour|apple|audi|pizzahut1|9.34
+movistar|claro|0|mcdonalds|farmacity|ge|1.27
+>whatsapp|facebook|honda|spiderman|pinterest|2.16
+vw|honda|0|cocacola|ferrum|android|2.1
+>firestone|mario|jorgito|xbox|fila1|6.81
+america|microsoft|2|canal7|gamecube|puma|3.6
+>mcdonalds1|carrefour|suzuki|ford|xbox|3.41
+addidas|puma|0|ital|toilet|crush|1.78
+>like|nike|gamecube|ford|firestone|11.4
+cocacola|manaos|0|vw|mitsubishi|sube|1.91
+>facebook|farmacity|cocacola|superman|bic2|22.28
+honda|audi|0|ferrum|claro|bic|1.86
+>pinterest|apple|cat|gamecube|canal7|2.43
+claro|motorola|1|movistar|mitsubishi|toilet|7.41
+>ge|gamecube|android|suzuki|audi|4.87
+cocacola2|manaos|0|ford|mitsubishi|facebook|5.56
+>pizzahut1|manaos|honda|apple|v|2.38
+havana|fantoche|0|farmacity|paginas amarillas|movistar|20.59
+>dot|michelin|batman|america|paginas amarillas|4.19
+chevrolet|cat|2|mitsubishi|cruz|twitter|6.76
+>nike|ge|suzuki|mario|manaos|5.47
+disco|carrefour|0|motorola|honda|toilet|2.09
+>walmart|pepsi|fila1|bic|linterna|5.07
+unicenter|dot|0|sube|whatsapp|ital|2.98
+>jorgito|ital|audi|canal9|whatsapp|3.1
+farmacity|drahorro|0|chevrolet|whatsapp|mcdonalds1|1.39
+>canal7|cocacola2|spiderman|unicenter|cruz|21.67
+mcdonalds1|burger king|0|movistar|paginas amarillas|twitter|1.3
+>bic2|canal7|puma|vw|audi|3.38
+audi|mitsubishi|0|olimpiadas|fila1|carrefour|6.59
+>linterna|mitsubishi|burger king|cat|twitter|4.21
+facebook|whatsapp|0|firestone|motorola|paginas amarillas|2.67
+>v|warner music|pizzahut1|chrome|superman|3.12
+superman|linterna|0|suzuki|mcdonalds|word press|3.03
+>puma|walmart|mcdonalds|linterna|whatsapp|24.97
+android|xbox|2|microsoft|bic2|bic|1.18
+>cruz|mario|bic2|toilet|jorgito|2.73
+movistar|claro|0|mcdonalds|sube|paginas amarillas|3.61
+>walmart|puma|ital|fila1|vw|4.04
+vw|chevrolet|0|cocacola|ferrum|superman|1.65
+>addidas2|disco|chevrolet|mcdonalds1|batman|4.7
+america|microsoft|2|canal7|gamecube|word press|1.87
+>cocacola|disco|bic2|motorola|honda|6.3
+addidas|nike|0|warner music|toilet|superman|1.82
+>mcdonalds1|pepsi|farmacity|word press|microsoft|4.16
+cocacola|manaos|0|motorola|firestone|facebook|1.59
+>cat|bic2|mitsubishi|mcdonalds1|havana|3.04
+honda|vw|0|havana|pinterest|whatsapp|1.97
+>superman|google|mcdonalds1|word press|claro|3.84
+claro|movistar|0|word press|firestone|farmacity|2.07
+>mario|gamecube|v|canal9|fila|8.98
+cocacola2|pepsi|0|ford|pinterest|facebook|1.62
+>android|batman|fantoche|fanta|addidas2|3.08
+havana|fantoche|0|cruz|cat|movistar|8.09
+>mcdonalds1|v|addidas|microsoft|olimpiadas|8.97
+chevrolet|ford|0|cruz|paginas amarillas|android|1.73
+>disco|bic|mario|vw|word press|3.93
+disco|carrefour|0|motorola|mcdonalds|paginas amarillas|1.97
+>whatsapp|chrome|guaymallen|gamecube|shell|2.88
+unicenter|dot|0|sube|movistar|ital|1.32
+>cocacola2|apple|chevrolet|puma|motorola|4.91
+farmacity|drahorro|0|havana|whatsapp|mitsubishi|1.27
+NEW USER
+>mcdonalds1|addidas|ital|vw|ge|3.75
+mcdonalds1|burger king|0|movistar|cat|vw|1.15
+>ital|v|fanta|toilet|farmacity|3.28
+audi|olimpiadas|1|mitsubishi|fila1|microsoft|1.56
+>honda|mitsubishi|disco|claro|bic2|1.09
+facebook|google|0|firestone|vw|mitsubishi|2.03
+>fanta|havana|unicenter|canal7|cruzroja|3.12
+superman|linterna|0|suzuki|mcdonalds|word press|1.08
+>cruzroja|python|michelin|jorgito|dot|3.05
+android|xbox|2|microsoft|bic2|paginas amarillas|4.16
+>motorola|facebook|mario|mcdonalds1|apple|4.43
+movistar|motorola|1|claro|farmacity|pepsi|1.32
+>drahorro|bic|carrefour|vw|puma|3.02
+vw|honda|0|cocacola|carrefour|fanta|1.18
+>mcdonalds1|cruz|apple|guaymallen|cruzroja|1.98
+america|canal9|0|gamecube|olimpiadas|toilet|1.51
+>walmart|ge|unicenter|toilet|word press|3.76
+addidas|warner music|1|fila|toilet|crush|2.69
+>ferrum|suzuki|unicenter|mcdonalds|crush|1.52
+cocacola|fanta|0|word press|honda|sube|0.93
+>gamecube|suzuki|disco|v|vw|4.15
+honda|chevrolet|0|twitter|disco|ge|2.08
+>cruzroja|suzuki|pepsi|ford|mcdonalds|4.32
+claro|movistar|0|word press|honda|chevrolet|0.93
+>apple|pinterest|walmart|america|jorgito|1.92
+cocacola2|manaos|0|ford|mitsubishi|motorola|1.24
+>ford|audi|mario|facebook|superman|1.01
+havana|guaymallen|0|farmacity|superman|vw|0.99
+>mcdonalds1|fila1|pinterest|google|unicenter|2.77
+chevrolet|ford|0|cruzroja|mcdonalds1|yahoo|1.1
+>crush|sube|canal9|vw|xbox|2.65
+disco|carrefour|0|motorola|mcdonalds|paginas amarillas|2.43
+>canal7|drahorro|havana|pepsi|shell|1.63
+unicenter|dot|0|sube|android|vw|2.01
+>spiderman|ital|olimpiadas|cocacola|pizzahut1|2.08
+farmacity|drahorro|0|cruz|whatsapp|pepsi|1.13
+>firestone|facebook|vw|burger king|cruzroja|2.18
+mcdonalds1|motorola|1|burger king|cat|nike|0.98
+>facebook|manaos|chevrolet|fila|linterna|3.18
+audi|olimpiadas|1|honda|puma|microsoft|0.91
+>mario|cocacola2|gamecube|bic|shell|1.99
+facebook|google|0|firestone|motorola|superman|1.65
+>fanta|burger king|google|canal7|addidas|1.36
+superman|spiderman|0|suzuki|shell|like|1.24
+>fanta|pepsi|gamecube|paginas amarillas|walmart|1.03
+android|apple2|0|toilet|farmacity|superman|1.28
+>canal9|microsoft|suzuki|fila1|manaos|1.96
+movistar|claro|0|motorola|farmacity|carrefour|2.87
+>mitsubishi|gamecube|pizzahut1|pinterest|cruzroja|2.48
+vw|mitsubishi|0|disco|ferrum|android|1.06
+>farmacity|bic2|claro|movistar|vw|2.51
+america|canal7|0|gamecube|chrome|word press|1.4
+>ge|paginas amarillas|cocacola|yahoo|android|3.63
+addidas|ital|1|fila|word press|superman|1.99
+>superman|burger king|disco|word press|toilet|0.91
+cocacola|manaos|0|word press|firestone|addidas2|1.6
+>ferrum|ge|chrome|gamecube|olimpiadas|2.66
+honda|audi|0|ferrum|claro|bic|2.1
+>audi|chevrolet|suzuki|motorola|guaymallen|1.18
+claro|movistar|0|motorola|mitsubishi|paginas amarillas|0.7
+>pizzahut1|walmart|mario|firestone|addidas|1.5
+cocacola2|manaos|0|ford|mitsubishi|facebook|0.91
+>unicenter|cat|chevrolet|mario|movistar|4.34
+havana|guaymallen|0|honda|paginas amarillas|twitter|1.02
+>cruzroja|unicenter|ford|michelin|puma|1.35
+chevrolet|yahoo|3|honda|farmacity|mcdonalds1|0.81
+>walmart|unicenter|apple|fanta|firestone|0.96
+disco|walmart|0|word press|mcdonalds|twitter|1.25
+>bic2|xbox|whatsapp|chevrolet|canal7|3.27
+unicenter|sube|1|dot|whatsapp|vw|0.81
+>chrome|xbox|carrefour|manaos|cruzroja|2.65
+farmacity|drahorro|0|cruz|movistar|audi|1.52
+>disco|cocacola|facebook|linterna|movistar|2.39
+mcdonalds1|pizzahut1|0|mario|cat|nike|1.4
+>android|apple|addidas|sube|claro|1.9
+audi|olimpiadas|1|honda|addidas|microsoft|1.14
+>michelin|honda|disco|nike|apple|1.11
+facebook|google|0|firestone|addidas2|honda|1.57
+>cat|addidas2|honda|canal9|america|2.77
+superman|spiderman|0|suzuki|mcdonalds|like|1.08
+>pizzahut1|python|warner music|unicenter|twitter|2.58
+android|michelin|1|microsoft|farmacity|ge|1.0
+>fila1|mcdonalds1|ital|xbox|like|2.23
+movistar|paginas amarillas|3|claro|mario|farmacity|1.2
+>fila|python|cocacola2|suzuki|firestone|2.72
+vw|addidas2|2|ford|cocacola|havana|1.82
+>android|bic2|batman|whatsapp|microsoft|1.16
+america|canal9|0|gamecube|chrome|puma|1.39
+>yahoo|fila|olimpiadas|chevrolet|carrefour|3.18
+addidas|ital|1|nike|toilet|firestone|0.8
+>motorola|shell|puma|ital|chevrolet|1.64
+cocacola|crush|0|motorola|honda|facebook|1.28
+>firestone|ferrum|pizzahut1|xbox|microsoft|1.43
+honda|vw|0|ferrum|pinterest|whatsapp|2.39
+>addidas2|batman|honda|pinterest|bic2|1.07
+claro|motorola|1|movistar|honda|addidas|1.82
+>america|chrome|bic2|mcdonalds|audi|1.9
+cocacola2|manaos|0|ford|pinterest|facebook|0.95
+>michelin|chevrolet|apple|like|superman|2.6
+havana|cruz|1|jorgito|superman|movistar|1.76
+>cruzroja|olimpiadas|crush|suzuki|claro|1.99
+chevrolet|cat|2|vw|farmacity|twitter|0.96
+>addidas2|pinterest|facebook|suzuki|mario|1.69
+disco|word press|1|carrefour|honda|toilet|1.54
+>android|disco|canal9|chrome|batman|1.77
+unicenter|dot|0|sube|movistar|ferrum|1.46
+>like|whatsapp|vw|mitsubishi|addidas2|1.77
+farmacity|drahorro|0|cruz|whatsapp|audi|0.93
+>movistar|claro|paginas amarillas|batman|carrefour|0.74
+mcdonalds1|burger king|0|movistar|cat|twitter|0.91
+>bic|linterna|addidas2|microsoft|apple|1.9
+audi|honda|0|olimpiadas|puma|movistar|1.04
+>linterna|guaymallen|twitter|yahoo|android|2.06
+facebook|firestone|1|pinterest|addidas2|honda|1.44
+>cocacola2|mcdonalds|linterna|shell|carrefour|1.41
+superman|shell|2|batman|suzuki|toilet|1.31
+>havana|sube|unicenter|google|chevrolet|1.03
+android|xbox|2|apple2|toilet|disco|1.01
+>cat|crush|superman|claro|canal7|2.45
+movistar|claro|0|mcdonalds|farmacity|burger king|1.74
+>ital|motorola|facebook|xbox|mitsubishi|1.82
+vw|ford|0|cocacola|twitter|havana|1.42
+>bic2|fanta|ford|ferrum|pepsi|1.64
+america|canal9|0|gamecube|chrome|toilet|0.93
+>chrome|yahoo|addidas|bic|canal7|2.8
+addidas|ital|1|puma|v|firestone|1.39
+>fila1|facebook|linterna|v|xbox|0.75
+cocacola|manaos|0|whatsapp|honda|facebook|0.94
+>toilet|mcdonalds1|shell|google|cocacola|3.44
+NEW USER
+>fila1|burger king|android|spiderman|manaos|5.31
+claro|movistar|0|whatsapp|mitsubishi|toilet|2.13
+>crush|whatsapp|facebook|gamecube|paginas amarillas|6.93
+cocacola2|manaos|0|ford|pinterest|america|2.89
+>cocacola|mcdonalds|burger king|xbox|bic|3.55
+havana|vw|3|guaymallen|cruz|paginas amarillas|4.76
+>ferrum|python|superman|ge|michelin|4.62
+chevrolet|mitsubishi|0|farmacity|mcdonalds1|pepsi|2.32
+>michelin|shell|burger king|nike|movistar|3.45
+disco|walmart|0|word press|honda|android|3.13
+>cat|batman|audi|twitter|facebook|4.77
+unicenter|dot|0|sube|movistar|ferrum|2.99
+>fila1|cruz|canal7|havana|suzuki|12.08
+farmacity|drahorro|0|havana|movistar|burger king|1.96
+>suzuki|fila|claro|walmart|cocacola2|7.09
+mcdonalds1|burger king|0|mario|cat|fila|1.61
+>warner music|cruzroja|bic|spiderman|cruz|9.24
+audi|honda|0|olimpiadas|addidas|microsoft|1.85
+>canal7|superman|cat|claro|vw|11.79
+facebook|google|0|fila1|motorola|mitsubishi|2.31
+>cruzroja|linterna|vw|canal9|jorgito|6.25
+superman|spiderman|0|suzuki|shell|walmart|1.71
+>spiderman|cocacola2|microsoft|canal9|ferrum|11.65
+android|microsoft|0|toilet|farmacity|vw|3.77
+>warner music|linterna|addidas2|unicenter|puma|5.45
+movistar|claro|0|mario|sube|ge|1.89
+>walmart|fanta|fila1|android|microsoft|3.36
+vw|chevrolet|0|v|carrefour|android|2.13
+>mcdonalds|sube|fantoche|havana|suzuki|5.07
+america|canal7|0|gamecube|apple2|puma|2.71
+>olimpiadas|chrome|sube|jorgito|mcdonalds|5.73
+addidas|nike|0|ital|word press|crush|2.94
+>addidas2|like|gamecube|canal7|vw|8.92
+cocacola|manaos|0|vw|firestone|walmart|3.07
+>shell|honda|pepsi|america|fila|4.2
+honda|chevrolet|0|havana|disco|whatsapp|1.89
+>motorola|like|mcdonalds|america|pepsi|5.01
+claro|movistar|0|whatsapp|firestone|chevrolet|3.62
+>claro|warner music|manaos|paginas amarillas|puma|7.84
+cocacola2|pepsi|0|ford|mitsubishi|facebook|1.65
+>mario|fanta|paginas amarillas|gamecube|firestone|5.3
+havana|vw|3|fantoche|farmacity|cat|6.76
+>microsoft|mario|cruz|linterna|cat|3.21
+chevrolet|vw|0|cruzroja|paginas amarillas|unicenter|2.72
+>yahoo|toilet|batman|suzuki|dot|5.36
+disco|carrefour|0|word press|honda|twitter|1.24
+>pinterest|xbox|michelin|manaos|mario|3.86
+unicenter|dot|0|sube|whatsapp|vw|4.53
+>fantoche|cat|cocacola2|ge|fila|8.95
+farmacity|drahorro|0|havana|movistar|pepsi|1.34
+>cruz|apple|olimpiadas|crush|pizzahut1|9.81
+mcdonalds1|pizzahut1|0|mario|cat|farmacity|2.63
+>olimpiadas|chrome|disco|facebook|carrefour|4.23
+audi|mitsubishi|0|olimpiadas|fila1|farmacity|12.23
+NEW USER
+>fantoche|mcdonalds|ge|motorola|movistar|3.04
+facebook|fila1|1|google|vw|honda|5.21
+>pinterest|pepsi|superman|linterna|mario|2.46
+superman|batman|0|suzuki|shell|like|2.07
+>mcdonalds1|word press|yahoo|claro|gamecube|3.83
+android|farmacity|2|microsoft|toilet|paginas amarillas|4.23
+>twitter|puma|havana|mcdonalds|chevrolet|3.29
+movistar|sube|2|claro|motorola|mitsubishi|2.93
+>dot|disco|shell|movistar|firestone|3.9
+vw|word press|1|chevrolet|addidas2|superman|2.01
+>toilet|chevrolet|cocacola2|claro|twitter|2.59
+america|chrome|2|canal7|gamecube|toilet|1.01
+>crush|superman|mcdonalds|honda|cocacola2|1.42
+addidas|warner music|1|nike|toilet|crush|1.5
+>facebook|addidas2|android|honda|linterna|1.62
+cocacola|motorola|1|manaos|firestone|walmart|1.76
+>michelin|walmart|america|puma|spiderman|4.39
+honda|claro|2|vw|ferrum|addidas2|1.23
+>cocacola2|fantoche|paginas amarillas|microsoft|jorgito|3.89
+claro|mitsubishi|2|movistar|motorola|addidas|0.68
+>pepsi|mario|canal9|linterna|gamecube|3.71
+cocacola2|pinterest|2|manaos|ford|facebook|1.52
+>shell|cat|suzuki|android|sube|1.83
+havana|cat|2|fantoche|sube|movistar|0.95
+>mcdonalds|shell|crush|cocacola|america|2.01
+chevrolet|mitsubishi|0|cruzroja|paginas amarillas|android|2.41
+>farmacity|cruz|yahoo|pizzahut1|canal9|0.77
+disco|mcdonalds|2|walmart|motorola|paginas amarillas|1.08
+>firestone|cruzroja|apple|batman|mcdonalds|0.77
+unicenter|sube|1|dot|android|ital|1.06
+>canal7|warner music|yahoo|america|michelin|2.66
+farmacity|movistar|2|drahorro|cruz|mitsubishi|0.97
+>apple|crush|guaymallen|canal7|unicenter|1.46
+mcdonalds1|bic|2|pizzahut1|motorola|farmacity|1.38
+>canal7|firestone|nike|toilet|bic|3.09
+audi|olimpiadas|1|honda|addidas|movistar|0.95
+>cocacola|cat|superman|michelin|spiderman|3.04
+facebook|firestone|1|whatsapp|vw|crush|1.28
+>michelin|drahorro|ital|suzuki|jorgito|1.14
+superman|batman|0|suzuki|mcdonalds|walmart|1.19
+>python|apple|canal7|mcdonalds1|dot|2.05
+android|bic2|1|microsoft|xbox|superman|1.04
+>paginas amarillas|like|jorgito|unicenter|guaymallen|1.27
+movistar|sube|2|claro|motorola|bic|0.94
+>word press|pinterest|apple|bic2|disco|2.36
+vw|word press|1|ford|carrefour|havana|1.26
+>pinterest|ford|sube|walmart|michelin|3.05
+america|gamecube|1|canal7|olimpiadas|toilet|1.05
+>apple|warner music|burger king|olimpiadas|walmart|2.52
+addidas|ital|1|nike|toilet|apple2|1.32
+>mcdonalds|apple|ital|batman|like|3.49
+cocacola|motorola|1|manaos|honda|facebook|1.43
+>farmacity|apple|cocacola2|fantoche|ital|2.8
+honda|disco|2|vw|ferrum|ge|0.71
+>bic|fantoche|ital|mario|xbox|1.23
+claro|movistar|0|word press|mitsubishi|chevrolet|2.25
+>motorola|facebook|apple|carrefour|havana|1.05
+cocacola2|pepsi|0|ford|pinterest|america|1.09
+>whatsapp|facebook|puma|mitsubishi|apple|1.42
+havana|sube|1|fantoche|cat|movistar|1.92
+>spiderman|fila|honda|microsoft|fila1|2.13
+chevrolet|ford|0|farmacity|paginas amarillas|yahoo|1.41
+>android|addidas2|honda|vw|ital|2.24
+disco|walmart|0|vw|honda|paginas amarillas|1.86
+>chevrolet|mitsubishi|apple|python|farmacity|1.43
+unicenter|dot|0|sube|android|ferrum|1.79
+>cocacola|python|motorola|fantoche|whatsapp|2.57
+farmacity|drahorro|0|havana|movistar|audi|1.02
+>batman|fantoche|carrefour|mitsubishi|guaymallen|2.45
+mcdonalds1|mario|1|pizzahut1|bic|farmacity|1.81
+>xbox|microsoft|honda|cruzroja|mario|1.45
+audi|olimpiadas|1|mitsubishi|puma|farmacity|1.33
+>superman|bic2|xbox|paginas amarillas|jorgito|2.26
+facebook|motorola|2|pinterest|firestone|honda|1.65
+>pepsi|facebook|drahorro|gamecube|canal7|3.45
+superman|like|3|batman|suzuki|mcdonalds|5.08
+>ge|dot|yahoo|canal9|google|2.1
+android|microsoft|0|toilet|xbox|paginas amarillas|2.46
+>ford|dot|fila|cruzroja|toilet|2.08
+movistar|mcdonalds|1|claro|farmacity|burger king|1.67
+>sube|fila|bic|jorgito|mitsubishi|4.06
+vw|chevrolet|0|cocacola|ferrum|android|1.79
+>walmart|cat|mitsubishi|claro|apple|3.01
+america|canal7|0|gamecube|microsoft|puma|1.29
+>superman|v|vw|firestone|canal9|1.38
+addidas|warner music|1|fila|v|crush|2.21
+>spiderman|linterna|claro|word press|addidas|1.35
+cocacola|fanta|0|word press|firestone|bic|1.47
+>cocacola2|nike|android|superman|fila1|1.76
+honda|audi|0|paginas amarillas|disco|bic|2.21
+>bic|suzuki|gamecube|ferrum|carrefour|1.6
+claro|movistar|0|motorola|honda|chevrolet|1.46
+>apple|microsoft|michelin|america|toilet|1.64
+cocacola2|pepsi|0|ford|pinterest|facebook|1.52
+>python|mario|pepsi|word press|honda|5.68
+havana|cruz|1|guaymallen|paginas amarillas|nike|1.24
+>bic|addidas|canal7|vw|firestone|1.76
+chevrolet|cat|2|honda|cruzroja|yahoo|1.24
+>sube|pizzahut1|audi|cruzroja|cocacola|1.82
+disco|carrefour|0|vw|mcdonalds|nike|2.09
+>firestone|paginas amarillas|bic2|toilet|sube|2.33
+unicenter|dot|0|sube|whatsapp|vw|1.88
+>fantoche|manaos|puma|apple|bic|1.53
+farmacity|drahorro|0|chevrolet|movistar|audi|1.41
+>bic2|unicenter|xbox|yahoo|chevrolet|1.63
+mcdonalds1|pizzahut1|0|movistar|bic|vw|1.5
+>addidas2|michelin|walmart|crush|shell|1.69
+audi|honda|0|olimpiadas|puma|movistar|0.86
+>bic2|fila1|pinterest|pizzahut1|superman|8.37
+facebook|fila1|1|pinterest|vw|crush|0.92
+>fila1|batman|chrome|pizzahut1|claro|1.11
+superman|linterna|0|suzuki|shell|walmart|1.09
+>chrome|microsoft|fanta|mario|cruz|1.45
+android|xbox|2|microsoft|bic2|ge|1.46
+>movistar|apple|spiderman|sube|nike|1.29
+movistar|claro|0|mario|sube|pepsi|1.41
+>shell|guaymallen|facebook|gamecube|jorgito|2.2
+vw|chevrolet|0|whatsapp|twitter|havana|1.05
+>apple|gamecube|drahorro|fila1|cruzroja|2.33
+america|canal9|0|gamecube|olimpiadas|word press|1.33
+>audi|linterna|canal7|havana|apple|2.63
+addidas|puma|0|warner music|toilet|firestone|0.84
+>superman|walmart|canal9|farmacity|movistar|1.81
+cocacola|crush|0|vw|mitsubishi|addidas2|1.12
+>xbox|spiderman|crush|claro|guaymallen|1.53
+honda|chevrolet|0|fila1|claro|whatsapp|1.16
+>bic|drahorro|cruz|paginas amarillas|cruzroja|0.97
+claro|motorola|1|movistar|honda|addidas|2.13
+>unicenter|bic2|addidas|chevrolet|mitsubishi|1.48
+cocacola2|manaos|0|ford|pinterest|facebook|1.28
+>drahorro|fantoche|jorgito|toilet|gamecube|1.25
+havana|fantoche|0|cruz|shell|yahoo|1.57
+>puma|pinterest|cruz|mcdonalds1|android|1.18
+chevrolet|ford|0|farmacity|mcdonalds1|pepsi|0.85
+>sube|unicenter|yahoo|like|canal7|1.1
+disco|walmart|0|vw|mcdonalds|paginas amarillas|1.77
+>olimpiadas|canal7|ferrum|google|android|1.12
+unicenter|sube|1|dot|movistar|ferrum|0.8
+>bic2|puma|cruzroja|apple|cocacola2|1.61
+farmacity|drahorro|0|havana|movistar|mcdonalds1|0.95
+>nike|unicenter|android|linterna|google|0.92
+mcdonalds1|mario|1|burger king|cat|addidas2|0.96
+>mcdonalds|v|like|america|apple|1.61
+audi|honda|0|olimpiadas|puma|carrefour|1.29
+>sube|disco|cocacola|google|drahorro|1.63
+facebook|whatsapp|0|firestone|vw|superman|1.13
+>like|google|superman|farmacity|shell|1.25
+superman|word press|3|linterna|suzuki|mcdonalds|1.47
+>suzuki|audi|dot|whatsapp|shell|5.84
+android|xbox|2|microsoft|michelin|superman|1.26
+>shell|pepsi|suzuki|cocacola|word press|3.86
+movistar|sube|2|claro|mario|burger king|1.88
+>like|jorgito|cruz|batman|yahoo|4.7
+vw|mitsubishi|0|whatsapp|twitter|unicenter|7.89
+>shell|michelin|cruzroja|nike|microsoft|2.07
+america|canal7|0|gamecube|chrome|puma|2.79
+>addidas2|puma|manaos|honda|vw|0.94
+addidas|fila|0|ital|toilet|apple2|1.74
+>word press|ge|cocacola|batman|addidas|1.62
+cocacola|fanta|0|word press|honda|toilet|0.92
+>michelin|canal7|crush|dot|facebook|2.14
+honda|vw|0|ferrum|mario|bic|1.88
+>audi|chevrolet|america|manaos|pinterest|1.58
+claro|whatsapp|1|movistar|firestone|paginas amarillas|1.07
+>word press|warner music|canal9|bic|fantoche|1.53
+cocacola2|pinterest|2|crush|ford|whatsapp|1.08
+>dot|addidas|toilet|olimpiadas|android|2.02
+havana|fantoche|0|cruz|cat|twitter|1.98
+>word press|chrome|yahoo|manaos|twitter|2.49
+chevrolet|vw|0|cruz|mcdonalds1|android|0.99
+>pinterest|cocacola|bic|cat|canal7|1.32
+disco|carrefour|0|motorola|mcdonalds|nike|1.46
+>firestone|shell|pinterest|whatsapp|addidas|1.27
+unicenter|dot|0|sube|movistar|ital|2.93
+>apple|superman|shell|michelin|addidas2|2.38
+farmacity|drahorro|0|havana|whatsapp|pepsi|1.01
+>bic2|twitter|fila1|ge|cruz|1.44
+mcdonalds1|mario|1|pizzahut1|bic|addidas2|1.92
+>canal9|firestone|claro|michelin|android|1.99
+audi|honda|0|olimpiadas|addidas|carrefour|1.43
+>pepsi|mario|batman|chrome|bic|2.03
+NEW USER
+>mcdonalds|fanta|ge|android|python|2.18
+superman|shell|2|spiderman|suzuki|toilet|0.96
+>cruz|disco|jorgito|fanta|linterna|3.43
+android|farmacity|2|microsoft|michelin|bic|1.07
+>mcdonalds1|linterna|v|ge|batman|3.61
+movistar|sube|2|claro|mario|pepsi|0.81
+>pinterest|paginas amarillas|ford|chevrolet|like|6.77
+vw|honda|0|cocacola|carrefour|superman|1.73
+>xbox|android|word press|like|gamecube|0.9
+america|canal9|0|gamecube|chrome|puma|1.29
+>chrome|twitter|puma|superman|pinterest|2.15
+addidas|puma|0|ital|word press|firestone|2.61
+>dot|ge|word press|google|like|2.6
+cocacola|fanta|0|motorola|mitsubishi|addidas2|2.16
+>whatsapp|guaymallen|superman|bic2|suzuki|1.39
+honda|mario|2|audi|ferrum|addidas2|1.43
+>olimpiadas|ferrum|movistar|bic2|honda|3.13
+claro|honda|2|movistar|whatsapp|fila1|0.98
+>toilet|fanta|cat|facebook|google|2.65
+cocacola2|pepsi|0|ford|mitsubishi|america|2.87
+>vw|motorola|ferrum|firestone|microsoft|4.31
+havana|bic|2|guaymallen|farmacity|yahoo|0.79
+>ford|firestone|nike|microsoft|word press|3.05
+chevrolet|vw|0|cruz|paginas amarillas|twitter|1.47
+>v|honda|like|batman|carrefour|1.13
+disco|honda|2|carrefour|word press|toilet|1.03
+>firestone|paginas amarillas|crush|bic2|fantoche|2.02
+unicenter|sube|1|dot|movistar|ital|1.13
+>cocacola2|cat|warner music|addidas2|nike|3.36
+farmacity|movistar|2|drahorro|chevrolet|burger king|1.12
+>google|pinterest|cruz|jorgito|olimpiadas|0.95
+mcdonalds1|bic|2|burger king|movistar|fila|1.21
+>pizzahut1|cocacola2|android|ferrum|nike|2.44
+audi|olimpiadas|1|honda|fila1|farmacity|0.87
+>guaymallen|batman|paginas amarillas|honda|disco|0.92
+facebook|addidas2|2|pinterest|firestone|honda|1.21
+>facebook|carrefour|drahorro|mario|apple|1.07
+superman|mcdonalds|2|batman|suzuki|toilet|1.53
+>apple|michelin|toilet|ford|unicenter|0.88
+android|farmacity|2|apple2|bic2|disco|0.92
+>apple|python|chrome|mcdonalds1|addidas2|2.06
+movistar|sube|2|claro|mcdonalds|bic|1.54
+>gamecube|ital|firestone|android|america|0.75
+vw|cocacola|1|honda|carrefour|unicenter|1.96
+>xbox|carrefour|chevrolet|spiderman|farmacity|2.46
+america|olimpiadas|2|canal9|gamecube|word press|0.93
+>audi|puma|ge|whatsapp|ford|1.05
+addidas|nike|0|ital|toilet|crush|3.14
+>google|firestone|farmacity|ferrum|havana|0.91
+cocacola|honda|2|manaos|vw|facebook|0.9
+>audi|unicenter|python|twitter|drahorro|1.34
+honda|claro|2|audi|paginas amarillas|bic|0.69
+>firestone|honda|dot|toilet|canal7|1.31
+claro|mitsubishi|2|movistar|motorola|chevrolet|0.82
+>whatsapp|honda|v|word press|canal9|2.08
+cocacola2|mitsubishi|2|pepsi|ford|america|1.07
+>cruz|spiderman|motorola|fanta|firestone|1.31
+havana|nike|3|fantoche|honda|superman|1.4
+>chevrolet|suzuki|spiderman|movistar|honda|1.12
+chevrolet|cat|2|vw|cruzroja|yahoo|1.6
+>honda|suzuki|yahoo|manaos|cat|2.01
+disco|honda|2|walmart|word press|twitter|1.01
+>olimpiadas|superman|cocacola2|burger king|cocacola|2.43
+unicenter|sube|1|dot|movistar|ital|1.28
+>ferrum|gamecube|drahorro|motorola|disco|2.0
+farmacity|whatsapp|2|drahorro|havana|mcdonalds1|0.89
+>addidas|unicenter|suzuki|movistar|manaos|2.89
+mcdonalds1|paginas amarillas|2|pizzahut1|motorola|farmacity|0.9
+>audi|twitter|linterna|pepsi|olimpiadas|0.88
+audi|puma|2|mitsubishi|olimpiadas|carrefour|1.59
+>fila|unicenter|havana|drahorro|ge|0.93
+facebook|addidas2|2|pinterest|fila1|paginas amarillas|1.54
+>xbox|mitsubishi|drahorro|paginas amarillas|guaymallen|1.23
+superman|shell|2|spiderman|suzuki|word press|1.03
+>dot|fila|puma|manaos|gamecube|2.43
+android|microsoft|0|michelin|farmacity|paginas amarillas|2.39
+>toilet|bic2|motorola|cat|cocacola|1.86
+movistar|sube|2|claro|mcdonalds|ge|0.84
+>yahoo|google|xbox|paginas amarillas|ferrum|1.5
+vw|android|3|chevrolet|word press|twitter|1.25
+>disco|pepsi|mitsubishi|android|vw|1.21
+america|apple2|2|canal9|gamecube|word press|1.3
+>havana|ge|sube|canal7|cruz|1.18
+addidas|word press|2|puma|ital|firestone|1.63
+>addidas2|vw|apple|batman|mcdonalds1|1.21
+cocacola|fanta|0|vw|honda|sube|1.62
+>pinterest|mcdonalds|movistar|vw|mitsubishi|0.83
+honda|claro|2|vw|ferrum|bic|1.0
+>puma|dot|yahoo|like|firestone|1.32
+claro|mitsubishi|2|movistar|whatsapp|toilet|0.97
+>microsoft|python|bic|canal7|fantoche|1.63
+cocacola2|pinterest|2|crush|ford|motorola|1.48
+>unicenter|microsoft|michelin|mcdonalds|like|0.96
+havana|fantoche|0|cruz|shell|movistar|1.56
+>unicenter|mitsubishi|claro|pinterest|apple|1.56
+chevrolet|cruzroja|1|vw|mcdonalds1|pepsi|1.25
+>audi|vw|jorgito|canal9|pinterest|0.85
+disco|carrefour|0|word press|mcdonalds|paginas amarillas|1.27
+>dot|bic2|puma|farmacity|cocacola2|2.41
+unicenter|sube|1|dot|movistar|ferrum|1.25
+>motorola|carrefour|movistar|twitter|python|1.29
+farmacity|movistar|2|drahorro|havana|pepsi|1.99
+>burger king|microsoft|puma|cocacola|fila|2.3
+mcdonalds1|movistar|1|burger king|paginas amarillas|addidas2|1.05
+>gamecube|america|cocacola|movistar|apple|1.38
+audi|olimpiadas|1|honda|puma|carrefour|1.23
+>drahorro|fantoche|cocacola2|cruzroja|superman|1.06
+facebook|firestone|1|whatsapp|motorola|superman|0.81
+>bic2|havana|python|olimpiadas|gamecube|1.04
+superman|shell|2|batman|suzuki|like|1.21
+>canal9|walmart|cruz|apple|v|3.37
+android|bic2|1|microsoft|xbox|vw|1.09
+>jorgito|michelin|ford|superman|whatsapp|1.05
+NEW USER
+>farmacity|cruz|fila1|ferrum|canal9|2.06
+vw|honda|0|cocacola|twitter|fanta|3.0
+>cruz|yahoo|mcdonalds1|cocacola2|disco|4.8
+america|gamecube|1|canal9|olimpiadas|word press|2.3
+>whatsapp|apple|mcdonalds1|drahorro|apple|3.96
+addidas|ital|1|nike|v|apple2|2.45
+>drahorro|walmart|addidas2|fila|chevrolet|3.24
+cocacola|manaos|0|word press|honda|walmart|2.6
+>disco|bic|spiderman|vw|movistar|3.65
+honda|ford|0|twitter|disco|addidas2|3.3
+>bic|addidas2|pepsi|pizzahut1|farmacity|3.31
+claro|motorola|1|movistar|firestone|farmacity|2.65
+>chrome|apple|addidas|mcdonalds|linterna|1.98
+cocacola2|crush|0|ford|pinterest|america|3.56
+>mcdonalds1|pizzahut1|python|apple|addidas2|4.09
+havana|vw|3|jorgito|sube|superman|3.92
+>mario|motorola|linterna|manaos|america|1.91
+chevrolet|vw|0|cruz|cat|android|2.23
+>carrefour|guaymallen|spiderman|ge|mario|1.74
+disco|walmart|0|word press|mcdonalds|toilet|2.58
+>dot|python|cruz|motorola|america|4.27
+unicenter|sube|1|dot|android|ferrum|1.39
+>fanta|burger king|fantoche|ford|mario|4.23
+farmacity|havana|1|drahorro|whatsapp|mitsubishi|3.6
+>manaos|carrefour|claro|puma|cruzroja|1.61
+mcdonalds1|burger king|0|motorola|bic|nike|1.5
+>shell|fila|disco|xbox|cat|2.68
+audi|olimpiadas|1|honda|addidas|carrefour|1.37
+>farmacity|manaos|mcdonalds|guaymallen|vw|3.47
+facebook|pinterest|0|fila1|vw|superman|1.52
+>addidas|addidas2|facebook|bic2|canal9|1.97
+superman|spiderman|0|suzuki|shell|walmart|2.44
+>addidas|yahoo|ge|cocacola2|ital|4.05
+android|apple2|0|michelin|xbox|superman|7.4
+>word press|movistar|crush|pinterest|canal9|5.26
+movistar|claro|0|mcdonalds|farmacity|bic|2.51
+>suzuki|v|ford|canal9|audi|2.6
+vw|chevrolet|0|whatsapp|addidas2|superman|2.31
+>toilet|superman|mario|claro|burger king|1.41
+america|microsoft|2|canal9|gamecube|toilet|1.26
+>python|mario|cocacola2|america|unicenter|1.43
+addidas|fila|0|ital|word press|apple2|4.83
+>carrefour|disco|google|mario|dot|1.4
+cocacola|crush|0|motorola|mitsubishi|sube|1.32
+>addidas|unicenter|like|havana|whatsapp|3.24
+honda|chevrolet|0|paginas amarillas|claro|ge|2.38
+>mcdonalds1|apple|motorola|cocacola|firestone|2.65
+claro|whatsapp|1|movistar|firestone|fila1|1.52
+>paginas amarillas|spiderman|bic|whatsapp|havana|2.24
+cocacola2|ford|1|manaos|pinterest|america|4.24
+>yahoo|cat|cruzroja|olimpiadas|walmart|4.61
+havana|paginas amarillas|2|fantoche|sube|vw|1.12
+>jorgito|toilet|suzuki|gamecube|fila|1.91
+chevrolet|ford|0|farmacity|paginas amarillas|android|1.12
+>bic|fantoche|addidas|pepsi|crush|5.75
+disco|carrefour|0|motorola|honda|toilet|3.37
+>python|cruz|cocacola|mcdonalds|whatsapp|2.24
+unicenter|sube|1|dot|movistar|vw|1.17
+>sube|word press|mcdonalds1|xbox|cruzroja|3.5
+farmacity|drahorro|0|chevrolet|whatsapp|audi|1.71
+>movistar|android|bic2|twitter|firestone|2.26
+mcdonalds1|pizzahut1|0|movistar|bic|twitter|1.4
+>guaymallen|pizzahut1|cocacola|microsoft|v|3.87
+audi|mitsubishi|0|olimpiadas|puma|carrefour|2.35
+>addidas|python|ital|linterna|firestone|4.26
+<29/9/2016>
+NEW USER
+>manaos|carrefour|pinterest|microsoft|honda|2.69
+addidas|puma|0|warner music|v|apple2|1.07
+>vw|audi|guaymallen|fila1|movistar|1.43
+honda|audi|0|paginas amarillas|claro|whatsapp|1.02
+>olimpiadas|cocacola|shell|addidas|pinterest|1.64
+america|microsoft|2|canal9|gamecube|toilet|0.82
+>sube|android|america|ge|word press|1.31
+cocacola|fanta|0|whatsapp|firestone|addidas2|1.09
+>fanta|nike|mcdonalds1|python|whatsapp|1.69
+havana|jorgito|0|farmacity|paginas amarillas|nike|1.09
+>crush|walmart|pizzahut1|microsoft|fila|1.52
+audi|honda|0|olimpiadas|addidas|farmacity|0.76
+>puma|canal9|paginas amarillas|pepsi|drahorro|1.91
+superman|spiderman|0|suzuki|mcdonalds|walmart|1.22
+>batman|spiderman|manaos|bic|claro|1.2
+mcdonalds1|pizzahut1|0|motorola|bic|fila|0.91
+>fantoche|mario|chrome|pinterest|facebook|2.13
+claro|movistar|0|whatsapp|mitsubishi|fila1|0.78
+>cocacola|whatsapp|motorola|warner music|facebook|2.33
+unicenter|sube|1|dot|whatsapp|vw|0.86
+>suzuki|spiderman|chrome|facebook|movistar|1.94
+movistar|claro|0|motorola|sube|mitsubishi|1.29
+>america|microsoft|python|walmart|sube|0.94
+android|apple2|0|toilet|farmacity|superman|1.05
+>word press|america|ital|nike|chevrolet|1.79
+cocacola2|crush|0|ford|mitsubishi|whatsapp|1.13
+>xbox|michelin|facebook|chrome|mcdonalds1|1.45
+farmacity|drahorro|0|chevrolet|whatsapp|mcdonalds1|0.87
+>jorgito|mcdonalds1|pinterest|farmacity|ford|2.02
+facebook|pinterest|0|firestone|motorola|crush|1.41
+>cruz|mitsubishi|word press|canal7|cruzroja|1.06
+chevrolet|cruzroja|1|honda|paginas amarillas|yahoo|1.16
+>claro|bic2|ford|fila|addidas2|1.73
+disco|carrefour|0|motorola|honda|twitter|1.0
+>linterna|cruzroja|paginas amarillas|ital|twitter|1.05
+vw|carrefour|2|mitsubishi|v|havana|1.03
+>linterna|mario|word press|pizzahut1|whatsapp|1.38
+addidas|nike|0|warner music|v|firestone|1.04
+>cruz|android|pepsi|mcdonalds1|michelin|1.18
+honda|audi|0|fila1|disco|ge|1.07
+>drahorro|twitter|yahoo|mcdonalds|batman|1.7
+america|microsoft|2|canal7|gamecube|word press|1.14
+>superman|nike|claro|farmacity|carrefour|1.79
+cocacola|fanta|0|vw|honda|walmart|1.4
+>mario|manaos|spiderman|warner music|ford|1.65
+havana|fantoche|0|cruz|superman|nike|1.15
+>bic2|bic|audi|microsoft|michelin|0.93
+audi|honda|0|olimpiadas|puma|farmacity|1.85
+>apple|facebook|farmacity|vw|fantoche|1.71
+superman|suzuki|1|spiderman|mcdonalds|toilet|1.4
+>whatsapp|canal9|mcdonalds1|dot|crush|2.12
+mcdonalds1|pizzahut1|0|movistar|bic|farmacity|1.14
+>canal9|fanta|unicenter|havana|movistar|1.75
+claro|movistar|0|motorola|mitsubishi|addidas|1.39
+>olimpiadas|cocacola2|dot|pinterest|guaymallen|1.88
+unicenter|dot|0|sube|android|ital|1.21
+>mario|cocacola|ge|fila|claro|2.04
+movistar|claro|0|mcdonalds|farmacity|mitsubishi|0.84
+>michelin|cruz|mcdonalds1|paginas amarillas|ital|1.89
+android|apple2|0|toilet|xbox|paginas amarillas|1.09
+>mcdonalds|fanta|chevrolet|jorgito|whatsapp|2.98
+cocacola2|crush|0|ford|mitsubishi|facebook|1.01
+>canal7|facebook|havana|gamecube|cruzroja|1.86
+farmacity|drahorro|0|cruz|whatsapp|mitsubishi|1.01
+>guaymallen|v|michelin|apple|whatsapp|1.35
+facebook|fila1|1|google|motorola|superman|1.21
+>pepsi|xbox|claro|farmacity|honda|2.37
+chevrolet|paginas amarillas|2|vw|cruz|yahoo|2.26
+>warner music|toilet|firestone|audi|microsoft|1.42
+disco|walmart|0|motorola|mcdonalds|nike|1.72
+>chrome|pinterest|addidas|drahorro|burger king|1.81
+vw|ford|0|v|twitter|superman|0.99
+>word press|pizzahut1|unicenter|gamecube|dot|1.48
+addidas|ital|1|fila|v|android|1.12
+>python|cat|carrefour|jorgito|manaos|1.4
+honda|chevrolet|0|twitter|mario|ge|1.18
+>movistar|cat|canal7|firestone|twitter|2.1
+america|chrome|2|canal9|gamecube|word press|1.13
+>facebook|america|claro|firestone|addidas2|1.1
+cocacola|fanta|0|vw|mitsubishi|facebook|1.38
+>michelin|honda|vw|mcdonalds|xbox|1.21
+havana|fantoche|0|honda|shell|yahoo|1.04
+>audi|chevrolet|manaos|addidas|ferrum|0.87
+audi|olimpiadas|1|chevrolet|puma|carrefour|0.71
+>v|fila1|canal7|ge|manaos|0.81
+superman|batman|0|suzuki|mcdonalds|like|1.2
+>v|manaos|motorola|microsoft|fantoche|1.84
+mcdonalds1|burger king|0|movistar|bic|twitter|0.97
+>word press|paginas amarillas|canal9|mcdonalds1|cat|1.22
+claro|movistar|0|motorola|firestone|fila1|1.56
+>mario|motorola|honda|audi|ford|1.08
+unicenter|sube|1|dot|movistar|vw|0.89
+>chevrolet|claro|manaos|movistar|disco|1.28
+movistar|claro|0|mario|farmacity|burger king|1.19
+>pizzahut1|burger king|claro|cocacola|canal7|1.53
+android|apple2|0|toilet|farmacity|disco|1.76
+>twitter|fantoche|bic|cat|drahorro|2.23
+cocacola2|manaos|0|ford|pinterest|facebook|0.9
+>word press|facebook|sube|cat|fantoche|1.08
+farmacity|drahorro|0|chevrolet|whatsapp|audi|1.2
+>disco|farmacity|burger king|whatsapp|mario|2.58
+facebook|pinterest|0|fila1|motorola|mitsubishi|2.14
+>spiderman|batman|sube|yahoo|audi|0.81
+chevrolet|ford|0|cruzroja|cat|pepsi|0.62
+>cocacola2|burger king|honda|chevrolet|sube|1.85
+disco|walmart|0|word press|mcdonalds|twitter|1.57
+>jorgito|gamecube|mario|puma|microsoft|2.75
+vw|ford|0|v|ferrum|unicenter|1.11
+>puma|carrefour|suzuki|ford|bic|3.03
+addidas|puma|0|warner music|v|superman|1.73
+>farmacity|yahoo|olimpiadas|apple|firestone|2.44
+honda|havana|1|ford|disco|bic|1.47
+>shell|suzuki|olimpiadas|like|microsoft|1.96
+america|canal7|0|gamecube|olimpiadas|word press|1.6
+>warner music|jorgito|cruz|apple|xbox|1.51
+cocacola|manaos|0|motorola|honda|facebook|0.97
+>drahorro|python|honda|movistar|carrefour|1.73
+havana|yahoo|3|jorgito|sube|paginas amarillas|1.03
+>chevrolet|facebook|superman|yahoo|olimpiadas|2.08
+audi|mitsubishi|0|olimpiadas|addidas|movistar|1.87
+>jorgito|canal9|ferrum|spiderman|olimpiadas|2.22
+superman|batman|0|suzuki|mcdonalds|walmart|1.02
+>word press|mcdonalds|cocacola2|claro|ferrum|1.23
+mcdonalds1|pizzahut1|0|movistar|cat|fila|2.21
+>google|microsoft|drahorro|disco|claro|1.89
+claro|movistar|0|word press|honda|paginas amarillas|0.95
+>fila1|fila|dot|puma|apple|0.95
+unicenter|dot|0|sube|movistar|ital|1.39
+>ital|toilet|python|america|mario|1.34
+movistar|claro|0|mario|sube|carrefour|2.27
+>word press|guaymallen|gamecube|superman|unicenter|2.66
+android|michelin|1|apple2|xbox|ge|2.72
+>ital|warner music|addidas2|farmacity|whatsapp|1.42
+cocacola2|crush|0|ford|mitsubishi|whatsapp|1.06
+>motorola|whatsapp|shell|manaos|cocacola|1.61
+farmacity|drahorro|0|havana|whatsapp|burger king|0.95
+>guaymallen|manaos|fila|honda|superman|1.26
+facebook|whatsapp|0|firestone|vw|crush|1.39
+>fanta|shell|guaymallen|twitter|claro|2.71
+chevrolet|vw|0|farmacity|mcdonalds1|twitter|1.23
+>motorola|claro|havana|audi|farmacity|2.22
+disco|carrefour|0|word press|honda|paginas amarillas|1.44
+>sube|apple|fila1|superman|ford|1.75
+vw|mitsubishi|0|word press|addidas2|superman|2.88
+>apple|word press|firestone|suzuki|warner music|2.35
+addidas|puma|0|warner music|word press|apple2|0.98
+>google|fantoche|drahorro|facebook|bic2|2.38
+honda|vw|0|paginas amarillas|pinterest|addidas2|3.53
+>fanta|batman|google|mario|nike|3.0
+america|gamecube|1|canal7|olimpiadas|toilet|2.79
+>suzuki|nike|dot|batman|pizzahut1|2.2
+cocacola|manaos|0|word press|mitsubishi|facebook|1.17
+>firestone|mcdonalds|puma|android|fanta|2.52
+havana|nike|3|guaymallen|sube|bic|1.84
+>cat|twitter|mitsubishi|pepsi|canal7|2.39
+audi|mitsubishi|0|olimpiadas|fila1|farmacity|1.57
+>fantoche|jorgito|pepsi|farmacity|shell|1.12
+superman|spiderman|0|suzuki|shell|walmart|3.21
+>canal9|pinterest|unicenter|addidas2|warner music|4.67
+mcdonalds1|burger king|0|motorola|bic|farmacity|0.71
+>ford|cocacola|farmacity|mcdonalds1|manaos|4.01
+claro|movistar|0|whatsapp|honda|paginas amarillas|1.46
+>batman|bic|fantoche|apple|xbox|3.03
+unicenter|dot|0|sube|android|vw|1.62
+NEW USER

@@ -40,8 +40,6 @@ if __name__ == '__main__':
 	carrefour = [pygame.image.load("img/carrefour.jpg").convert_alpha(),"carrefour"]
 	twitter = [pygame.image.load("img/twitter.jpg").convert_alpha(),"twitter"]
 	claro = [pygame.image.load("img/claro.jpg").convert_alpha(),"claro"]
-	claro_c = [pygame.image.load("img/mod/claro.jpg").convert_alpha(),"claro_c"]
-	claro_f = [pygame.transform.flip(pygame.image.load("img/claro.jpg").convert_alpha(),True,False),"claro_f"]
 	cocacola = [pygame.image.load("img/cocacola.jpg").convert_alpha(),"cocacola"]
 	cocacola2 = [pygame.image.load("img/cocacola2.jpg").convert_alpha(),"cocacola2"]
 	ford = [pygame.image.load("img/ford.jpg").convert_alpha(),"ford"]

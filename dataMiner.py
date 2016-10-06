@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys, math, random, pygame, datetime
+import sys, math, random, datetime, Image
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib._png import read_png
 
 if __name__ == '__main__':
 
@@ -18,7 +19,7 @@ if __name__ == '__main__':
 	randoms = {}
 	rand_int = 0
 	# TODO: agregar al último gráfico el promedio (y la varianza) de las elecciones de los usuarios.
-	#avg_users =
+	avg_users = [[],[],[],[]]
 
 
 	for l in f:
@@ -27,6 +28,10 @@ if __name__ == '__main__':
 			user = user+1
 			users.append({obj['0']:0,obj['1']:0,obj['2']:0,obj['3']:0,"TOTAL":0})
 			temp_users.append([])
+			avg_users[0].append(0)
+			avg_users[1].append(0)
+			avg_users[2].append(0)
+			avg_users[3].append(0)
 		elif l[0] == '>':
 		# Random trial
 			trial = l[1:].split('|')
@@ -75,11 +80,12 @@ if __name__ == '__main__':
 			users[user]["TOTAL"] += 1
 			alls[obj[trial[2]]] += 1/time
 			alls["TOTAL"] += 1
+			avg_users[int(trial[2])][user] += 1/time
 
 	colors = ['r','g','b','y','c','m','orangered','olive','indigo','lightcoral','lime','magenta','k']
 
 	pTrials = False
-	pTrials = True
+#	pTrials = True
 	if (pTrials):
 		for t in trials_c:
 			highs = [0,0,0,0]
@@ -114,17 +120,17 @@ if __name__ == '__main__':
 			plt.show()
 
 	pTusers = False
-	pTusers = True
+#	pTusers = True
 	if (pTusers):
 		for u in temp_users:
 			if len(u) > 0:
-				p = plt.plot(u,'-o')
-				plt.title(u'Decisiones de un usuario en función del tiempo')
+				plt.plot(u,'-o')
 				plt.yticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
+				plt.title(u'Decisiones de un usuario en función del tiempo')
 				plt.show()
 
 	pUsers = False
-	pUsers = True
+#	pUsers = True
 	if (pUsers):
 		c = 0
 		for u in range(len(users)):
@@ -140,15 +146,23 @@ if __name__ == '__main__':
 	pGlobal = False
 	pGlobal = True
 	if (pGlobal):
-		p = plt.bar((0,1,2,3),(alls[obj['0']],alls[obj['1']],alls[obj['2']],alls[obj['3']]),0.2)
-		plt.title(u'Decisiones conjuntas de todos los trials y todos los usuarios')
+#		plt.bar((0,1,2,3),(alls[obj['0']],alls[obj['1']],alls[obj['2']],alls[obj['3']]),0.2)
+#		plt.title(u'Decisiones conjuntas de todos los trials y todos los usuarios')
+#		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
+#		plt.show()
+		means = map(lambda x : np.mean(x), avg_users)
+		yu = map(lambda x : np.mean(x) + 0.1, avg_users)
+		yd = map(lambda x : np.mean(x) - 0.1, avg_users)
+		plt.errorbar((0,1,2,3),means, yerr=[yu,yd], capthick=5, fmt=' r')
 		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
+		plt.bar((0,1,2,3),means,0.2)
 		plt.show()
 
 	gpRandom = open("random.data",'w')
 	x = []
 	y = []
 	names = []
+	full = []
 	for r in randoms:
 		index = randoms[r][0]
 		while len(names) <= index:
@@ -159,8 +173,13 @@ if __name__ == '__main__':
 				val = randoms[v][0]
 				res = randoms[r][1][v][1] / randoms[r][1][v][0]
 				gpRandom.write(str(val) + " " + str(index) + " " + str(res) + "\n")
+				full.append([index,val,res])
 	z = "set xtics (\""
 	for i in range(len(names)):
 		z += names[i] + "\" " + str(i) + ", \""
 	z += ")"
 #	print z
+	full = sorted(full, key=lambda x : x[2])
+	for r in full:
+		if (r[2] > 0):
+			print names[r[0]] + " -> " + names[r[1]] + ": " + str(r[2])

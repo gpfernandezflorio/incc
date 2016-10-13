@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Ir_t: Índice de relación en un trial = 1/tiempo.
+# Ir_uxc: Índice de relación de un usuario respecto a una de las cuatro clases = Sum Ir de los trials de ese usuario en los que eligió esa clase.
+# Ir_l1xl2: Índice de relación de un logo respecto a otro = Sum Ir de los trials con target l1 en los que se eligió a l2.
+
+# Irr_uxc: Índice de relación reativa de un usuario respecto a una de las cuatro clases = Ir_uxc / cantidad de trials que el usuario eligió esa clase.
+
 import sys, math, random, datetime, Image
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,7 +88,7 @@ if __name__ == '__main__':
 			alls["TOTAL"] += 1
 			avg_users[int(trial[2])][user] += 1/time
 
-	colors = ['r','g','b','y','c','m','orangered','olive','indigo','lightcoral','lime','magenta','k']
+	colors = ['r','g','b','gold','c','purple','darkorange','dodgerblue','olive','mediumpurple','lightcoral','yellowgreen','darkblue','lightpink','k','darkgrey']
 
 	pTrials = False
 #	pTrials = True
@@ -116,7 +122,7 @@ if __name__ == '__main__':
 					c = 0
 			plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
 			plt.title(u'Decisiones en el trial ' + t)
-			plt.legend(gs,legends)
+			plt.legend(gs,legends,bbox_to_anchor=(1.1, 1.05))
 			plt.show()
 
 	pTusers = False
@@ -130,14 +136,18 @@ if __name__ == '__main__':
 				plt.show()
 
 	pUsers = False
-#	pUsers = True
+	pUsers = True
 	if (pUsers):
 		c = 0
+		l = 1.0/(len(users)+10)
 		for u in range(len(users)):
 			if int (users[u]["TOTAL"]) > 0:
-				p = plt.plot((0,1,2,3),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),colors[c])
+				#p = plt.plot((0+u*l,1+u*l,2+u*l,3+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),colors[c])
+				p = plt.bar((0+u*l,1+u*l,2+u*l,3+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),width=l,color=colors[c])
+				#p = plt.bar((0+u*l,1+u*l,2+u*l,3+u*l),(users[u][obj['0']]/users[u]["TOTAL"],users[u][obj['1']]/users[u]["TOTAL"],users[u][obj['2']]/users[u]["TOTAL"],users[u][obj['3']]/users[u]["TOTAL"]),width=l,color=colors[c])
 				plt.title(u'Decisiones de los usuarios')
-				plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
+				plt.ylabel("Indice de relacion relativa")
+				plt.xticks((0+l*len(users)/2,1+l*len(users)/2,2+l*len(users)/2,3+l*len(users)/2),(obj["0"],obj["1"],obj["2"],obj["3"]))
 				c = c+1
 				if c >= len(colors):
 					c = 0

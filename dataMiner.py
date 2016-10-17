@@ -9,8 +9,6 @@
 # Irr_uxc: Índice de relación reativa de un usuario respecto a una de las cuatro clases = Ir_uxc / cantidad de trials que el usuario eligió la clase c.
 # Irr_cxt: Índice de relación reativa de un choice respecto a un target = Ir_cxt / cantidad de veces que apareció el choice c
 
-
-# Ordenar el randoms por tamaño de globos.
 # El de pTarget, hacerlo de dos dimensiones: En el eje y poner las 4 clases y en el eje z (color/tamaño) el índice NORMALIZADO.
 # Definir índice normalizado.
 
@@ -46,6 +44,7 @@ if __name__ == '__main__':
 	f = open("trials.txt", 'r')
 
 	obj = {'0':"CONCEPTO",'1':"LETRA/FORMA",'2':"COLOR",'3':"RUIDO",'4':"?"}
+	apariciones_trials = {}
 	trials_c = {}
 	users = []
 	temp_users = []
@@ -93,6 +92,10 @@ if __name__ == '__main__':
 		# Set trial
 			trial = l.split('|')
 			time = float(trial[6])
+			if not trial[0] in apariciones_trials:
+				apariciones_trials[trial[0]] = 0
+			else:
+				apariciones_trials[trial[0]] += 1
 			if not trial[0] in trials_c:
 				trials_c[trial[0]] = {}
 
@@ -124,7 +127,7 @@ if __name__ == '__main__':
 	colors = ['r','g','b','gold','c','purple','darkorange','darkblue','olive','mediumpurple','lightcoral','yellowgreen','saddlebrown','dodgerblue','lightpink','darkgrey','k']
 
 	names = []
-	ir = []
+	ir = [[],[],[],[]]
 
 	pTrials = False
 #	pTrials = True
@@ -161,7 +164,14 @@ if __name__ == '__main__':
 			c = c+1
 			if c >= len(colors):
 				c = 0
-		ir.append(highs[0])
+		#ir[0].append(highs[0])
+		#ir[1].append(highs[1])
+		#ir[2].append(highs[2])
+		#ir[3].append(highs[3])
+		ir[0].append(highs[0]/apariciones_trials[t])
+		ir[1].append(highs[1]/apariciones_trials[t])
+		ir[2].append(highs[2]/apariciones_trials[t])
+		ir[3].append(highs[3]/apariciones_trials[t])
 		if (pTrials):
 			plt.xticks((-0.5,0,1,2,3,3.5),("",obj["0"],obj["1"],obj["2"],obj["3"],""))
 			plt.title(u'Índice de relación relativa por choice del target ' + t,fontsize=20)
@@ -169,13 +179,6 @@ if __name__ == '__main__':
 			plt.legend(gs,legends,bbox_to_anchor=(1.1, 1.05))
 			plt.grid()
 			plt.show()
-
-	pTarget = False
-#	pTarget = True
-	if (pTarget):
-		plt.xticks(range(len(names)),names)
-		plt.bar(range(len(names)),ir)
-		plt.show()
 
 	pTusers = False
 #	pTusers = True
@@ -215,6 +218,30 @@ if __name__ == '__main__':
 		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
 		plt.boxplot(avg_users)
 		plt.show()
+
+	pTarget = False
+#	pTarget = True
+	greatsort = []
+	for i in range(len(names)):
+		greatsort.append([names[i],ir[0][i],i])
+	greatsort = sorted(greatsort, key=lambda x : x[1])
+	xsort = range(len(names))
+	for i in range(len(greatsort)):
+		xsort[greatsort[i][2]] = i
+	M = len(xsort)
+	xsort = map(lambda x : M-x, xsort)
+	if (pTarget):
+		gpTarget = open("target.data",'w')
+		z = "set xtics (\""
+		for i in range(len(ir[0])):
+			gpTarget.write(str(xsort[i]) + " " + str(0) + " " + str(ir[0][i]) + "\n")
+			gpTarget.write(str(xsort[i]) + " " + str(1) + " " + str(ir[1][i]) + "\n")
+			gpTarget.write(str(xsort[i]) + " " + str(2) + " " + str(ir[2][i]) + "\n")
+			gpTarget.write(str(xsort[i]) + " " + str(3) + " " + str(ir[3][i]) + "\n")
+			z += names[i] + "\" " + str(xsort[i]) + ", \""
+		gpTarget.close()
+		z += ") rotate by -45"
+		print z
 
 	#RANDOMS:
 	list_random = []

@@ -144,7 +144,7 @@ if __name__ == '__main__':
 			plt.show()
 
 	pTarget = False
-	pTarget = True
+#	pTarget = True
 	if (pTarget):
 		plt.xticks(range(len(names)),names)
 		plt.bar(range(len(names)),ir)
@@ -186,18 +186,13 @@ if __name__ == '__main__':
 		plt.show()
 
 	pGlobal = False
-#	pGlobal = True
+	pGlobal = True
 	if (pGlobal):
-#		plt.bar((0,1,2,3),(alls[obj['0']],alls[obj['1']],alls[obj['2']],alls[obj['3']]),0.2)
-#		plt.title(u'Decisiones conjuntas de todos los trials y todos los usuarios')
-#		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
-#		plt.show()
-		means = map(lambda x : np.mean(x), avg_users)
-		yu = map(lambda x : np.mean(x) + 0.1, avg_users)
-		yd = map(lambda x : np.mean(x) - 0.1, avg_users)
-		plt.errorbar((0,1,2,3),means, yerr=[yu,yd], capthick=5, fmt=' r')
-		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
-		plt.bar((0,1,2,3),means,0.2)
+		
+		plt.ylim(-1, 60) 
+		labels = (obj["0"],obj["1"],obj["2"],obj["3"])
+		plt.boxplot(avg_users, labels=labels, showfliers=False)
+		
 		plt.show()
 
 	gpRandom = open("random.data",'w')

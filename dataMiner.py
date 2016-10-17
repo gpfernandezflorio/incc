@@ -19,6 +19,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib._png import read_png
 
+def maximox(dic):
+	iMax = [0,0]
+	for i in dic:
+		if dic[i][1] / dic[i][0] > iMax[1]:
+			iMax = [i,dic[i][1] / dic[i][0]]
+	return iMax[1]
+
+def maximoy(l):
+	greatsort = map(lambda x : [x[0],0,x[1][0]], l)
+	for i in l:
+		for j in i[1][1]:
+			x = i[1][1][j][1] / i[1][1][j][0]
+			for h in greatsort:
+				if h[0] == j:
+					if x > h[1]:
+						h[1] = x
+	greatsort = sorted(greatsort, key=lambda x : x[1])
+	ysort = range(len(greatsort))
+	for i in range(len(greatsort)):
+		ysort[greatsort[i][2]] = i
+	return ysort
+
 if __name__ == '__main__':
 
 	f = open("trials.txt", 'r')
@@ -38,6 +60,11 @@ if __name__ == '__main__':
 	for l in f:
 		if l.startswith("NEW USER"):
 		# Cambio de Usuario
+#			if (user != -1 and users[user]["TOTAL"]!=0):
+#				avg_users[0][user] /= users[user]["TOTAL"]
+#				avg_users[1][user] /= users[user]["TOTAL"]
+#				avg_users[2][user] /= users[user]["TOTAL"]
+#				avg_users[3][user] /= users[user]["TOTAL"]
 			user = user+1
 			users.append({obj['0']:0,obj['1']:0,obj['2']:0,obj['3']:0,"TOTAL":0})
 			temp_users.append([])
@@ -169,31 +196,39 @@ if __name__ == '__main__':
 #	pUsers = True
 	if (pUsers):
 		c = 0
-		l = 1.0/(len(users)+10)
+		l = 1.0/(len(users)+50)
+		center = l*len(users)/2
 		for u in range(len(users)):
 			if int (users[u]["TOTAL"]) > 0:
-				#p = plt.plot((0+u*l,1+u*l,2+u*l,3+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),colors[c])
-				p = plt.bar((0+u*l,1+u*l,2+u*l,3+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),width=l,color=colors[c])
-				#p = plt.bar((0+u*l,1+u*l,2+u*l,3+u*l),(users[u][obj['0']]/users[u]["TOTAL"],users[u][obj['1']]/users[u]["TOTAL"],users[u][obj['2']]/users[u]["TOTAL"],users[u][obj['3']]/users[u]["TOTAL"]),width=l,color=colors[c])
+				p = plt.bar((0.5+u*l,1.5+u*l,2.5+u*l,3.5+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),width=l,color=colors[c])
+				#p = plt.bar((0.5+u*l,1.5+u*l,2.5+u*l,3.5+u*l),(users[u][obj['0']]/users[u]["TOTAL"],users[u][obj['1']]/users[u]["TOTAL"],users[u][obj['2']]/users[u]["TOTAL"],users[u][obj['3']]/users[u]["TOTAL"]),width=l,color=colors[c])
 				plt.title(u'Índice de relación de los usuarios por cada clase',fontsize=20)
 				#plt.title(u'Índice de relación relativa de los usuarios por cada clase',fontsize=20)
 				plt.ylabel(u'Índice de relación',fontsize=20)
 				#plt.ylabel(u'Índice de relación relativa',fontsize=20)
-				plt.xticks((0+l*len(users)/2,1+l*len(users)/2,2+l*len(users)/2,3+l*len(users)/2),(obj["0"],obj["1"],obj["2"],obj["3"]))
 				c = c+1
 				if c >= len(colors):
 					c = 0
+
+		plt.ylim(-0.1, 60)
+		#plt.ylim(-0.002, 60)
+		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
+		plt.boxplot(avg_users)
 		plt.show()
 
-	pGlobal = False
-	pGlobal = True
-	if (pGlobal):
-		
-		plt.ylim(-1, 60) 
-		labels = (obj["0"],obj["1"],obj["2"],obj["3"])
-		plt.boxplot(avg_users, labels=labels, showfliers=False)
-		
-		plt.show()
+	#RANDOMS:
+	list_random = []
+	for i in randoms.keys():
+		list_random.append([i,randoms[i]])
+	great_sortx = sorted(map(lambda x : [x[0],maximox(x[1][1]),x[1][0]], list_random), key=lambda x : x[1])
+	xsort = range(len(great_sortx))
+	for i in range(len(great_sortx)):
+		xsort[great_sortx[i][2]] = i
+	ysort = maximoy(list_random)
+	M = len(xsort)
+	xsort = map(lambda x : M-x, xsort)
+	M = len(ysort)
+	ysort = map(lambda x : M-x, ysort)
 
 	gpRandom = open("random.data",'w')
 	x = []
@@ -209,14 +244,19 @@ if __name__ == '__main__':
 			if v in randoms:
 				val = randoms[v][0]
 				res = randoms[r][1][v][1] / randoms[r][1][v][0]
-				gpRandom.write(str(val) + " " + str(index) + " " + str(res) + "\n")
+				gpRandom.write(str(ysort[val]) + " " + str(xsort[index]) + " " + str(res) + "\n")
 				full.append([index,val,res])
-	z = "set xtics (\""
+	z = "set ytics (\""
 	for i in range(len(names)):
-		z += names[i] + "\" " + str(i) + ", \""
+		z += names[i] + "\" " + str(xsort[i]) + ", \""
 	z += ")"
 #	print z
+	z = "set xtics (\""
+	for i in range(len(names)):
+		z += names[i] + "\" " + str(ysort[i]) + ", \""
+	z += ") rotate by -45"
+#	print z
 	full = sorted(full, key=lambda x : x[2])
-	#for r in full:
-	#	if (r[2] > 0):
-	#		print names[r[0]] + " -> " + names[r[1]] + ": " + str(r[2])
+#	for r in full:
+#		if (r[2] > 0):
+#			print names[r[0]] + " -> " + names[r[1]] + ": " + str(r[2])

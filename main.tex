@@ -11,7 +11,10 @@
 % notice. 
 
 \documentclass{beamer}
-
+\usepackage[utf8x]{inputenc}            % Acentos, ñ, etc.
+\usepackage{graphicx}                   % Gráficos
+\usepackage[spanish]{babel}             % Macros en español
+\usepackage{float}
 % There are many different themes available for Beamer. A comprehensive
 % list with examples is given here:
 % http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
@@ -44,18 +47,18 @@
 %\usetheme{Singapore}
 %\usetheme{Szeged}
 %\usetheme{Warsaw}
-
-\title{¿Que ves cuando lo ves?}
+\setbeamersize{text margin left=5pt, text margin right=5pt}
+\title{¿Qué ves cuando lo ves?}
 
 % A subtitle is optional and this may be deleted
-\subtitle{Optional Subtitle}
+\subtitle{Cómo funciona el lobulo relacionador conceptual}
 
-\author{Gonzalo Florio \and Ignacio Linari \and Cyntia Bonomi}
+\author{G. Fernández \and I. Linari \and C. Bonomi}
 % - Give the names in the same order as the appear in the paper.
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
-\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+\institute[UBA] % (optional, but mostly needed)
 {
   \inst{1}%
   Departmento de Computación\\
@@ -67,7 +70,7 @@
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date{Conference Name, 2013}
+\date{INCC, 2016}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -87,7 +90,7 @@
 % the beginning of each subsection:
 \AtBeginSubsection[]
 {
-  \begin{frame}<beamer>{Outline}
+  \begin{frame}<beamer>{Índice}
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
@@ -99,7 +102,7 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
+\begin{frame}{Índice}
   \tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
@@ -110,13 +113,23 @@
 
 \subsection{Idea}
 
-\begin{frame}{Hipotesis}{Optional Subtitle}
+\begin{frame}{Pregunta}{El origen de este trabajo}
   \begin{itemize}
   \item {
-  	
-    %Nos preguntamos que identifican las personas cuando ven un logo? Colores? Conceptos? Formas? 
 
-    Nos preguntamos que tan bien hacen su trabajo los logos de marcas. Las personas cuando los ven identifican Conceptos, Colores, formas, o no les significan nada especifico? 
+    Nos preguntamos qué tan bien hacen su trabajo los logos de marcas. Las personas cuando los ven identifican Conceptos, Colores, formas, o no les significan nada especifico? 
+
+  }
+
+ 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Hipótesis}{La respuesta a todas las preguntas}
+  \begin{itemize}
+  \item {
+
+    Creemos que la gente tiende a asociar logos por concepto, más que por color o forma.
 
   }
 
@@ -131,11 +144,15 @@
 \begin{frame}{Experimento}
   \begin{itemize}
   \item {
-    Conjunto de trials que muestran un logo target y luego 4 logos distintos relacionados con el targuet de acuerdo a 4 categorias: Forma/Letra, Concepto, Color, Ruido.   
+    Conjunto de trials que muestran un logo target y luego 4 logos choice distintos relacionados con el targuet de acuerdo a 3 categorias: Forma/Letra, Concepto, Color. Además agregamos un cuarto choice al que llamamos Ruido, el cual consideramos que no se relaciona con el target de ninguna manera.
     \pause % The slide will pause after showing the first item
   }
-  \item {   
-	Cada participante dado el logo targuet debe seleccionar segun su criterio de asociacion uno de los 4 logos. 
+  \item {
+	Cada participante dado el logo target debe seleccionar según su criterio de asociación, uno de los 4 choices.
+  }
+    \pause % The slide will pause after showing the first item
+  \item {
+	A estos trials los llamamos Set. Otro conjunto de trials son los trials Random, en los cuales se toman como target y como choices todos logos al azar. Los trials aparecen intercalados.
   }
   % or you can use the \uncover command to reveal general
   % content (not just \items):
@@ -145,51 +162,169 @@
   \end{itemize}
 \end{frame}
 
-\section{Analisis de datos}
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.16]{exp.png}
+        \caption{Experimento}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\section{Análisis de datos}
 
 \subsection{Definiciones}
 
-%Ir: Índice de relación en un trial = 
-%# Ir_uxc: Índice de relación de un usuario respecto a una de las cuatro clases = Sum Ir %de los trials de ese usuario en los que eligió la clase c.
-
-%# Ir_l1xl2: Índice de relación de un logo respecto a otro = Sum Ir de los trials con target l1 en los que se eligió a l2.
-
-
-\begin{frame}{Metricas}
-\begin{block}{Indice de Relacion en un trial}
-IR = 1/tiempo.
+\begin{frame}{Métricas}
+\begin{block}{Índice de Relacion en un trial}
+IR = 1/tiempo de respuesta. 
 \end{block}
 
 \begin{block}{Indice de relacion de un usuario respecto a una clase.}
-$IR\_uxc$ = $\sum IR$ de los trials de ese usuario en los que eligio la clase.
+$IR\_uxc$ = $\sum IR$ de los trials de ese usuario en los que eligió la clase.
 \end{block}
 
-\begin{block}{Índice de relación de un choice(clase?) respecto a un target.}
+\begin{block}{Índice de relación de un choice respecto a un target.}
 $IR\_cxt$ = $\sum IR$ de los trials con el target t en los que se eligió el choice c.
 \end{block}
 
-\begin{block}{Índice de relación de un logo respecto a otro }
+\begin{block}{Índice de relación de un logo respecto a otro logo.}
 $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a l2.
 \end{block}
-
 
 %\begin{example}
 %Here is an example of an example block.
 %\end{example}
 \end{frame}
 
-\begin{frame}{Resultados}
+\subsection{Resultados}
+
+\begin{frame}
 
 \begin{figure}[h]
  \centering
   \begin{minipage}[c]{1\textwidth}
 	\centering	
-	\includegraphics[scale=0.2]{irr_uxc.png}
-        \caption{imagen}
+	\includegraphics[scale=0.23]{ir_uxc.png}
   \end{minipage}
 \end{figure}
 
+\end{frame}
+\begin{frame}
 
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.23]{ir_uxc_2.png}
+  \end{minipage}
+\end{figure}
+
+\end{frame}
+\begin{frame}
+
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.23]{irr_uxc.png}
+  \end{minipage}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.23]{irr_uxc_2.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\includegraphics[scale=0.11]{user2.png}
+	\includegraphics[scale=0.11]{user12.png}
+  \end{minipage}
+  \begin{minipage}[c]{1\textwidth}
+	\includegraphics[scale=0.11]{user4.png}
+	\includegraphics[scale=0.11]{user5.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\includegraphics[scale=0.11]{user1.png}
+	\includegraphics[scale=0.11]{user14.png}
+  \end{minipage}
+  \begin{minipage}[c]{1\textwidth}
+	\includegraphics[scale=0.11]{user6.png}
+	\includegraphics[scale=0.11]{user7.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\includegraphics[scale=0.11]{user3.png}
+	\includegraphics[scale=0.11]{user13.png}
+  \end{minipage}
+  \begin{minipage}[c]{1\textwidth}
+	\includegraphics[scale=0.11]{user8.png}
+	\includegraphics[scale=0.11]{user11.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.4]{target_ir.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.4]{target_irr.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.13]{random.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.32]{randomx.png}
+  \end{minipage}
+\end{figure}
 \end{frame}
 
 % Placing a * after \section means it will not show in the
@@ -218,7 +353,15 @@ $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a 
   \end{itemize}
 \end{frame}
 
-
+\begin{frame}
+\begin{figure}[h]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.4]{bender.jpg}
+  \end{minipage}
+\end{figure}
+\end{frame}
 
 % All of the following is optional and typically not needed. 
 \appendix

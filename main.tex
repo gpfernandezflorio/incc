@@ -201,6 +201,9 @@ $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a 
 
 \subsection{Resultados}
 
+
+
+
 \begin{frame}
 
 \begin{figure}[h]
@@ -326,6 +329,47 @@ $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a 
   \end{minipage}
 \end{figure}
 \end{frame}
+
+
+\begin{center}
+    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+    \hline
+	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+    \hline
+     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
+     color        &  concepto    & 17.8125  & 7.6811   &  27.9439 & True   \\ 
+     color        &  letra/forma & 2.0      & -8.1314  &  12.1314 & False  \\ 
+     color        &  ruido       & -8.0     & -18.1314 &  2.1314  & False  \\ 
+	 concepto     &  letra/forma & -15.8125 & -25.9439 & -5.6811  & True  \\ 
+     concepto     &  ruido       & -25.8125 & -35.9439 & -15.6811 & True   \\ 
+     letra/forma  &  ruido       & -10.0    & -20.1314 & 0.1314   & False  \\ 
+    \end{tabular}
+\end{center} 
+
+
+\begin{center}
+    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+    \hline
+	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+    \hline
+     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
+     color        &  concepto    &  0.2077  & 0.0706   & 0.3447   & True  \\ 
+     color        &  letra/forma &  0.0198  & -0.1173  & 0.1569   & False \\ 
+     color        &  ruido       &  -0.1207 & -0.2578  & 0.0164   & False \\ 
+	 concepto     &  letra/forma &  -0.1879 & -0.3249  & -0.0508  & True \\ 
+     concepto     &  ruido       &  -0.3283 & -0.4654  & -0.1912  & True  \\ 
+     letra/forma  &  ruido       &  -0.1405 & -0.2776  & -0.0034  & True \\ 
+    \end{tabular}
+\end{center} 
+
+
+                   
+%['color' 'concepto' 'letra/forma' 'ruido']
+
+
+Anova Cantidad de elecciones de un usuario por clase 1.02032498869e-07 \\
+Anova Cantidad de elecciones de un usuario por clase / cantidad de jugadas del usuario 6.60708232706e-07 \\
+
 
 % Placing a * after \section means it will not show in the
 % outline or table of contents.

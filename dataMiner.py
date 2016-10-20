@@ -59,11 +59,11 @@ if __name__ == '__main__':
 	for l in f:
 		if l.startswith("NEW USER"):
 		# Cambio de Usuario
-#			if (user != -1 and users[user]["TOTAL"]!=0):
-#				avg_users[0][user] /= users[user]["TOTAL"]
-#				avg_users[1][user] /= users[user]["TOTAL"]
-#				avg_users[2][user] /= users[user]["TOTAL"]
-#				avg_users[3][user] /= users[user]["TOTAL"]
+			if (user != -1 and users[user]["TOTAL"]!=0):
+				avg_users[0][user] /= users[user]["TOTAL"]
+				avg_users[1][user] /= users[user]["TOTAL"]
+				avg_users[2][user] /= users[user]["TOTAL"]
+				avg_users[3][user] /= users[user]["TOTAL"]
 			user = user+1
 			users.append({obj['0']:0,obj['1']:0,obj['2']:0,obj['3']:0,"TOTAL":0})
 			temp_users.append([])
@@ -196,27 +196,31 @@ if __name__ == '__main__':
 					c = 0
 
 	pUsers = False
-#	pUsers = True
+	pUsers = True
 	if (pUsers):
 		c = 0
-		l = 1.0/(len(users)+50)
+		l = 1.0/(len(users)+8)
 		center = l*len(users)/2
 		for u in range(len(users)):
 			if int (users[u]["TOTAL"]) > 0:
-				p = plt.bar((0.5+u*l,1.5+u*l,2.5+u*l,3.5+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),width=l,color=colors[c])
-				#p = plt.bar((0.5+u*l,1.5+u*l,2.5+u*l,3.5+u*l),(users[u][obj['0']]/users[u]["TOTAL"],users[u][obj['1']]/users[u]["TOTAL"],users[u][obj['2']]/users[u]["TOTAL"],users[u][obj['3']]/users[u]["TOTAL"]),width=l,color=colors[c])
-				plt.title(u'Índice de relación de los usuarios por cada clase',fontsize=20)
-				#plt.title(u'Índice de relación relativa de los usuarios por cada clase',fontsize=20)
-				plt.ylabel(u'Índice de relación',fontsize=20)
-				#plt.ylabel(u'Índice de relación relativa',fontsize=20)
+				#p = plt.bar((1.2+u*l,2.2+u*l,3.2+u*l,4.2+u*l),(users[u][obj['0']],users[u][obj['1']],users[u][obj['2']],users[u][obj['3']]),width=l,color=colors[c])
+				p = plt.bar((1.2+u*l,2.2+u*l,3.2+u*l,4.2+u*l),(users[u][obj['0']]/users[u]["TOTAL"],users[u][obj['1']]/users[u]["TOTAL"],users[u][obj['2']]/users[u]["TOTAL"],users[u][obj['3']]/users[u]["TOTAL"]),width=l,color=colors[c])
+				#plt.title(u'Índice de relación de los usuarios por cada clase',fontsize=40)
+				plt.title(u'Índice de relación relativa de los usuarios por cada clase',fontsize=40)
+				#plt.ylabel(u'Índice de relación',fontsize=40)
+				plt.ylabel(u'Índice de relación relativa',fontsize=40)
 				c = c+1
 				if c >= len(colors):
 					c = 0
 
-		plt.ylim(-0.1, 60)
-		#plt.ylim(-0.002, 60)
-		plt.xticks((0,1,2,3),(obj["0"],obj["1"],obj["2"],obj["3"]))
-		plt.boxplot(avg_users)
+		#plt.ylim(-0.1, 60)
+		plt.ylim(-0.002, 0.75)
+		plt.xticks((),(obj["0"],obj["1"],obj["2"],obj["3"],""),fontsize=20)
+		plt.axvline(x=1.85, ymin=-0.1, ymax = 60, linewidth=1, color='k')
+		plt.axvline(x=2.85, ymin=-0.1, ymax = 60, linewidth=1, color='k')
+		plt.axvline(x=3.85, ymin=-0.1, ymax = 60, linewidth=1, color='k')
+		avg_users.append([0])
+		plt.boxplot(avg_users,widths=(0.23,0.23,0.23,0.23,0))
 		plt.show()
 
 	pTarget = False

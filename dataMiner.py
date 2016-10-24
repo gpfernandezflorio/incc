@@ -130,7 +130,7 @@ if __name__ == '__main__':
 	ir = [[],[],[],[]]
 
 	pTrials = False
-#	pTrials = True
+	pTrials = True
 	for t in trials_c:
 		highs = [0,0,0,0]
 		c = 0
@@ -173,10 +173,10 @@ if __name__ == '__main__':
 		ir[2].append(highs[2]/apariciones_trials[t])
 		ir[3].append(highs[3]/apariciones_trials[t])
 		if (pTrials):
-			plt.xticks((-0.5,0,1,2,3,3.5),("",obj["0"],obj["1"],obj["2"],obj["3"],""))
-			plt.title(u'Índice de relación relativa por choice del target ' + t,fontsize=20)
-			plt.ylabel(u'Índice de relación relativa',fontsize=20)
-			plt.legend(gs,legends,bbox_to_anchor=(1.1, 1.05))
+			plt.xticks((-0.5,0,1,2,3,3.5),("",obj["0"],obj["1"],obj["2"],obj["3"],""),fontsize=40)
+			plt.title(u'Índice de relación relativa por choice del target ' + t,fontsize=40)
+			plt.ylabel(u'Índice de relación relativa',fontsize=40)
+			plt.legend(gs,legends,bbox_to_anchor=(1.1, 1.05),fontsize=20)
 			plt.grid()
 			plt.show()
 
@@ -187,16 +187,16 @@ if __name__ == '__main__':
 		for u in temp_users:
 			if len(u) > 0:
 				plt.plot(u,'-o',color=colors[c])
-				plt.yticks((-0.5,0,1,2,3,3.5),("",obj["0"],obj["1"],obj["2"],obj["3"],""))
-				plt.title(u'Decisiones de un usuario en función del tiempo',fontsize=20)
-				plt.xlabel(u'Número de trial',fontsize=20)
+				plt.yticks((-0.5,0,1,2,3,3.5),("",obj["0"],obj["1"],obj["2"],obj["3"],""),fontsize=40)
+				plt.title(u'Decisiones de un usuario en función del tiempo',fontsize=40)
+				plt.xlabel(u'Número de trial',fontsize=40)
 				plt.show()
 				c = c+1
 				if c >= len(colors):
 					c = 0
 
 	pUsers = False
-	pUsers = True
+#	pUsers = True
 	if (pUsers):
 		c = 0
 		l = 1.0/(len(users)+8)
@@ -215,7 +215,7 @@ if __name__ == '__main__':
 
 		#plt.ylim(-0.1, 60)
 		plt.ylim(-0.002, 0.75)
-		plt.xticks((),(obj["0"],obj["1"],obj["2"],obj["3"],""),fontsize=20)
+		plt.xticks((),(obj["0"],obj["1"],obj["2"],obj["3"],""),fontsize=40)
 		plt.axvline(x=1.85, ymin=-0.1, ymax = 60, linewidth=1, color='k')
 		plt.axvline(x=2.85, ymin=-0.1, ymax = 60, linewidth=1, color='k')
 		plt.axvline(x=3.85, ymin=-0.1, ymax = 60, linewidth=1, color='k')

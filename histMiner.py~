@@ -50,10 +50,6 @@ if __name__ == '__main__':
 	randoms = {}
 	rand_int = 0
 	avg_users = [[],[],[],[]]
-	histogram_concepto = []
-	histogram_color = []
-	histogram_letraforma = []
-	histogram_ruido = []
 
 
 	for l in f:
@@ -64,16 +60,8 @@ if __name__ == '__main__':
 				avg_users[1][user] /= users[user]["TOTAL"]
 				avg_users[2][user] /= users[user]["TOTAL"]
 				avg_users[3][user] /= users[user]["TOTAL"]
-				histogram_concepto[user] =int(histogram_concepto[user]* 100.0 / users[user]["TOTAL"])
-				histogram_color[user] =int(histogram_color[user]* 100.0 / users[user]["TOTAL"])
-				histogram_letraforma[user] =int(histogram_letraforma[user]* 100.0 / users[user]["TOTAL"])
-				histogram_ruido[user] =int(histogram_ruido[user]* 100.0 / users[user]["TOTAL"])
 			user = user+1
 			users.append({obj['0']:0,obj['1']:0,obj['2']:0,obj['3']:0,"TOTAL":0})
-			histogram_concepto.append(0)
-			histogram_color.append(0)
-			histogram_letraforma.append(0)
-			histogram_ruido.append(0)
 			temp_users.append([])
 			avg_users[0].append(0)
 			avg_users[1].append(0)
@@ -117,15 +105,6 @@ if __name__ == '__main__':
 				trials_c[trial[0]][trial[1]][1] += 1/time
 				if trials_c[trial[0]][trial[1]][2] == '4':
 					trials_c[trial[0]][trial[1]][2] = trial[2]
-			#HISTOGRAMA
-			if (trial[2]=='0'):
-				histogram_concepto[user] += 1
-			if (trial[2]=='2'):
-				histogram_color[user] += 1
-			if (trial[2]=='1'):
-				histogram_letraforma[user] += 1
-			if (trial[2]=='3'):
-				histogram_ruido[user] += 1
 
 			# El resto
 			for j in range(3,6):
@@ -143,49 +122,11 @@ if __name__ == '__main__':
 			avg_users[int(trial[2])][user] += 1/time
 	colors = ['r','g','b','gold','c','purple','darkorange','darkblue','olive','mediumpurple','lightcoral','yellowgreen','saddlebrown','dodgerblue','lightpink','darkgrey','k']
 
-	histogram_concepto.remove(0)
-	histogram_color.remove(0)
-	histogram_letraforma.remove(0)
-	histogram_ruido.remove(0)
-	b = 5
-	plt.title("Histograma de Concepto",fontsize=40)
-	plt.yticks(fontsize=40)
-	plt.xticks(fontsize=40)
-	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	plt.xlim(0,100)
-	plt.hist(histogram_concepto,range=[0,100],bins=b,width=100.0/b)
-	plt.show()
-	plt.title("Histograma de Color",fontsize=40)
-	plt.yticks(fontsize=40)
-	plt.xticks(fontsize=40)
-	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	plt.xlim(0,100)
-	plt.hist(histogram_color,range=[0,100],bins=b,width=100.0/b)
-	plt.show()
-	plt.title("Histograma de Letra/Forma",fontsize=40)
-	plt.yticks(fontsize=40)
-	plt.xticks(fontsize=40)
-	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	plt.xlim(0,100)
-	plt.hist(histogram_letraforma,range=[0,100],bins=b,width=100.0/b)
-	plt.show()
-	plt.title("Histograma de Ruido",fontsize=40)
-	plt.yticks(fontsize=40)
-	plt.xticks(fontsize=40)
-	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	plt.xlim(0,100)
-	plt.hist(histogram_ruido,range=[0,100],bins=b,width=100.0/b)
-	plt.show()
-
 	names = []
 	ir = [[],[],[],[]]
 
 	pTrials = False
-#	pTrials = True
+	pTrials = True
 	for t in trials_c:
 		highs = [0,0,0,0]
 		c = 0

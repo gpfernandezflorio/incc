@@ -171,13 +171,18 @@ if __name__ == '__main__':
 #	tiempos_random = filter(lambda x : x < 3.03 and x > 0.74, tiempos_random)
 	print tiempos_set
 	print tiempos_random
-	plt.title("Tiempos de respuesta de los trials Set y Random",fontsize=40)
-	#plt.legend(gs,legends,bbox_to_anchor=(1.1, 1.05),fontsize=20)
-	plt.hist([tiempos_set,tiempos_random],bins=70,width=0.045)
-	plt.show()
+#	plt.title("Histogramas para tiempos de respuesta",fontsize=40)
+#	plt.hist([tiempos_set,tiempos_random],bins=70,width=0.045)
+#	plt.legend(["Set","Random"],bbox_to_anchor=(1.1, 1.05),fontsize=40)
+#	plt.ylabel("Cantidad",fontsize=40)
+#	plt.ylabel("Tiempo de respuesta (segundos)",fontsize=40)
+#	plt.yticks(fontsize=40)
+#	plt.xticks(fontsize=40)
+#	plt.axvline(x=1.63, ymin=-0.1, ymax = 6, linewidth=1, color='b')
+#	plt.axvline(x=2.43, ymin=-0.1, ymax = 6, linewidth=1, color='g')
+#	plt.show()
 	print np.mean(tiempos_set)
 	print np.mean(tiempos_random)
-	exit(0)
 
 	histogram_concepto = []
 	x = 0
@@ -221,8 +226,13 @@ if __name__ == '__main__':
 		histogram_ruido[x] = histogram_ruido[x] * 100.0 / z
 		x += 1
 
-	b = 15
+	b = 35
+	plt.ylim(0,18)
 	plt.hist([histogram_concepto,histogram_color,histogram_letraforma,histogram_ruido],range=[0,100],bins=b)
+	plt.axvline(x=np.mean(histogram_concepto), ymin=-0.1, ymax = 20, linewidth=1, color='b')
+	plt.axvline(x=np.mean(histogram_color), ymin=-0.1, ymax = 20, linewidth=1, color='g')
+	plt.axvline(x=np.mean(histogram_letraforma), ymin=-0.1, ymax = 20, linewidth=1, color='r')
+	plt.axvline(x=np.mean(histogram_ruido), ymin=-0.1, ymax = 20, linewidth=1, color='c')
 	plt.show()
 	exit(0)
 

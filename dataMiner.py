@@ -15,8 +15,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib._png import read_png
 from scipy import stats
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
-from statsmodels.stats.multicomp import MultiComparison
+#from statsmodels.stats.multicomp import pairwise_tukeyhsd
+#from statsmodels.stats.multicomp import MultiComparison
 from math import log10
 
 
@@ -60,7 +60,8 @@ if __name__ == '__main__':
 	histogram_color = []
 	histogram_letraforma = []
 	histogram_ruido = []
-
+	tiempos_set = []
+	tiempos_random = []
 
 	for l in f:
 		if l.startswith("NEW USER"):
@@ -89,6 +90,7 @@ if __name__ == '__main__':
 		# Random trial
 			trial = l[1:].split('|')
 			time = float(trial[5])
+			tiempos_random.append(time)
 			if not trial[0] in randoms:
 				randoms[trial[0]] = [rand_int,{}]
 				rand_int += 1
@@ -106,6 +108,7 @@ if __name__ == '__main__':
 		# Set trial
 			trial = l.split('|')
 			time = float(trial[6])
+			tiempos_set.append(time)
 			if not trial[0] in apariciones_trials:
 				apariciones_trials[trial[0]] = 0
 			else:
@@ -150,6 +153,16 @@ if __name__ == '__main__':
 			alls["TOTAL"] += 1
 			avg_users[int(trial[2])][user] += 1/time
 	colors = ['r','g','b','gold','c','purple','darkorange','darkblue','olive','mediumpurple','lightcoral','yellowgreen','saddlebrown','dodgerblue','lightpink','darkgrey','k']
+
+#	print tiempos_set
+#	print tiempos_random
+	plt.boxplot([tiempos_set,tiempos_random])
+	plt.show()
+	plt.hist(tiempos_set,bins=70)
+	plt.show()
+	plt.hist(tiempos_set,bins=70)
+	plt.show()
+	exit(0)
 
 	histogram_concepto = []
 	x = 0
@@ -239,29 +252,29 @@ if __name__ == '__main__':
 
 	#z,pval = stats.normaltest(histogram_ruido)
  	#z,pval = stats.kstest(histogram_ruido, 'norm')
-	z,pval = stats.shapiro(histogram_ruido)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Ruido")
+	#z,pval = stats.shapiro(histogram_ruido)
+#	if(pval < 0.05):
+#	 	print pval 
+#		print("Not normal distribution Ruido")
 
 	#z,pval = stats.normaltest(histogram_color)
-	z,pval = stats.shapiro(histogram_color)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Color")
+	#z,pval = stats.shapiro(histogram_color)
+#	if(pval < 0.05):
+#	 	print pval 
+#		print("Not normal distribution Color")
 
 
 #	z,pval = stats.normaltest(histogram_letraforma)
-	z,pval = stats.shapiro(histogram_letraforma)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Letra/Forma")
+	#z,pval = stats.shapiro(histogram_letraforma)
+#	if(pval < 0.05):
+#	 	print pval 
+#		print("Not normal distribution Letra/Forma")
 
 #	z,pval = stats.normaltest(histogram_concepto)
-	z,pval = stats.shapiro(histogram_concepto)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Concepto")
+	#z,pval = stats.shapiro(histogram_concepto)
+#	if(pval < 0.05):
+#	 	print pval 
+#		print("Not normal distribution Concepto")
 
 	names = []
 	ir = [[],[],[],[]]

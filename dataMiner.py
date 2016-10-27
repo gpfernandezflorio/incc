@@ -234,7 +234,7 @@ if __name__ == '__main__':
 	plt.axvline(x=np.mean(histogram_letraforma), ymin=-0.1, ymax = 20, linewidth=1, color='r')
 	plt.axvline(x=np.mean(histogram_ruido), ymin=-0.1, ymax = 20, linewidth=1, color='c')
 	plt.show()
-	exit(0)
+	#exit(0)
 
 	plt.title("Histograma de Concepto",fontsize=40)
 	plt.yticks(fontsize=40)
@@ -275,29 +275,56 @@ if __name__ == '__main__':
 
 	#z,pval = stats.normaltest(histogram_ruido)
  	#z,pval = stats.kstest(histogram_ruido, 'norm')
-	#z,pval = stats.shapiro(histogram_ruido)
-#	if(pval < 0.05):
-#	 	print pval 
-#		print("Not normal distribution Ruido")
+	z,pval = stats.shapiro(histogram_ruido)
+	if(pval < 0.05):
+	 	print pval 
+		print("Not normal distribution Ruido")
 
 	#z,pval = stats.normaltest(histogram_color)
-	#z,pval = stats.shapiro(histogram_color)
-#	if(pval < 0.05):
-#	 	print pval 
-#		print("Not normal distribution Color")
+	z,pval = stats.shapiro(histogram_color)
+	if(pval < 0.05):
+	 	print pval 
+		print("Not normal distribution Color")
 
 
 #	z,pval = stats.normaltest(histogram_letraforma)
-	#z,pval = stats.shapiro(histogram_letraforma)
-#	if(pval < 0.05):
-#	 	print pval 
-#		print("Not normal distribution Letra/Forma")
+	z,pval = stats.shapiro(histogram_letraforma)
+	if(pval < 0.05):
+	 	print pval 
+		print("Not normal distribution Letra/Forma")
 
 #	z,pval = stats.normaltest(histogram_concepto)
-	#z,pval = stats.shapiro(histogram_concepto)
-#	if(pval < 0.05):
-#	 	print pval 
-#		print("Not normal distribution Concepto")
+	z,pval = stats.shapiro(histogram_concepto)
+	if(pval < 0.05):
+	 	print pval 
+		print("Not normal distribution Concepto")
+
+	w, p = stats.bartlett(histogram_concepto, histogram_letraforma, histogram_color)
+
+	print "Varianzas: "
+	print p
+	print w
+
+	w, p = stats.ttest_ind(histogram_concepto, histogram_letraforma, equal_var = True)
+
+	print "T Test concepto vs letraForma: "
+	print p
+	print w
+
+	w, p = stats.ttest_ind(histogram_concepto, histogram_color, equal_var = True)
+
+	print "T Test concepto vs Color: "
+	print p
+	print w
+
+	w, p = stats.ttest_ind(histogram_color, histogram_letraforma, equal_var = True)
+
+	print "T Test color vs letraForma: "
+	print p
+	print w
+
+	
+
 
 	names = []
 	ir = [[],[],[],[]]

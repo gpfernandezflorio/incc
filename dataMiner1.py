@@ -9,16 +9,10 @@
 # Irr_uxc: Índice de relación reativa de un usuario respecto a una de las cuatro clases = Ir_uxc / cantidad de trials que el usuario eligió la clase c.
 # Irr_cxt: Índice de relación reativa de un choice respecto a un target = Ir_cxt / cantidad de veces que apareció el choice c
 
-
 import sys, math, random, datetime, Image
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib._png import read_png
-from scipy import stats
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
-from statsmodels.stats.multicomp import MultiComparison
-from math import log10
-
 
 def maximox(dic):
 	iMax = [0,0]
@@ -115,14 +109,12 @@ if __name__ == '__main__':
 
 			# Elegida:
 			if not trial[1] in trials_c[trial[0]]:
-#				trials_c[trial[0]][trial[1]] = [1,1/time,trial[2]]
-				trials_c[trial[0]][trial[1]] = [1,1,trial[2]]
+				trials_c[trial[0]][trial[1]] = [1,1/time,trial[2]]
 			else:
 				# Le sumo 1 a cant apariciones
 				trials_c[trial[0]][trial[1]][0] += 1
 				# Le sumo 1 a cant elegida
-#				trials_c[trial[0]][trial[1]][1] += 1/time
-				trials_c[trial[0]][trial[1]][1] += 1
+				trials_c[trial[0]][trial[1]][1] += 1/time
 				if trials_c[trial[0]][trial[1]][2] == '4':
 					trials_c[trial[0]][trial[1]][2] = trial[2]
 			#HISTOGRAMA
@@ -151,117 +143,43 @@ if __name__ == '__main__':
 			avg_users[int(trial[2])][user] += 1/time
 	colors = ['r','g','b','gold','c','purple','darkorange','darkblue','olive','mediumpurple','lightcoral','yellowgreen','saddlebrown','dodgerblue','lightpink','darkgrey','k']
 
-	histogram_concepto = []
-	x = 0
-	for i in trials_c:
-		z = apariciones_trials[i]
-		histogram_concepto.append(0)
-		for j in trials_c[i]:
-			if trials_c[i][j][2] == '0':
-				histogram_concepto[x] += trials_c[i][j][1]
-		histogram_concepto[x] = histogram_concepto[x] * 100.0 / z
-		x += 1
-
-	histogram_color = []
-	x = 0
-	for i in trials_c:
-		z = apariciones_trials[i]
-		histogram_color.append(0)
-		for j in trials_c[i]:
-			if trials_c[i][j][2] == '2':
-				histogram_color[x] += trials_c[i][j][1]
-		histogram_color[x] = histogram_color[x] * 100.0 / z
-		x += 1
-	histogram_letraforma = []
-	x = 0
-	for i in trials_c:
-		z = apariciones_trials[i]
-		histogram_letraforma.append(0)
-		for j in trials_c[i]:
-			if trials_c[i][j][2] == '1':
-				histogram_letraforma[x] += trials_c[i][j][1]
-		histogram_letraforma[x] = histogram_letraforma[x] * 100.0 / z
-		x += 1
-	histogram_ruido = []
-	x = 0
-	for i in trials_c:
-		z = apariciones_trials[i]
-		histogram_ruido.append(0)
-		for j in trials_c[i]:
-			if trials_c[i][j][2] == '3':
-				histogram_ruido[x] += trials_c[i][j][1]
-		histogram_ruido[x] = histogram_ruido[x] * 100.0 / z
-		x += 1
-
-	# histogram_concepto.remove(0)
-	# histogram_color.remove(0)
-	# histogram_letraforma.remove(0)
-	histogram_ruido.remove(19.047619047619047)
-	b = 10
-	# plt.title("Histograma de Concepto",fontsize=40)
-	# plt.yticks(fontsize=40)
-	# plt.xticks(fontsize=40)
-	# plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	# plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	# plt.xlim(0,100)
-	# plt.hist(histogram_concepto,range=[0,100],bins=b,width=100.0/b)
-	# plt.show()
-	# plt.title("Histograma de Color",fontsize=40)
-	# plt.yticks(fontsize=40)
-	# plt.xticks(fontsize=40)
-	# plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	# plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	# plt.xlim(0,100)
-	# plt.hist(histogram_color,range=[0,100],bins=b,width=100.0/b)
-	# plt.show()
-	# plt.title("Histograma de Letra/Forma",fontsize=40)
-	# plt.yticks(fontsize=40)
-	# plt.xticks(fontsize=40)
-	# plt.xlabel("Porcentaje de Desiciones",fontsize=40)
-	# plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	# plt.xlim(0,100)
-	# plt.hist(histogram_letraforma,range=[0,100],bins=b,width=100.0/b)
-	# plt.show()
+	histogram_concepto.remove(0)
+	histogram_color.remove(0)
+	histogram_letraforma.remove(0)
+	histogram_ruido.remove(0)
+	b = 5
+	plt.title("Histograma de Concepto",fontsize=40)
+	plt.yticks(fontsize=40)
+	plt.xticks(fontsize=40)
+	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
+	plt.ylabel("Cantidad de Usuarios",fontsize=40)
+	plt.xlim(0,100)
+	plt.hist(histogram_concepto,range=[0,100],bins=b,width=100.0/b)
+	plt.show()
+	plt.title("Histograma de Color",fontsize=40)
+	plt.yticks(fontsize=40)
+	plt.xticks(fontsize=40)
+	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
+	plt.ylabel("Cantidad de Usuarios",fontsize=40)
+	plt.xlim(0,100)
+	plt.hist(histogram_color,range=[0,100],bins=b,width=100.0/b)
+	plt.show()
+	plt.title("Histograma de Letra/Forma",fontsize=40)
+	plt.yticks(fontsize=40)
+	plt.xticks(fontsize=40)
+	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
+	plt.ylabel("Cantidad de Usuarios",fontsize=40)
+	plt.xlim(0,100)
+	plt.hist(histogram_letraforma,range=[0,100],bins=b,width=100.0/b)
+	plt.show()
 	plt.title("Histograma de Ruido",fontsize=40)
 	plt.yticks(fontsize=40)
 	plt.xticks(fontsize=40)
 	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
 	plt.ylabel("Cantidad de Usuarios",fontsize=40)
-	#plt.xlim(0,100)
-	#plt.hist(histogram_ruido,range=[0,100],bins=b,width=100.0/b)
-	plt.hist(histogram_ruido,bins=b)
-	#plt.show()
-
-	print(sorted(histogram_ruido))
-	print(sorted(histogram_concepto))
-	print(sorted(histogram_color))
-	print(sorted(histogram_letraforma))
-
-	#z,pval = stats.normaltest(histogram_ruido)
- 	#z,pval = stats.kstest(histogram_ruido, 'norm')
-	z,pval = stats.shapiro(histogram_ruido)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Ruido")
-
-	#z,pval = stats.normaltest(histogram_color)
-	z,pval = stats.shapiro(histogram_color)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Color")
-
-
-#	z,pval = stats.normaltest(histogram_letraforma)
-	z,pval = stats.shapiro(histogram_letraforma)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Letra/Forma")
-
-#	z,pval = stats.normaltest(histogram_concepto)
-	z,pval = stats.shapiro(histogram_concepto)
-	if(pval < 0.05):
-	 	print pval 
-		print("Not normal distribution Concepto")
+	plt.xlim(0,100)
+	plt.hist(histogram_ruido,range=[0,100],bins=b,width=100.0/b)
+	plt.show()
 
 	names = []
 	ir = [[],[],[],[]]

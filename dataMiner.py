@@ -154,14 +154,16 @@ if __name__ == '__main__':
 			avg_users[int(trial[2])][user] += 1/time
 	colors = ['r','g','b','gold','c','purple','darkorange','darkblue','olive','mediumpurple','lightcoral','yellowgreen','saddlebrown','dodgerblue','lightpink','darkgrey','k']
 
-#	print tiempos_set
-#	print tiempos_random
 	plt.boxplot([tiempos_set,tiempos_random])
-	plt.show()
+#	plt.show()
+	tiempos_set = filter(lambda x : x < 3.63 and x > 0.61, tiempos_set)
+	tiempos_random = filter(lambda x : x < 6.03 and x > 0.74, tiempos_random)
+	#print tiempos_set
+	#print tiempos_random
 	plt.hist(tiempos_set,bins=70)
-	plt.show()
-	plt.hist(tiempos_set,bins=70)
-	plt.show()
+#	plt.show()
+	plt.hist(tiempos_random,bins=70)
+#	plt.show()
 	exit(0)
 
 	histogram_concepto = []

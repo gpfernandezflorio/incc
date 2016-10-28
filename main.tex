@@ -376,7 +376,7 @@ $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a 
 \end{frame}
 
 \begin{frame}
-\begin{figure}[h]
+\begin{figure}[c]
  \centering
   \begin{minipage}[c]{1\textwidth}
 	\centering	
@@ -386,7 +386,7 @@ $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a 
 \end{frame}
 
 \begin{frame}
-\begin{figure}[h]
+\begin{figure}[c]
  \centering
   \begin{minipage}[c]{1\textwidth}
 	\centering	
@@ -396,44 +396,98 @@ $IR\_l1xl2$ = $\sum IR$ de los trials con con target l1 en los que se eligió a 
 \end{frame}
 
 
+
+
+
+
+
+\begin{frame}{Test shapiro - Normalidad}
+
+La hipótesis nula de esta prueba es que la población tiene una distribución normal. Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada (se concluye que los datos no vienen de una distribución normal).
+
 \begin{center}
-    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+    \begin{tabular}{ | p{2cm} | p{3.5cm} | p{2cm} |}
     \hline
-	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+     clase       &  p-value               & Rechaza H0		\\ 
     \hline
-     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
-     color        &  concepto    & 17.8125  & 7.6811   &  27.9439 & True   \\ 
-     color        &  letra/forma & 2.0      & -8.1314  &  12.1314 & False  \\ 
-     color        &  ruido       & -8.0     & -18.1314 &  2.1314  & False  \\ 
-	 concepto     &  letra/forma & -15.8125 & -25.9439 & -5.6811  & True  \\ 
-     concepto     &  ruido       & -25.8125 & -35.9439 & -15.6811 & True   \\ 
-     letra/forma  &  ruido       & -10.0    & -20.1314 & 0.1314   & False  \\ 
+     Ruido       &  9.67449295786e-07     & True 				\\ 
+     Color       &  0.138976812363   	  &	False				\\ 
+     Letra/Forma &  0.0948526263237       & False 				\\ 
+	 Concepto    &  0.733717143536   	  &	False			\\ 
+    \hline
     \end{tabular}
 \end{center} 
 
+\end{frame}
+
+\begin{frame}{Test bartlett - Homocedasticidad}
+
+%{\Huge ESTA BIEN LO QUE SIGUE NO?}
+
+%La prueba de Bartlett se utiliza para probar la hipótesis nula, {\displaystyle H_{0}} H_0 que todas las varianzas de una población k son iguales, frente a la hipótesis alternativa de que al menos dos son diferentes.
+Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las varianzas.
+
+$P-value$ : 0.413846834579
+
+\end{frame}
+
+\begin{frame}{T-Test}
+
+Se trata de una prueba bilateral para la hipótesis nula de que 2 muestras independientes tienen idénticos valores madios (esperados). Esta prueba asume que las poblaciones tienen varianzas iguales.
 
 \begin{center}
-    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+    \begin{tabular}{ | p{2cm} | p{2cm} | p{3.5cm} | p{2cm} |}
     \hline
-	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+     Clase1       &  Clase2 			&  p-value               & Rechaza H0		\\ 
     \hline
-     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
-     color        &  concepto    &  0.2077  & 0.0706   & 0.3447   & True  \\ 
-     color        &  letra/forma &  0.0198  & -0.1173  & 0.1569   & False \\ 
-     color        &  ruido       &  -0.1207 & -0.2578  & 0.0164   & False \\ 
-	 concepto     &  letra/forma &  -0.1879 & -0.3249  & -0.0508  & True \\ 
-     concepto     &  ruido       &  -0.3283 & -0.4654  & -0.1912  & True  \\ 
-     letra/forma  &  ruido       &  -0.1405 & -0.2776  & -0.0034  & True \\ 
+     Concepto    &  Letra/Forma	    &  6.04027331118e-09     & True 				\\ 
+     Concepto    &  Color 			&  7.02800170074e-11   	 & True				\\ 
+     Color 		 &  Letra/Forma     &  0.40368990303         & False 				\\ 
+    \hline
     \end{tabular}
 \end{center} 
+
+\end{frame}
+
+
+%\begin{center}
+%    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+%    \hline
+%	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+ %   \hline
+%     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
+%     color        &  concepto    & 17.8125  & 7.6811   &  27.9439 & True   \\ 
+%     color        &  letra/forma & 2.0      & -8.1314  &  12.1314 & False  \\ 
+%     color        &  ruido       & -8.0     & -18.1314 &  2.1314  & False  \\ 
+%	 concepto     &  letra/forma & -15.8125 & -25.9439 & -5.6811  & True  \\ 
+%     concepto     &  ruido       & -25.8125 & -35.9439 & -15.6811 & True   \\ 
+%     letra/forma  &  ruido       & -10.0    & -20.1314 & 0.1314   & False  \\ 
+%    \end{tabular}
+%\end{center} 
+
+
+%\begin{center}
+%    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+%    \hline
+%	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+%    \hline
+%     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
+%     color        &  concepto    &  0.2077  & 0.0706   & 0.3447   & True  \\ 
+%     color        &  letra/forma &  0.0198  & -0.1173  & 0.1569   & False \\ 
+%     color        &  ruido       &  -0.1207 & -0.2578  & 0.0164   & False \\ 
+%	 concepto     &  letra/forma &  -0.1879 & -0.3249  & -0.0508  & True \\ 
+%     concepto     &  ruido       &  -0.3283 & -0.4654  & -0.1912  & True  \\ 
+%     letra/forma  &  ruido       &  -0.1405 & -0.2776  & -0.0034  & True \\ 
+%    \end{tabular}
+%\end{center} 
 
 
                    
 %['color' 'concepto' 'letra/forma' 'ruido']
 
 
-Anova Cantidad de elecciones de un usuario por clase 1.02032498869e-07 \\
-Anova Cantidad de elecciones de un usuario por clase / cantidad de jugadas del usuario 6.60708232706e-07 \\
+%Anova Cantidad de elecciones de un usuario por clase 1.02032498869e-07 \\
+%Anova Cantidad de elecciones de un usuario por clase / cantidad de jugadas del usuario 6.60708232706e-07 \\
 
 
 % Placing a * after \section means it will not show in the

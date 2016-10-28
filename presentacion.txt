@@ -1,0 +1,74 @@
+PONER UN TITULO IMPACTANTE
+
+Idea del tp:
+
+La idea fue ver en que pensamos cuando vemos un logo. Si nos remite a la idea del producto o aquello a lo que el logo referencia o si vemos al logo como una imagen sin significado. 
+
+Por ejemplo: Si ves el logo de coca cola te remite a la gaseosa o solo ves un circulo rojo con letras?.
+
+Si ves el logo de apple recordas tecnologia o fruta (?)
+
+Nota Agregar diapo. 
+
+Agregar el chamuyo de porque lo hicimos. 
+
+Hipotesis:
+
+Creemos que la gente asocia mayormente por concepto. Es decir, que por mas que un logo no haga referencia explicita a su concepto, las personas pensamos inconscientemente en aquello que el logo representa. 
+
+
+Experimento:
+
+La idea original fue pedirle a los usuarios que clasifiquen un grupo de logos para ver si asociaban por conceptos relacionados. Si tenemos el grupo mc coca, fb, burger, pepsi, google. Ver si asociaban mc con burger, coca con pepsi, facebook con google. Para hacerlo mas dinamico 
+pensamos que aparezca un logo target y luego el usuario tenga que elegir alguna de las opciones que le damos a las que llamamos choice. 
+
+Explicacion en las diapos. 
+
+Esta hecho en python. 
+
+el targuet aparece durante 1/2 seg
+luego durante 1/10 seg pantalla negra
+luego el conjunto de choices para elegir
+Cada jugador tenia como limite inferior 3 min de juego para garantizar un minimo de trials resueltos. 
+
+Decidimos que cada target tenga asociado cuatro choices, uno perteneciente a casa clase (concepto, letra/forma, color, ruido)
+
+
+Metricas
+
+Para hacer los graficos inicialmente ibamos a graficar la cantidad de veces que los usuarios hicieron click sobre una imagen de una determinada clase.  
+
+Pero pensamos que era conveniente darle mas peso a las elecciones mas rapidas. Para esto definimos el indice de relacion (IR) como 1/t siendo t el tiempo que le tomo al usuario seleccionar un choice. 
+
+
+------------------------------------------------------------------------
+Grafico 1
+
+Cada barra es un usuario, la altura de la barra nos indica la sumatoria de los indices de relacion de cada usuario sobre cada clase. 
+
+Utilizamos el boxplot para hacer un analisis descriptivos de los datos. Lo que podemos ver es donde se encuentra 
+
+Lo que podemos ver en el boxplot es en donde se encuentra el promedio para cada una de las clases. Lo que se puede ver es que hay mucha variabilidad de datos, los boxplots se superponen por lo que no podemos sacar ninguna conclusion a priori. Entonces decidimos relativizar el IR, es decir, lo dividimos por el tiempo de respuesta.    
+
+Grafico2
+
+En este segundo grafico relativizado podemos ver que homogeneizamos mas los valores, aun asi no podemos concluir nada. Lo que si podemos ver es que hay una clara tendencia de asociacion y puede verse en que el ruido casi no fue elegido. 
+
+Grafico 3 4 y 5
+
+Podemos ver diferentes perfiles de usuarios. 
+
+En estos graficos podemos ver las elecciones de los usuarios para los trials que no son random. 
+
+
+En el primero vemos usuarios con tendencia a asociar por concepto, en el segundo por color y letra/forma
+
+
+
+discusion:
+tener los trials random, metidos en el medio hace que un usuario no pueda encontrar un patron y sea mas parecido a lo que pasa en la realidad. 
+
+Graficos 6 7 8 y 9 
+
+Podemos ver por cada barra la acumulacion de IRr por cada categoria para un target especifico. Y ademas por cada barra tenemos la cantidad de veces que se eligio cada choice. 
+

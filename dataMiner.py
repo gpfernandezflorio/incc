@@ -276,28 +276,36 @@ if __name__ == '__main__':
 	#z,pval = stats.normaltest(histogram_ruido)
  	#z,pval = stats.kstest(histogram_ruido, 'norm')
 	z,pval = stats.shapiro(histogram_ruido)
+	print pval 
 	if(pval < 0.05):
-	 	print pval 
 		print("Not normal distribution Ruido")
-
+	else:
+		print("Normal distribution Ruido")
+		
 	#z,pval = stats.normaltest(histogram_color)
 	z,pval = stats.shapiro(histogram_color)
+	print pval 
 	if(pval < 0.05):
-	 	print pval 
 		print("Not normal distribution Color")
+	else:
+		print("Normal distribution Color")
 
 
 #	z,pval = stats.normaltest(histogram_letraforma)
 	z,pval = stats.shapiro(histogram_letraforma)
+	print pval 
 	if(pval < 0.05):
-	 	print pval 
 		print("Not normal distribution Letra/Forma")
+	else:
+		print("Normal distribution Letra/Forma")
 
 #	z,pval = stats.normaltest(histogram_concepto)
 	z,pval = stats.shapiro(histogram_concepto)
+	print pval 
 	if(pval < 0.05):
-	 	print pval 
 		print("Not normal distribution Concepto")
+	else:
+		print("Normal distribution Concepto")
 
 	w, p = stats.bartlett(histogram_concepto, histogram_letraforma, histogram_color)
 

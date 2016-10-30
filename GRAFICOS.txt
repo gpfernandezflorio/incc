@@ -5,20 +5,23 @@ userX.png: (con X entre 1 y 16)
 
 ir_uxc.png:
 	Por cada usuario, la suma de los ir de cada clase en los trials set.
+  > La altura indica la cantidad de veces que el usuario eligió esa clase, sólo que en vez de sumar uno, suma 1/t
 
 irr_uxc.png:
-	Igual al anterior pero cada valor se divide por la cantidad de trials set que hizo el usuario.
+	Igual al anterior pero cada valor se divide por la cantidad de trials Set que hizo el usuario.
 
-ir_uxc_2.png y irr_uxc_2.png:
-	Igual que los dos anteriores pero además se agregan los boxplots que miden la media y la distribución.
+addidas.png,america.png,...,vw.png:
+  Cada sub-barra corresponde a la cantidad de veces que, dado este target, se eligió el choice correspondiente.
+  > En vez de sumar uno, suma 1/t. Además, cada sub-barra se la divide por la cantidad de veces que apareció ese choice.
 
 target_ir.png:
 	Para cada trial set, la suma de los ir de cada uno de sus choices de cada clase.
+  > Cada círculo se corresponde con una barra completa de alguno de los gráficos anteriores.
 
 target_irr.png:
 	Igual al anterior pero cada valor se divide por la cantidad de apariciones del trial.
 
 random.png:
 	Para los trials randoms, en el eje y está el target que apareció y en el eje x el choice elegido.
-	Tanto el tamaño como el color del punto denotan el ínidce de relación relativo entre el target y el choice.
+	Tanto el tamaño como el color del punto denotan el índice de relación relativo entre el target y el choice.
 	Es decir, la suma de los ir (1/tiempo) de cada vez que se eligió ese choice contra ese target dividido la cantidad de veces que apareció ese choice contra ese target.

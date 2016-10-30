@@ -435,14 +435,51 @@ La hipótesis nula de esta prueba es que la población tiene una distribución n
 
 \begin{frame}{Test bartlett - Homocedasticidad}
 
-%{\Huge ESTA BIEN LO QUE SIGUE NO?}
+{\Large ESTA BIEN LA DESCRIPCION DE LO QUE HACE BARTLETT?}
 
-%La prueba de Bartlett se utiliza para probar la hipótesis nula, {\displaystyle H_{0}} H_0 que todas las varianzas de una población k son iguales, frente a la hipótesis alternativa de que al menos dos son diferentes.
+La prueba de Bartlett se utiliza para probar la hipótesis nula, H0 que todas las varianzas de una población k son iguales, frente a la hipótesis alternativa de que al menos dos son diferentes.
 Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las varianzas.
 
 $P-value$ : 0.413846834579
 
 \end{frame}
+
+\begin{frame}{Test Anova - comparación de medias}
+
+{\Large ESTA BIEN LA DESCRIPCION DE LO QUE HACE ANOVA?}
+{\Large BARTLETT HACE LO MISMO QUE ANOVA TIENE SENTIDO TENER LOS DOS?}
+
+La prueba ANOVA (Analysis Of Variance) permite comparar simultaneamente todas las medias. Como su nombre lo indica, compara varianzas aunque lo que contrastamos son medias. La hipotesis nula es que las medias no tienen diferencias significativas.
+Si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las medias.
+
+$P-value$ : 7.03090345431e-12
+
+\end{frame}
+
+\begin{frame}{Test Tukey}
+
+El Test de Tukey es un test de comparaciones múltiples. Permite comparar las medias de los t niveles de un factor después de haber rechazado la Hipótesis nula de igualdad de medias mediante la técnica ANOVA. 
+
+Se establece así un umbral, como en otros métodos. Se calculan todas las diferencias de medias muestrales entre los t niveles del factor estudiado. 
+
+{\Large QUE SIGNIFICA ESE REJECT, ES RECHAZAR H0 NO?}
+
+
+\begin{center}
+    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+    \hline
+	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+    \hline
+     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
+     color        &  concepto    & 37.4293  & 26.8863   &  47.9722 & True   \\ 
+     color        &  letra/forma & 3.9808   & -6.5621   &  14.5237 & False  \\ 
+	 concepto     &  letra/forma & -33.4485 & -43.9914 &  -22.9056  & True  \\ 
+    \hline
+    \end{tabular}
+\end{center} 
+
+\end{frame}
+
 
 \begin{frame}{T-Test}
 
@@ -461,6 +498,9 @@ Se trata de una prueba bilateral para la hipótesis nula de que 2 muestras indep
 \end{center} 
 
 \end{frame}
+
+
+
 
 
 %\begin{center}

@@ -17,8 +17,8 @@ import matplotlib.pyplot as plt
 from matplotlib._png import read_png
 from scipy import stats
 from scipy.stats import norm
-#from statsmodels.stats.multicomp import pairwise_tukeyhsd
-#from statsmodels.stats.multicomp import MultiComparison
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+from statsmodels.stats.multicomp import MultiComparison
 from math import log10
 
 
@@ -264,7 +264,7 @@ if __name__ == '__main__':
 	plt.xlabel("Porcentaje de Desiciones",fontsize=40)
 	plt.ylabel("Cantidad de Targets",fontsize=40)
 	plt.show()
-	exit(0)
+#	exit(0)
 
 	plt.title("Histograma de Concepto",fontsize=40)
 	plt.yticks(fontsize=40)
@@ -361,6 +361,50 @@ if __name__ == '__main__':
 	print p
 	print w
 
+	print("-------------------------------------------------------------------------")
+	print("*************************************************************************")
+	print("-------------------------------------------------------------------------")
+
+	F, p = stats.f_oneway(histogram_concepto, histogram_letraforma, histogram_color)
+	print "Anova Cantidad de elecciones de un usuario por clase"
+	print p
+
+	print("-------------------------------------------------------------------------")
+	print("*************************************************************************")
+	print("-------------------------------------------------------------------------")
+
+
+	arrayAux1  = np.concatenate((np.array(histogram_concepto), np.array(histogram_letraforma)), axis=0)
+	arrayTotal  = np.concatenate((arrayAux1, histogram_color), axis=0)
+
+
+	arr1 = np.array(map(lambda x: "concepto", range(len(histogram_concepto))))
+	arr2 = np.array(map(lambda x: "letra/forma", range(len(histogram_letraforma))))
+	arr3 = np.array(map(lambda x: "color", range(len(histogram_color))))
+
+	arrAux1  = np.concatenate((arr1, arr2), axis=0)
+	arrTotal  = np.concatenate((arrAux1, arr3), axis=0)
+
+
+	mc = MultiComparison(arrayTotal, arrTotal)
+	result = mc.tukeyhsd()
+
+
+	print(result)
+	print(mc.groupsunique)
+	print("-------------------------------------------------------------------------")
+	print("*************************************************************************")
+	print("-------------------------------------------------------------------------")
+
+	#plt.title("",fontsize=20)
+	#plt.yticks(fontsize=20)
+	#plt.xlabel("Porcentaje de Desiciones",fontsize=20)
+	#plt.ylabel("Cantidad de Targets",fontsize=20)
+	#plt.xticks(range(3), ('Concepto','Letra/Formo','Color'), fontsize=20)
+	#plt.xlim(0,100)
+
+	#plt.boxplot([histogram_concepto, histogram_letraforma, histogram_color])
+	#plt.show()
 	
 
 

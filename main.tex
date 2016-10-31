@@ -133,11 +133,7 @@ Por ejemplo: Si ven al logo de coca cola los remite a la gaseosa o solo ven un c
 \end{figure}
 
 
-
-
    % Nos preguntamos qué tan bien hacen su trabajo los logos de marcas. Las personas cuando los ven identifican Conceptos, Colores, formas, o no les significan nada especifico? 
-
-
 
  
   \end{itemize}
@@ -148,13 +144,53 @@ Por ejemplo: Si ven al logo de coca cola los remite a la gaseosa o solo ven un c
   \item {
 
 Creemos que la gente asocia mayormente por concepto. Es decir, que por mas que un logo no haga referencia explicita a su concepto, las personas pensamos inconscientemente en aquello que el logo representa. 
-
-
   }
-
- 
+  
   \end{itemize}
 \end{frame}
+
+\subsection{Experimento}
+
+
+
+\begin{frame}{}{}
+  \begin{itemize}
+  \item {\textbf{Asociación en la memoria:}  relación que percibimos entre palabras, 		objetos, lugares, emociones. En este caso, imágenes, precisamente logos.
+} %\pause
+  \item {\textbf{Aprendizaje incidental:} información captada y almacenada de forma involuntaria como consecuencia de la simple exposición a situaciones en las que intervienen esos contenidos
+}
+  \begin{itemize}
+  \item {\textbf{Memoria implicita:} recuerdo no intencional de algo como consecuencia de la presentaciön de una clave o estimulo.
+}%\pause
+  \end{itemize}
+  \item {\textbf{Aprendizaje intencional:}  tiene lugar cuando prestamos atención a la información y la estudiamos con la intención de recordarla posteriormente
+}%\pause
+  \begin{itemize}
+  \item {\textbf{Memoria explicita:} recuerdo voluntario y consciente que ocurre cuando nos proponemos recuperar intencionalmente algún contenido de nuestra memoria
+}
+  \end{itemize}
+  
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{}{}
+  \begin{itemize}
+
+  \item {
+Asociaciones como base en la formación de conocimientos: importancia en psicología!
+la asociación como concepto clave para "explicar" el funcionamiento de la mente y del conocimiento humano esta idea la toma la psicología de la corriente empirista (todo conocimiento procede de la experiencia)
+  }%\pause 
+  \item {\textbf{Existen principios de contiguidad, semejanza y contraste aunque actualmente se considera que los conocimientos contenidos en nuestra memoria constituyen nodos de una red -red semantica- (se puede medir distancias semanticas entre nodos midiendo tiempos de reacción)  
+}  
+}
+  
+  \end{itemize}
+  
+
+  
+  
+\end{frame}
+
 
 \subsection{Experimento}
 
@@ -238,28 +274,28 @@ IR = 1/tiempo de respuesta.
 \subsection{Usuarios}
 
 
-\begin{frame}
+%\begin{frame}
 
-\begin{figure}[h]
- \centering
-  \begin{minipage}[c]{1\textwidth}
-	\centering	
-	\includegraphics[scale=0.23]{ir_uxc.png}
-  \end{minipage}
-\end{figure}
+%\begin{figure}[h]
+% \centering
+%  \begin{minipage}[c]{1\textwidth}
+%	\centering	
+%	\includegraphics[scale=0.23]{ir_uxc.png}
+%  \end{minipage}
+%\end{figure}
 
-\end{frame}
-\begin{frame}
+%\end{frame}
+%\begin{frame}
 
-\begin{figure}[h]
- \centering
-  \begin{minipage}[c]{1\textwidth}
-	\centering	
-	\includegraphics[scale=0.23]{irr_uxc.png}
-  \end{minipage}
-\end{figure}
+%\begin{figure}[h]
+% \centering
+%  \begin{minipage}[c]{1\textwidth}
+%	\centering	
+%	\includegraphics[scale=0.23]{irr_uxc.png}
+%  \end{minipage}
+%\end{figure}
 
-\end{frame}
+%\end{frame}
 
 \begin{frame}
 \begin{figure}[h]
@@ -384,6 +420,110 @@ Comparación de los índices de relación relativa (relativizado)
 \end{figure}
 \end{frame}
 
+
+\subsection{Clases}
+
+\begin{frame}
+\begin{figure}[c]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.27]{hist_users.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[c]
+ \centering
+  \begin{minipage}[c]{1\textwidth}
+	\centering	
+	\includegraphics[scale=0.27]{hist_targets.png}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\section{Tests}
+
+\begin{frame}{Test shapiro - Normalidad}
+
+La hipótesis nula de esta prueba es que la población tiene una distribución normal. Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada (se concluye que los datos no vienen de una distribución normal).
+
+\begin{center}
+    \begin{tabular}{ | p{2cm} | p{3.5cm} | p{2cm} |}
+    \hline
+     clase       &  p-value               & Rechaza H0		\\ 
+    \hline
+     Ruido       &  9.67449295786e-07     & True 				\\ 
+     Color       &  0.138976812363   	  &	False				\\ 
+     Letra/Forma &  0.0948526263237       & False 				\\ 
+	 Concepto    &  0.733717143536   	  &	False			\\ 
+    \hline
+    \end{tabular}
+\end{center} 
+
+\end{frame}
+
+\begin{frame}{Test bartlett - Homocedasticidad}
+
+La prueba de Bartlett se utiliza para probar la hipótesis nula H0 (todas las varianzas de una población k son iguales), frente a la hipótesis alternativa de que al menos dos son diferentes.
+Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las varianzas.
+
+$P-value$ : 0.413846834579
+
+\end{frame}
+
+\begin{frame}{Test Anova - comparación de medias}
+
+La prueba ANOVA (Analysis Of Variance) permite comparar simultaneamente todas las medias. Como su nombre lo indica, compara varianzas aunque lo que contrastamos son medias. La hipotesis nula es que las medias no tienen diferencias significativas.
+Si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las medias.
+
+$P-value$ : 7.03090345431e-12
+
+\end{frame}
+
+\begin{frame}{Test Tukey}
+
+El Test de Tukey es un test de comparaciones múltiples. Permite comparar las medias de los t niveles de un factor después de haber rechazado la Hipótesis nula de igualdad de medias mediante la técnica ANOVA. 
+
+Se establece así un umbral, como en otros métodos. Se calculan todas las diferencias de medias muestrales entre los t niveles del factor estudiado. 
+
+\begin{center}
+    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
+    \hline
+	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
+    \hline
+     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
+     color        &  concepto    & 37.4293  & 26.8863   &  47.9722 & True   \\ 
+     color        &  letra/forma & 3.9808   & -6.5621   &  14.5237 & False  \\ 
+	 concepto     &  letra/forma & -33.4485 & -43.9914 &  -22.9056  & True  \\ 
+    \hline
+    \end{tabular}
+\end{center} 
+
+\end{frame}
+
+
+\begin{frame}{T-Test}
+
+Se trata de una prueba bilateral para la hipótesis nula de que 2 muestras independientes tienen idénticos valores medios. Esta prueba asume que las poblaciones tienen varianzas iguales.
+
+\begin{center}
+    \begin{tabular}{ | p{2cm} | p{2cm} | p{3.5cm} | p{2cm} |}
+    \hline
+     Clase1       &  Clase2 			&  p-value               & Rechaza H0		\\ 
+    \hline
+     Concepto    &  Letra/Forma	    &  6.04027331118e-09     & True 				\\ 
+     Concepto    &  Color 			&  7.02800170074e-11   	 & True				\\ 
+     Color 		 &  Letra/Forma     &  0.40368990303         & False 				\\ 
+    \hline
+    \end{tabular}
+\end{center} 
+
+\end{frame}
+
+\section{Resultados1}
+
 \subsection{Random Trials}
 
 \begin{frame}
@@ -440,114 +580,6 @@ Comparación de los índices de relación relativa (relativizado)
 \end{figure}
 \end{frame}
 
-\subsection{Clases}
-
-\begin{frame}
-\begin{figure}[c]
- \centering
-  \begin{minipage}[c]{1\textwidth}
-	\centering	
-	\includegraphics[scale=0.27]{hist_users.png}
-  \end{minipage}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\begin{figure}[c]
- \centering
-  \begin{minipage}[c]{1\textwidth}
-	\centering	
-	\includegraphics[scale=0.27]{hist_targets.png}
-  \end{minipage}
-\end{figure}
-\end{frame}
-
-\section{Tests}
-
-\begin{frame}{Test shapiro - Normalidad}
-
-La hipótesis nula de esta prueba es que la población tiene una distribución normal. Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada (se concluye que los datos no vienen de una distribución normal).
-
-\begin{center}
-    \begin{tabular}{ | p{2cm} | p{3.5cm} | p{2cm} |}
-    \hline
-     clase       &  p-value               & Rechaza H0		\\ 
-    \hline
-     Ruido       &  9.67449295786e-07     & True 				\\ 
-     Color       &  0.138976812363   	  &	False				\\ 
-     Letra/Forma &  0.0948526263237       & False 				\\ 
-	 Concepto    &  0.733717143536   	  &	False			\\ 
-    \hline
-    \end{tabular}
-\end{center} 
-
-\end{frame}
-
-\begin{frame}{Test bartlett - Homocedasticidad}
-
-{\Large ESTA BIEN LA DESCRIPCION DE LO QUE HACE BARTLETT?}
-
-La prueba de Bartlett se utiliza para probar la hipótesis nula, H0 que todas las varianzas de una población k son iguales, frente a la hipótesis alternativa de que al menos dos son diferentes.
-Por lo tanto si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las varianzas.
-
-$P-value$ : 0.413846834579
-
-\end{frame}
-
-\begin{frame}{Test Anova - comparación de medias}
-
-{\Large ESTA BIEN LA DESCRIPCION DE LO QUE HACE ANOVA?}
-{\Large BARTLETT HACE LO MISMO QUE ANOVA TIENE SENTIDO TENER LOS DOS?}
-
-La prueba ANOVA (Analysis Of Variance) permite comparar simultaneamente todas las medias. Como su nombre lo indica, compara varianzas aunque lo que contrastamos son medias. La hipotesis nula es que las medias no tienen diferencias significativas.
-Si el p-valor es menor a alfa (nivel de confianza) entonces la hipótesis nula es rechazada, es decir hay una diferencia signitificativa en las medias.
-
-$P-value$ : 7.03090345431e-12
-
-\end{frame}
-
-\begin{frame}{Test Tukey}
-
-El Test de Tukey es un test de comparaciones múltiples. Permite comparar las medias de los t niveles de un factor después de haber rechazado la Hipótesis nula de igualdad de medias mediante la técnica ANOVA. 
-
-Se establece así un umbral, como en otros métodos. Se calculan todas las diferencias de medias muestrales entre los t niveles del factor estudiado. 
-
-{\Large QUE SIGNIFICA ESE REJECT, ES RECHAZAR H0 NO?}
-
-
-\begin{center}
-    \begin{tabular}{ | p{1.7cm} | p{1.7cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{0.9cm} |}
-    \hline
-	 \multicolumn{6}{|c|}{Multiple Comparison of Means - Tukey HSD,FWER=0.05 } \\
-    \hline
-     group1       &  group2      & meandiff & lower    & upper    & reject \\ 
-     color        &  concepto    & 37.4293  & 26.8863   &  47.9722 & True   \\ 
-     color        &  letra/forma & 3.9808   & -6.5621   &  14.5237 & False  \\ 
-	 concepto     &  letra/forma & -33.4485 & -43.9914 &  -22.9056  & True  \\ 
-    \hline
-    \end{tabular}
-\end{center} 
-
-\end{frame}
-
-
-\begin{frame}{T-Test}
-
-Se trata de una prueba bilateral para la hipótesis nula de que 2 muestras independientes tienen idénticos valores madios (esperados). Esta prueba asume que las poblaciones tienen varianzas iguales.
-
-\begin{center}
-    \begin{tabular}{ | p{2cm} | p{2cm} | p{3.5cm} | p{2cm} |}
-    \hline
-     Clase1       &  Clase2 			&  p-value               & Rechaza H0		\\ 
-    \hline
-     Concepto    &  Letra/Forma	    &  6.04027331118e-09     & True 				\\ 
-     Concepto    &  Color 			&  7.02800170074e-11   	 & True				\\ 
-     Color 		 &  Letra/Forma     &  0.40368990303         & False 				\\ 
-    \hline
-    \end{tabular}
-\end{center} 
-
-\end{frame}
 
 
 
@@ -595,7 +627,7 @@ Se trata de una prueba bilateral para la hipótesis nula de que 2 muestras indep
 
 % Placing a * after \section means it will not show in the
 % outline or table of contents.
-\section*{Summary}
+\section*{Conclusiones}
 
 \begin{frame}{Summary}
   \begin{itemize}
